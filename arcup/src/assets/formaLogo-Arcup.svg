@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="formaLogo-Arcup.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 210 297"
+   height="297mm"
+   width="210mm">
+  <defs
+     id="defs2">
+    <style
+       id="style833">.cls-1{font-size:196.11px;fill:#fcfcfc;font-family:RoundedElegance-Regular, Rounded Elegance;}.cls-2{letter-spacing:-0.02em;}.cls-3,.cls-4,.cls-5{fill-rule:evenodd;}.cls-3{fill:url(#Degradado_sin_nombre_146);}.cls-4{fill:url(#Degradado_sin_nombre_146-2);}.cls-5{fill:url(#Degradado_sin_nombre_146-3);}</style>
+    <linearGradient
+       id="Degradado_sin_nombre_146"
+       x1="37.98"
+       y1="164.5"
+       x2="37.98"
+       y2="58.13"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0.01"
+         stop-color="#7b0094"
+         id="stop835" />
+      <stop
+         offset="1"
+         stop-color="aqua"
+         id="stop837" />
+    </linearGradient>
+    <linearGradient
+       id="Degradado_sin_nombre_146-2"
+       x1="27.2"
+       y1="142.93"
+       x2="27.2"
+       y2="79.69"
+       xlink:href="#Degradado_sin_nombre_146" />
+    <linearGradient
+       id="Degradado_sin_nombre_146-3"
+       x1="5.69"
+       y1="122.7"
+       x2="5.69"
+       y2="99.92"
+       xlink:href="#Degradado_sin_nombre_146" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#Degradado_sin_nombre_146"
+       id="linearGradient864"
+       gradientUnits="userSpaceOnUse"
+       x1="37.98"
+       y1="164.5"
+       x2="37.98"
+       y2="58.13" />
+  </defs>
+  <sodipodi:namedview
+     inkscape:window-maximized="1"
+     inkscape:window-y="-9"
+     inkscape:window-x="-9"
+     inkscape:window-height="1001"
+     inkscape:window-width="1920"
+     showgrid="false"
+     inkscape:document-rotation="0"
+     inkscape:current-layer="Capa_5"
+     inkscape:document-units="mm"
+     inkscape:cy="643.82729"
+     inkscape:cx="320.37455"
+     inkscape:zoom="0.7"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Capa 1">
+    <g
+       transform="matrix(0.26458333,0,0,0.26458333,29.685086,108.41709)"
+       data-name="Capa 5"
+       id="Capa_5">
+      <polygon
+         transform="matrix(11.975342,0,0,8.9815066,-98.571426,-839.67927)"
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         style="fill:url(#linearGradient864)"
+         id="polygon850"
+         points="11.39,150.17 50.25,111.31 11.39,72.45 11.39,58.13 64.57,111.31 57.41,118.48 11.39,164.5 "
+         class="cls-3" />
+      <polygon
+         transform="matrix(11.975342,0,0,8.9815066,-98.571426,-839.67927)"
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         style="fill:url(#Degradado_sin_nombre_146-2)"
+         id="polygon852"
+         points="11.39,142.93 11.39,128.6 28.68,111.31 11.39,94.02 11.39,79.69 35.84,104.15 43.01,111.31 35.84,118.48 "
+         class="cls-4" />
+      <polygon
+         transform="matrix(11.975342,0,0,8.9815066,-98.571426,-839.67927)"
+         inkscape:export-ydpi="96"
+         inkscape:export-xdpi="96"
+         style="fill:url(#Degradado_sin_nombre_146-3)"
+         id="polygon854"
+         points="0,122.7 0,99.92 11.39,111.31 2.69,120.01 "
+         class="cls-5" />
+    </g>
+  </g>
+</svg>
