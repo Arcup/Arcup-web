@@ -1,5 +1,6 @@
 <template>
   <div id="divContact" class="background_contact">
+    <base-header></base-header>
     <form @submit.prevent="submit">
       <div>
         <v-container>
@@ -59,13 +60,7 @@
         </v-container>
       </div>
     </form>
-    <v-carousel hide-delimiters>
-      <v-carousel-item
-        v-for="(item, i) in car"
-        :key="i"
-        :src="item.src"
-      ></v-carousel-item>
-    </v-carousel>
+ 
     <div class="center">
       <v-icon class="icon">mdi-facebook</v-icon>
       <a class="networks" href="https://www.facebook.com/">Arcup</a>
@@ -82,11 +77,18 @@
 </template>
 
 <script>
+import BaseHeader from '@/components/BaseHeader.vue'
+
 export default {
+  name: "Contact",
+  components: {
+      BaseHeader,
+    },
   data: () => ({
     name: "",
     email: "",
     select: null,
+    
     items: ["Item 1", "Item 2", "Item 3", "Item 4"],
     car: [
           {
