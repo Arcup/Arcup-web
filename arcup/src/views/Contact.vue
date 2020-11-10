@@ -1,5 +1,5 @@
 <template>
-  <div id="divContact" class="background_contact" >
+  <div id="divContact" class="background_contact">
     <form @submit.prevent="submit">
       <div>
         <v-container>
@@ -8,12 +8,13 @@
               <h1 class="h1">Contáctanos</h1>
               <v-card-text class="text-justify">
                 En Arcup nos interesa lo que tengas que decir, si tienes en
-                mente un proyecto y requieres una solucion tecnológica ponte en
-                contacto con nosotros a través del Formulario de Solicitud, o
-                para cualquier aclaración mediante nuestras fuentes de contacto:
+                mente un proyecto y requieres una solucion tecnológica o
+                asesoría personalizada ponte en contacto con nosotros a través
+                del formulario de solicitud, o para cualquier aclaración
+                mediante nuestras fuentes de contacto:
               </v-card-text>
               <v-card-text class="text-justify">
-                <h2 class="h2">Email</h2>
+                <h2 class="h2">E-mail</h2>
                 <br />
                 arcup.management@outlook.com
                 <h2 class="h2"><br />Teléfono</h2>
@@ -58,6 +59,25 @@
         </v-container>
       </div>
     </form>
+    <v-carousel hide-delimiters>
+      <v-carousel-item
+        v-for="(item, i) in car"
+        :key="i"
+        :src="item.src"
+      ></v-carousel-item>
+    </v-carousel>
+    <div class="center">
+      <v-icon class="icon">mdi-facebook</v-icon>
+      <a class="networks" href="https://www.facebook.com/">Arcup</a>
+      <v-icon class="icon">mdi-instagram</v-icon
+      ><a class="networks" href="https://www.instagram.com/">ArcupDeve</a>
+      <v-icon class="icon">mdi-twitter</v-icon
+      ><a class="networks" href="https://twitter.com/">ArcupDev</a>
+      <v-icon class="icon">mdi-linkedin</v-icon
+      ><a class="networks" href="https://www.linkedin.com/">Arcup</a>
+      <v-icon class="icon">mdi-whatsapp</v-icon
+      ><a class="networks" href="https://www.whatsapp.com/">2281132016</a>
+    </div>
   </div>
 </template>
 
@@ -68,10 +88,23 @@ export default {
     email: "",
     select: null,
     items: ["Item 1", "Item 2", "Item 3", "Item 4"],
+    car: [
+          {
+            src: 'https://cdn.pixabay.com/photo/2016/02/19/11/19/office-1209640_960_720.jpg',
+          },
+          {
+            src: 'https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg',
+          },
+          {
+            src: 'https://cdn.pixabay.com/photo/2015/05/31/10/55/man-791049_960_720.jpg',
+          },
+          {
+            src: 'https://cdn.pixabay.com/photo/2018/03/10/12/00/paper-3213924_960_720.jpg',
+          },
+        ],
     checkbox: null,
   }),
 
-  
   methods: {
     submit() {
       this.$refs.observer.validate();
@@ -90,6 +123,7 @@ export default {
 <style scoped>
 .h2 {
   color: rgb(119, 119, 119);
+  text-decoration: none;
 }
 .col-input {
   padding-left: 20px;
@@ -100,12 +134,33 @@ export default {
 }
 
 .background_contact {
- position: relative;
- height: 100%;
- background-position-y:top;
+  position: relative;
+  background-position-y: top;
   background-image: url("../assets/contact-background.svg");
 }
-.divContact{
+.divContact {
   height: 100%;
+}
+.center {
+  text-align: center;
+  padding-top: 10%;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.networks {
+  color: rgb(119, 119, 119);
+  text-decoration: none;
+  padding: 10px;
+}
+
+.icon {
+  color: rgb(119, 119, 119);
+}
+.black_background {
+  background-color: rgb(53, 53, 53);
+}
+.white_color {
+  color: aliceblue;
 }
 </style>
