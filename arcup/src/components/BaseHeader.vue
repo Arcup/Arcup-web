@@ -1,13 +1,13 @@
 <template>
   <div>
-    <v-toolbar dark>
+    <v-toolbar color="#161e2eff">
       <figure class="icon__arcup"></figure>
       <span class="white--text font__arcup ml-2 mr-16">arcup</span>
       <v-menu offset-y transition="slide-y-transition">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn text rounded v-bind="attrs" v-on="on">
+          <v-btn text rounded v-bind="attrs" v-on="on" color="white">
             Nosotros
-            <v-icon right color="orange darken-2"> mdi-chevron-down </v-icon>
+            <v-icon right> mdi-chevron-down </v-icon>
           </v-btn>
         </template>
         <v-list>
@@ -18,9 +18,9 @@
       </v-menu>
       <v-menu offset-y transition="slide-y-transition">
         <template v-slot:activator="{ on, attrs }">
-          <v-btn text rounded v-bind="attrs" v-on="on">
+          <v-btn text rounded v-bind="attrs" v-on="on" color="white">
             Servicios
-            <v-icon right color="orange darken-2"> mdi-chevron-down </v-icon>
+            <v-icon right> mdi-chevron-down </v-icon>
           </v-btn>
         </template>
         <v-list dense>
@@ -37,7 +37,7 @@
         </v-list>
       </v-menu>
       <router-link :to="{ name: 'Contact' }" class="text-decoration-none">
-        <v-btn text rounded v-bind="attrs" v-on="on"> Contáctanos </v-btn>
+        <v-btn text rounded color="white"> Contáctanos </v-btn>
       </router-link>
     </v-toolbar>
   </div>
@@ -48,11 +48,9 @@ export default {
   name: "BaseHeader",
   data: () => ({
     items: [
-      { title: "Click Me" },
-      { title: "Click Me" },
-      { title: "Click Me" },
-      { title: "Click Me 2" },
-    ],
+      { title: "Tecnologías" },
+      { title: "Historia" },
+      { title: "Cultura" },    ],
     items2: [
       { text: "Software", icon: "mdi-clock" },
       { text: "Paquetes", icon: "mdi-account" },
@@ -73,5 +71,8 @@ export default {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+.header__backgroud {
+  background-color: #161e2eff;
 }
 </style>
