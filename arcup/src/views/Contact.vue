@@ -7,14 +7,14 @@
           <v-row>
             <v-col class="col" sm="12" cols="12" md="4" lg="4">
               <h1 class="h1">Contáctanos</h1>
-              <v-card-text class="text-justify">
+              <v-card-text class="text-justify text-size">
                 En Arcup nos interesa lo que tengas que decir, si tienes en
                 mente un proyecto y requieres una solucion tecnológica o
                 asesoría personalizada ponte en contacto con nosotros a través
                 del formulario de solicitud, o para cualquier aclaración
                 mediante nuestras fuentes de contacto:
               </v-card-text>
-              <v-card-text class="text-justify">
+              <v-card-text class="text-justify text-size">
                 <h2 class="h2">E-mail</h2>
                 <br />
                 arcup.management@outlook.com
@@ -149,6 +149,9 @@ export default {
   padding-bottom: 30px;
   padding-left: 20px;
   padding-right: 20px;
+}
+.text-size {
+  font-size: medium;
 }
 .networks {
   color: rgb(119, 119, 119);
