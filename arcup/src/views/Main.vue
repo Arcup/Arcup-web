@@ -1,12 +1,14 @@
 <template>
   <v-main>
-    <div class="space__background">
+    <base-header></base-header>
+    <v-divider></v-divider>
+    <div class="container__deep" id="containerDeep">
       <v-row class="mb-6" no-gutters>
-        <v-col md="7" offset-md="5">
+        <v-col md="7" offset-md="5" id="colMainCarousel">
           <v-carousel
             :show-arrows="false"
             cycle
-            height="380"
+            height="320"
             hide-delimiter-background
           >
             <v-carousel-item
@@ -17,18 +19,26 @@
           </v-carousel>
         </v-col>
       </v-row>
-      <v-row class="mb-6 d-flex justify-end" no-gutters>
-        <v-sheet color="teal" elevation="4" height="250" shaped width="183" class="mr-13">
-        </v-sheet>
-        <v-sheet color="teal" elevation="4" height="250" shaped width="183" class="mr-13">
-        </v-sheet
-        ><v-sheet color="teal" elevation="4" height="250" shaped width="183" class="mr-13">
+      <v-row class="d-flex justify-end" id="rowMainSheets">
+        <v-sheet
+          color="blue lighten-5"
+          v-for="(item, index) in itemsPaquetes"
+          :key="index"
+          height="250"
+          width="183"
+          class="container__sheets rounded-xl"
+          outlined
+          style="opacity: 0.8"
+          id="sheetMain"
+        >
+          <p class="d-flex font-weight-black justify-center">{{ item.name }}</p>
+          <h1 class="d-flex justify-center">{{ item.price }}</h1>
+          <p class="d-flex justify-center">{{ item.description }}</p>
         </v-sheet>
       </v-row>
     </div>
-    <div class="space__backgroundAngle">
-      <base-header></base-header>
-      <v-col cols="4" md="6" class="ml-12 mt-10">
+    <div class="container__angle">
+        <v-col cols="4" md="6" class="ml-12 mt-10">
         <v-col class="white--text">
           <h1>
             Construimos software de calidad a la medida, creamos tu página y se
@@ -81,6 +91,23 @@ export default {
           src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
         },
       ],
+      itemsPaquetes: [
+        {
+          name: "Básico",
+          price: "$1,500",
+          description: "Este es un ejemplo de descripción",
+        },
+        {
+          name: "Intermedio",
+          price: "$7,000",
+          description: "Esta es otra descripción ejemplo",
+        },
+        {
+          name: "Avanzado",
+          price: "$12,000",
+          description: "La última descripción de ejemplo",
+        },
+      ],
     };
   },
   components: {
@@ -93,20 +120,21 @@ export default {
   font-family: RoundedElegance;
   src: url("../assets/Rounded_Elegance.ttf");
 }
-.space__background {
-  height: 50%;
-  width: 100%;
-  background-size: 800px auto;
-  position: absolute;
+.container__sheets {
+  margin-right: 58px;
 }
-.space__backgroundAngle {
+.container__deep {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.container__angle {
+  display: flex;
   position: relative;
   height: 100%;
-  background-size: 170% auto;
-  background-position-x: -1000px;
-  background-position-y: 0px;
   background-image: url("../assets/fondo-main-arcup.svg");
 }
+
 .size__fontText {
   font-size: 28px;
 }

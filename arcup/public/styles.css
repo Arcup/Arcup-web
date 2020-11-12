@@ -1,0 +1,43 @@
+@media (max-width: 1395px) { 
+    #sheetMain {
+        margin-right: 30px;
+    }
+    .container__angle {
+        background-position-x: -130px;
+    }
+}
+@media (max-width: 1185px) { 
+    #sheetMain {
+        margin-right: 22px;
+    }
+    .container__angle {
+        background-position-x: -155px;
+    }
+}
+@media (max-width: 1100px) { 
+    #containerDeep {
+        position: relative;
+    }
+    #rowMainSheets {
+        display: flex;
+        justify-content: center !important;
+        width: 100%;
+    }
+    #sheetMain {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        margin-right: 30px;
+        margin-left: 30px;
+        height: 270px !important;
+        width:300px;
+    }
+    #colMainCarousel {
+        justify-content: flex-start;
+        margin-left: 0px;
+        max-width: 100% !important;
+    }
+    .container__angle {
+        position: relative;
+    }
+    
+}
