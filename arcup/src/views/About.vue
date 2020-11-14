@@ -93,7 +93,7 @@ import BaseHeader from '@/components/BaseHeader.vue'
 
 
 export default {
-  name: "Contact",
+  name: "About",
   components: {
       BaseHeader,
     },
