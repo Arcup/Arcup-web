@@ -5,7 +5,7 @@
         <v-carousel
             cycle
             interval="5000"
-            height="300"
+            height="350"
             show-arrows-on-hover
         >
             <v-carousel-item
@@ -23,32 +23,28 @@
                         editable
                         step="1"
                         class="ma-2"
-                        color="primary"
-                        @click="expand = !expand"
+                        color="primary"                        
+                        @click="selec1"
                     >
                         Desarrollo Web
                     </v-stepper-step>
-
                     <v-divider></v-divider>
-
                     <v-stepper-step
                         editable
                         step="2"
                         class="ma-2"
-                        color="primary"
-                        @click="expand2 = !expand2"
+                        color="primary"                        
+                        @click="selec2"
                     >
                         Desarrollo movil
                     </v-stepper-step>
-
                     <v-divider></v-divider>
-
                     <v-stepper-step
                         step="3"
                         editable
                         class="ma-2"
-                        color="primary"
-                        @click="expand3 = !expand3"
+                        color="primary"                        
+                        @click="selec3"
                     >
                         Asesorias
                     </v-stepper-step>
@@ -56,44 +52,40 @@
             </v-stepper> 
             
             <v-col class="shrink">
-                <v-expand-transition>
+                <v-scroll-x-transition leave-absolute="false">
                     <v-card
                         v-show="expand"
-                        height="100"
-                        width="300"
+                        height="200"
+                        width="500"
                         class="mx-auto secondary"
                     >
                     1111111111111
                     </v-card>
-                </v-expand-transition>
-            </v-col>    
-
-            <v-col class="shrink">
-                <v-expand-transition>
+                </v-scroll-x-transition>
+                <v-scroll-x-transition leave-absolute="false">
                     <v-card
                         v-show="expand2"
-                        height="100"
-                        width="100"
+                        height="200"
+                        width="500"
                         class="mx-auto secondary"
                     >
                     22222222222
                     </v-card>
-                </v-expand-transition>
-            </v-col> 
-
-            <v-col class="shrink">
-                <v-expand-transition>
+                </v-scroll-x-transition >
+                <v-scroll-x-transition leave-absolute="false">
                     <v-card
                         v-show="expand3"
-                        height="100"
-                        width="100"
+                        height="200"
+                        width="500"
                         class="mx-auto secondary"
                     >
                     333333333333333333333
                     </v-card>
-                </v-expand-transition>
-            </v-col>        
-        </div>        
+                </v-scroll-x-transition>
+            </v-col>           
+        </div>    
+        <div>
+        </div>    
     </div>
 </template>
 <script>
@@ -124,7 +116,26 @@ export default {
         expand3: false,
       }
     },
-    
+    methods: {
+    selec1: function () {
+      this.expand2 = false;
+      this.expand3 = false;  
+      this.expand = !this.expand
+      
+    },
+    selec2: function () {
+      this.expand = false;
+      this.expand3 = false;  
+      this.expand2 = !this.expand2
+      
+    },
+    selec3: function () {
+      this.expand = false;
+      this.expand2 = false;
+      this.expand3 = !this.expand3
+      
+    },
+  },
 }
 </script>
 <style lang='css'>
