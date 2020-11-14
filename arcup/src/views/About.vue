@@ -1,24 +1,32 @@
 <template>
 <div >
       <base-header></base-header>
+      <v-img
+      src="../assets/title-images/image-culture.png"
+      max-width="100%"
+      max-height="200"
+    ></v-img>
 
   <v-container>
+    
+    
     <v-row>
+      
       <v-col cols="12" md="6" sm="6">
-        <v-card class="mx-auto">
-          <v-card-title class="title margin-text">Misión</v-card-title>
+        <v-card-title class="title margin-text">Misión</v-card-title>
 
           <v-card-text class="text--primary">
-            <div class="text-justify text-card margin-text ">
+            <div class="text-justify text-card padding-button ">
               Desarrollar y diseñar software de calidad basado en las nuevas
               tendencias tecnológicas, utilizando herramientas modernas y
               haciendo énfasis en la completitud de los requerimientos del
               cliente, superando así, las expectativas del producto desarrollado.
             </div>
           </v-card-text>
-        </v-card>
 
         <div class="card"></div>
+
+        
         <v-card class="mx-auto">
           <v-img
             class="white--text align-end"
@@ -28,8 +36,7 @@
         </v-card>
         <div class="card"></div>
 
-        <v-card class="mx-auto ">
-            <v-card-title>Nuestros valores</v-card-title>
+        <v-card-title>Nuestros valores</v-card-title>
 
 
           <v-card-text class="text--primary">
@@ -37,9 +44,8 @@
             <div class="text-card">⚫ Honestidad</div>
             <div class="text-card">⚫ Competitividad</div>
             <div class="text-card">⚫ Superar expectativas</div>
-            <div class="text-card">⚫ Innovación</div>
+            <div class="text-card padding-button">⚫ Innovación</div>
           </v-card-text>
-        </v-card>
       </v-col>
 
       <v-col cols="12" md="6" sm="6" >
@@ -54,18 +60,16 @@
         </v-card>
         <div class="card"></div>
         
-        <v-card class="mx-auto">
-            <v-card-title>Visión</v-card-title>
+        <v-card-title>Visión</v-card-title>
 
 
           <v-card-text class="text--primary">
-            <div class="text-justify text-card">
+            <div class="text-justify text-card padding-button">
               Consolidarnos como una empresa moderna de desarrollo de software
               en México, implementando metodologías de trabajo que ayuden a
               mejorar nuestros procesos de producción.
             </div>
           </v-card-text>
-        </v-card>
         <div class="card"></div>
 
         <v-card class="mx-auto">
@@ -126,7 +130,9 @@ export default {
   background-color: #161e2eff;
 }
 
-.margin-text{
+.padding-button{
+  padding-bottom: 30px;
 }
+
 
 </style>
