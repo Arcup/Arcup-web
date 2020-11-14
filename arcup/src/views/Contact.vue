@@ -1,12 +1,16 @@
 <template>
   <div id="divContact" class="background_contact">
     <base-header></base-header>
+    <v-img
+      src="../assets/title-images/image-contact.png"
+      max-width="100%"
+      max-height="200"
+    ></v-img>
     <form @submit.prevent="submit">
       <div>
         <v-container>
           <v-row>
             <v-col class="col" sm="12" cols="12" md="4" lg="4">
-              <h1 class="h1">Contáctanos</h1>
               <v-card-text class="text-justify text-size">
                 En Arcup nos interesa lo que tengas que decir, si tienes en
                 mente un proyecto y requieres una solucion tecnológica o
