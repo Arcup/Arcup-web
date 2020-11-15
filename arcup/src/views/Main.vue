@@ -49,15 +49,15 @@
           </h1>
         </v-col>
         <v-col class="mt-16">
-          <v-row>
-            <v-col lg="4" md="4" sm="10">
+          <v-row justify-sm="left">
+            <v-col md="4">
               <router-link :to="{ name: 'About' }" class="text-decoration-none">
                 <v-btn elevation="2" large rounded color="white">
                   <strong class="">Conócemos </strong></v-btn
                 >
               </router-link>
             </v-col>
-            <v-col cols="4">
+            <v-col md="4">
               <router-link
                 :to="{ name: 'Contact' }"
                 class="text-decoration-none"
@@ -138,7 +138,7 @@ export default {
   width: 100%;
   height: 100%;
   background-size: 85%;
-  background-image: url("../assets/fondo-main-arcup.svg");
+  background-image: url("../assets/background-darkBlueMain.svg");
 }
 
 .size__fontText {
