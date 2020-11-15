@@ -4,11 +4,11 @@
     <v-divider></v-divider>
     <div class="container__deep" id="containerDeep">
       <v-row class="mb-6" no-gutters>
-        <v-col md="7" offset-md="5" id="colMainCarousel">
+        <v-col offset-md="5" id="colMainCarousel">
           <v-carousel
             :show-arrows="false"
             cycle
-            height="320"
+            height="300"
             hide-delimiter-background
           >
             <v-carousel-item
@@ -19,26 +19,29 @@
           </v-carousel>
         </v-col>
       </v-row>
-      <v-row class="d-flex justify-end" id="rowMainSheets">
-        <v-sheet
-          color="blue lighten-5"
+      <v-row class="d-flex justify-end mr-2" id="rowMainSheets">
+        <v-card
+          class="ma-3 card__main"
+          max-width="280"
+          height="270"
           v-for="(item, index) in itemsPaquetes"
           :key="index"
-          height="250"
-          width="183"
-          class="container__sheets rounded-xl"
-          outlined
-          style="opacity: 0.8"
-          id="sheetMain"
         >
-          <p class="d-flex font-weight-black justify-center">{{ item.name }}</p>
-          <h1 class="d-flex justify-center">{{ item.price }}</h1>
-          <p class="d-flex justify-center">{{ item.description }}</p>
-        </v-sheet>
+          <v-card-text>
+            <p class="display-1 text--primary">{{ item.name }}</p>
+            <p class="deep-purple--text">{{ item.price }}</p>
+            <div class="text--primary">
+              {{ item.description }}
+            </div>
+          </v-card-text>
+          <v-card-actions>
+            <v-btn text color="deep-purple accent-4"> Ver más </v-btn>
+          </v-card-actions>
+        </v-card>
       </v-row>
     </div>
     <div class="container__angle">
-        <v-col cols="4" md="6" class="ml-12 mt-10">
+      <v-col lg="6" md="12" sm="12" class="ml-12 mt-10" id="columnTextMain">
         <v-col class="white--text">
           <h1>
             Construimos software de calidad a la medida, creamos tu página y se
@@ -46,15 +49,15 @@
           </h1>
         </v-col>
         <v-col class="mt-16">
-          <v-row>
-            <v-col cols="4">
+          <v-row justify-sm="left">
+            <v-col md="4">
               <router-link :to="{ name: 'About' }" class="text-decoration-none">
                 <v-btn elevation="2" large rounded color="white">
                   <strong class="">Conócemos </strong></v-btn
                 >
               </router-link>
             </v-col>
-            <v-col cols="4">
+            <v-col md="4">
               <router-link
                 :to="{ name: 'Contact' }"
                 class="text-decoration-none"
@@ -79,16 +82,20 @@ export default {
     return {
       items: [
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/squirrel.jpg",
+          src:
+            "https://cdn.pixabay.com/photo/2016/02/19/11/19/office-1209640_960_720.jpg",
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/sky.jpg",
+          src:
+            "https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg",
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/bird.jpg",
+          src:
+            "https://cdn.pixabay.com/photo/2015/01/08/18/26/write-593333_960_720.jpg",
         },
         {
-          src: "https://cdn.vuetifyjs.com/images/carousel/planet.jpg",
+          src:
+            "https://scontent.fmex23-1.fna.fbcdn.net/v/t1.0-9/78367546_2717002245022520_6775081467992080384_o.jpg?_nc_cat=109&ccb=2&_nc_sid=e3f864&_nc_eui2=AeE2EzwDBAM5zl0-DVYs_L2LPzZl9SyYmVI_NmX1LJiZUp1_UBE-W6pl8bmuUL8015ooorLi6N7La-yrv6k0wfzX&_nc_ohc=hPI1ghMeGpcAX_3Iif-&_nc_ht=scontent.fmex23-1.fna&oh=b1e7972683aeae20d6f57f9f01680cd5&oe=5FD48991",
         },
       ],
       itemsPaquetes: [
@@ -120,19 +127,18 @@ export default {
   font-family: RoundedElegance;
   src: url("../assets/Rounded_Elegance.ttf");
 }
-.container__sheets {
-  margin-right: 58px;
-}
 .container__deep {
   position: absolute;
-  height: 100%;
+  height: 100% auto;
   width: 100%;
 }
 .container__angle {
   display: flex;
   position: relative;
+  width: 100%;
   height: 100%;
-  background-image: url("../assets/fondo-main-arcup.svg");
+  background-size: 85%;
+  background-image: url("../assets/background-darkBlueMain.svg");
 }
 
 .size__fontText {
