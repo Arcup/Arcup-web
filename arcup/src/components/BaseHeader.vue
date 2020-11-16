@@ -168,7 +168,7 @@ export default {
         case 1:
           break;
         case 2:
-          this.$router.push({ name: "project" });
+          this.$router.push({ name: "Project" });
           break;
         default:
           break;
