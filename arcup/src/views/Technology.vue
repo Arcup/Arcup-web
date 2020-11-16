@@ -2,20 +2,12 @@
     <div>
         <base-header>
         </base-header>
-        <v-carousel
-            cycle
-            interval="5000"
-            height="350"
-            show-arrows-on-hover
+        <v-img
+            src="../assets/title-images/image-technology.png"
+            max-width="100%"
+            max-height="200"
         >
-            <v-carousel-item
-                v-for="(item,i) in items"
-                :key="i"
-                :src="item.src"
-                reverse-transition="fade-transition"
-                transition="fade-transition"
-            ></v-carousel-item>
-        </v-carousel>
+        </v-img>
         <div >
             <v-stepper non-linear>
                 <v-stepper-header>
@@ -52,7 +44,7 @@
             </v-stepper> 
             
             <v-col class="shrink">
-                <v-scroll-x-transition leave-absolute="false">
+                <v-scroll-x-transition>
                     <v-card
                         v-show="expand"
                         height="200"
@@ -62,7 +54,7 @@
                     1111111111111
                     </v-card>
                 </v-scroll-x-transition>
-                <v-scroll-x-transition leave-absolute="false">
+                <v-scroll-x-transition >
                     <v-card
                         v-show="expand2"
                         height="200"
@@ -72,7 +64,7 @@
                     22222222222
                     </v-card>
                 </v-scroll-x-transition >
-                <v-scroll-x-transition leave-absolute="false">
+                <v-scroll-x-transition >
                     <v-card
                         v-show="expand3"
                         height="200"
@@ -84,16 +76,19 @@
                 </v-scroll-x-transition>
             </v-col>           
         </div>    
-        <div>
-        </div>    
+        <base-footer>
+        </base-footer> 
     </div>
+    
 </template>
 <script>
 import BaseHeader from "@/components/BaseHeader.vue"
+import BaseFooter from "@/components/BaseFooter.vue"
 export default {
     name: 'Technology',
     components: {
         BaseHeader,
+        BaseFooter,
     },
     data () {
       return {
@@ -132,8 +127,7 @@ export default {
     selec3: function () {
       this.expand = false;
       this.expand2 = false;
-      this.expand3 = !this.expand3
-      
+      this.expand3 = !this.expand3      
     },
   },
 }
