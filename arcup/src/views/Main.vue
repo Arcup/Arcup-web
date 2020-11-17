@@ -4,7 +4,7 @@
     <v-divider></v-divider>
     <div class="container__deep" id="containerDeep">
       <v-row class="mb-6" no-gutters>
-        <v-col offset-md="5" id="colMainCarousel">
+        <v-col offset-md="3" id="colMainCarousel">
           <v-carousel
             :show-arrows="false"
             cycle
@@ -19,11 +19,12 @@
           </v-carousel>
         </v-col>
       </v-row>
-      <v-row class="d-flex justify-end mr-2" id="rowMainSheets">
+      <v-row class="d-flex justify-end mr-2" id="rowMainCards" >
         <v-card
           class="ma-3 card__main"
           max-width="280"
           height="270"
+          
           v-for="(item, index) in itemsPaquetes"
           :key="index"
         >
@@ -75,6 +76,11 @@
 </template>
 <script>
 import BaseHeader from "@/components/BaseHeader.vue";
+//  Se importan las imágenes que serán utilizadas en el carousel
+import imgProject from '../assets/title-images/image-project.png';
+import imgCulture from '../assets/title-images/image-culture.png';
+import imgContact from '../assets/title-images/image-contact.png';
+import imgTechnology from '../assets/title-images/image-technology.png';
 
 export default {
   name: "Main",
@@ -82,20 +88,16 @@ export default {
     return {
       items: [
         {
-          src:
-            "https://cdn.pixabay.com/photo/2016/02/19/11/19/office-1209640_960_720.jpg",
+          src:imgProject,
         },
         {
-          src:
-            "https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg",
+          src:imgCulture,
         },
         {
-          src:
-            "https://cdn.pixabay.com/photo/2015/01/08/18/26/write-593333_960_720.jpg",
+          src:imgContact,
         },
         {
-          src:
-            "https://scontent.fmex23-1.fna.fbcdn.net/v/t1.0-9/78367546_2717002245022520_6775081467992080384_o.jpg?_nc_cat=109&ccb=2&_nc_sid=e3f864&_nc_eui2=AeE2EzwDBAM5zl0-DVYs_L2LPzZl9SyYmVI_NmX1LJiZUp1_UBE-W6pl8bmuUL8015ooorLi6N7La-yrv6k0wfzX&_nc_ohc=hPI1ghMeGpcAX_3Iif-&_nc_ht=scontent.fmex23-1.fna&oh=b1e7972683aeae20d6f57f9f01680cd5&oe=5FD48991",
+          src:imgTechnology,
         },
       ],
       itemsPaquetes: [
@@ -127,10 +129,15 @@ export default {
   font-family: RoundedElegance;
   src: url("../assets/Rounded_Elegance.ttf");
 }
+.card__main {
+  z-index: 1;
+}
+
 .container__deep {
   position: absolute;
   height: 100% auto;
   width: 100%;
+  
 }
 .container__angle {
   display: flex;
