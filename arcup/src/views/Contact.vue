@@ -38,91 +38,97 @@
             </v-col>
             <v-col class="col-input" cols="12" sm="6" md="4" lg="4">
               <v-select
-                :items="items"
+                v-model="statesSelected"
+                :items="statesArray"
                 label="Estado"
-                data-vv-name="select"
                 required
+                @change="onChangeStates()"
               ></v-select>
-              <v-select
-                :items="items"
+              <v-select :disabled="selectDisabled === true"
+                v-model="citySelected"
+                :items="cityArray"
                 label="Ciudad"
-                data-vv-name="select"
                 required
               ></v-select>
               <v-text-field label="Nombre del Proyecto" required></v-text-field>
-
               <v-textarea
                 outlined
                 no-resize
                 label="Descripción del Proyecto"
                 height="121px"
               ></v-textarea>
-
               <v-btn depressed color="primary"> ENVIAR </v-btn>
             </v-col>
           </v-row>
         </v-container>
       </div>
     </form>
- 
-    <div class="center">
-      <v-icon class="icon">mdi-facebook</v-icon>
-      <a class="networks" href="https://www.facebook.com/">Arcup</a>
-      <v-icon class="icon">mdi-instagram</v-icon
-      ><a class="networks" href="https://www.instagram.com/">ArcupDeve</a>
-      <v-icon class="icon">mdi-twitter</v-icon
-      ><a class="networks" href="https://twitter.com/">ArcupDev</a>
-      <v-icon class="icon">mdi-linkedin</v-icon
-      ><a class="networks" href="https://www.linkedin.com/">Arcup</a>
-      <v-icon class="icon">mdi-whatsapp</v-icon
-      ><a class="networks" href="https://www.whatsapp.com/">2281132016</a>
-    </div>
   </div>
 </template>
 
 <script>
-import BaseHeader from '@/components/BaseHeader.vue'
+import BaseHeader from "@/components/BaseHeader.vue";
+import axios from "axios";
 
 export default {
   name: "Contact",
   components: {
-      BaseHeader,
+    BaseHeader,
+  },
+
+  created() {
+    axios
+      .get("https://api-sepomex.hckdrk.mx/query/get_estados")
+      .then((response) => (this.statesArray = response.data.response.estado));
+      this.statesArray.sort();
+  },
+
+  methods: {
+    onChangeStates() {
+      if (this.statesSelected != null) {
+        axios
+          .get(
+            "https://api-sepomex.hckdrk.mx/query/get_municipio_por_estado/" + this.statesSelected
+          )
+          .then(
+            (response) => (this.cityArray = response.data.response.municipios)
+          );
+          this.selectDisabled = false;
+          this.cityArray.sort();
+      }
     },
+  },
+
   data: () => ({
     name: "",
     email: "",
     select: null,
-    
+    selectDisabled: true,
+    statesArray: [],
+    statesSelected: [],
+    cityArray: ["Seleccione un esatdo"],
+    citySelected: [],
     items: ["Item 1", "Item 2", "Item 3", "Item 4"],
     car: [
-          {
-            src: 'https://cdn.pixabay.com/photo/2016/02/19/11/19/office-1209640_960_720.jpg',
-          },
-          {
-            src: 'https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg',
-          },
-          {
-            src: 'https://cdn.pixabay.com/photo/2015/05/31/10/55/man-791049_960_720.jpg',
-          },
-          {
-            src: 'https://cdn.pixabay.com/photo/2018/03/10/12/00/paper-3213924_960_720.jpg',
-          },
-        ],
+      {
+        src:
+          "https://cdn.pixabay.com/photo/2016/02/19/11/19/office-1209640_960_720.jpg",
+      },
+      {
+        src:
+          "https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg",
+      },
+      {
+        src:
+          "https://cdn.pixabay.com/photo/2015/05/31/10/55/man-791049_960_720.jpg",
+      },
+      {
+        src:
+          "https://cdn.pixabay.com/photo/2018/03/10/12/00/paper-3213924_960_720.jpg",
+      },
+    ],
     checkbox: null,
   }),
-
-  methods: {
-    submit() {
-      this.$refs.observer.validate();
-    },
-    clear() {
-      this.name = "";
-      this.email = "";
-      this.select = null;
-      this.checkbox = null;
-      this.$refs.observer.reset();
-    },
-  },
 };
 </script>
 

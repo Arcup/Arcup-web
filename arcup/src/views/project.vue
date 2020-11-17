@@ -142,6 +142,7 @@
 <script>
 import BaseHeader from "@/components/BaseHeader.vue";
 export default {
+  
   name: "Project",
   components: {
     BaseHeader,
