@@ -73,7 +73,7 @@
         </router-link>
       </v-toolbar-items>
     </v-app-bar>
-        <v-navigation-drawer v-model="drawer" absolute right>
+    <v-navigation-drawer v-model="drawer" absolute right class="drawer">
       <v-list>
         <v-subheader>CONTÁCTANOS</v-subheader>
         <v-divider></v-divider>
@@ -192,5 +192,8 @@ export default {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+.drawer {
+  z-index: 2 !important;
 }
 </style>
