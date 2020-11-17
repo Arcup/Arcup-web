@@ -8,7 +8,7 @@
           <v-carousel
             :show-arrows="false"
             cycle
-            height="300"
+            height="400"
             hide-delimiter-background
           >
             <v-carousel-item
@@ -19,30 +19,37 @@
           </v-carousel>
         </v-col>
       </v-row>
-      <v-row class="d-flex justify-end mr-2" id="rowMainCards" >
+      <v-row class="d-flex justify-end mr-5" id="rowMainCards" >
         <v-card
-          class="ma-3 card__main"
+          elevation="6"
+          class="mx-3 mb-5 card__main"
           max-width="280"
-          height="270"
-          
+          height="340"
           v-for="(item, index) in itemsPaquetes"
           :key="index"
         >
+        <v-card-title class="display-1 text--primary font-weight-bold">
+          {{ item.name }}
+        </v-card-title>
+        <v-card-subtitle class="subtitle-1 font-weight-thin">
+          {{ item.pages }}
+        </v-card-subtitle>
+        <v-divider></v-divider>
           <v-card-text>
-            <p class="display-1 text--primary">{{ item.name }}</p>
-            <p class="deep-purple--text">{{ item.price }}</p>
-            <div class="text--primary">
+            <p class="text--primary">
               {{ item.description }}
-            </div>
+            </p>
+            <p class="deep-purple--text font-italic">{{ item.price }}</p>
           </v-card-text>
+          <v-divider></v-divider>
           <v-card-actions>
-            <v-btn text color="deep-purple accent-4"> Ver más </v-btn>
+            <v-btn text outlined rounded color="deep-purple accent-4 justify-center"> Ver más </v-btn>
           </v-card-actions>
         </v-card>
       </v-row>
     </div>
     <div class="container__angle">
-      <v-col lg="6" md="12" sm="12" class="ml-12 mt-10" id="columnTextMain">
+      <v-col lg="7" md="12" sm="12" xl="5" class="ml-12 mt-10" id="columnTextMain">
         <v-col class="white--text">
           <h1>
             Construimos software de calidad a la medida, creamos tu página y se
@@ -75,7 +82,7 @@
   </v-main>
 </template>
 <script>
-import BaseHeader from "@/components/BaseHeader.vue";
+import BaseHeader from '@/components/BaseHeader.vue';
 //  Se importan las imágenes que serán utilizadas en el carousel
 import imgProject from '../assets/title-images/image-project.png';
 import imgCulture from '../assets/title-images/image-culture.png';
@@ -102,19 +109,23 @@ export default {
       ],
       itemsPaquetes: [
         {
-          name: "Básico",
-          price: "$1,500",
-          description: "Este es un ejemplo de descripción",
+          name: "Ventas",
+          price: "$7,199 - $14,899",
+          pages: "De 5 a 12 páginas",
+          description: "Administra tu negocio desde internet, háblanos del giro de tu empresa y creamos un sistema a tu medida. Autónomo. Organizado. Funcional",
         },
         {
-          name: "Intermedio",
-          price: "$7,000",
-          description: "Esta es otra descripción ejemplo",
+          name: "Informativo",
+          price: "$1,500 - $2,899",
+          pages: "De 1 a 4 páginas",
+          description: "Muéstrale al mundo quién eres. Creamos tu página web de manera rápida y eficiente. Emprendedores. Estudiantes. Empresas.",
         },
+        
         {
-          name: "Avanzado",
-          price: "$12,000",
-          description: "La última descripción de ejemplo",
+          name: "App Móvil",
+          price: "$5,899 - $19,899",
+          pages: "Android y/o iOS",
+          description: "¿Quieres hacer una aplicación móvil?. Crea tu propia app sin ser programador. Descárgala desde la Play Store y/o App Store.",
         },
       ],
     };
@@ -139,12 +150,13 @@ export default {
   width: 100%;
   
 }
+
 .container__angle {
   display: flex;
   position: relative;
   width: 100%;
   height: 100%;
-  background-size: 85%;
+  background-size: cover;
   background-image: url("../assets/background-darkBlueMain.svg");
 }
 
