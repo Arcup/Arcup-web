@@ -15,6 +15,7 @@
     .container__angle {
         position: relative;
         background-color: #161e2eff;
+        height: 35% !important;
     }
     .card__main {
         width: 250px;
@@ -22,7 +23,7 @@
     #containerDeep {
         position: relative;
     }
-    #rowMainSheets {
+    #rowMainCards {
         display: flex;
         justify-content: center !important;
         width: 100%;
