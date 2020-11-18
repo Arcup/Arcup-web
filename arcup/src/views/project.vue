@@ -78,7 +78,7 @@
 
     <div class="background-color padding-top padding-bottom">
       <v-row class="">
-        <v-col class="text-center" cols="12" sm="4" md="4" lg="4">
+        <v-col class="text-center " cols="12" sm="4" md="4" lg="4">
           <v-card class="mx-auto" max-width="344">
             <v-card-text>
               <div>Tecnologías</div>

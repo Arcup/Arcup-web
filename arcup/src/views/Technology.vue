@@ -12,24 +12,24 @@
     <v-container>
       <v-row>
         <v-col class="" cols="12" sm="4" md="4" lg="4">
-          <v-hover v-slot="{ hover }" open-delay="200">
+          <v-hover v-slot="{ hover }" open-delay="200" class="centrado">
             <v-card
               rounded="circle"
               :elevation="hover ? 16 : 2"
               :class="{ 'on-hover': hover }"
               class=""
               height="100"
-              max-width="100"
-              @clic="selec1"
+              max-width="100"              
             >
               <v-avatar size="100" class="background" @click="selec1">
                 <v-icon size="60" dark> mdi-web </v-icon>
               </v-avatar>
             </v-card>
-          </v-hover>
+          </v-hover>          
         </v-col>
+        
         <v-col class="text-center" cols="12" sm="4" md="4" lg="4">
-          <v-hover v-slot="{ hover }" open-delay="200">
+          <v-hover v-slot="{ hover }" open-delay="200" class="centrado">
             <v-card
               rounded="circle"
               :elevation="hover ? 16 : 2"
@@ -46,7 +46,7 @@
           </v-hover>
         </v-col>
         <v-col class="text-center"  cols="12" sm="4" md="4" lg="4">
-          <v-hover v-slot="{ hover }" open-delay="200">
+          <v-hover v-slot="{ hover }" open-delay="200" class="centrado">
             <v-card
               rounded="circle"
               :elevation="hover ? 16 : 2"
@@ -115,7 +115,7 @@ export default {
   },
   data() {
     return {
-      expand: false,
+      expand: true,
       expand2: false,
       expand3: false,
     };
@@ -124,29 +124,29 @@ export default {
     selec1: function () {
       this.expand2 = false;
       this.expand3 = false;
-      this.expand = !this.expand;
+      this.expand = true;
     },
     selec2: function () {
       this.expand = false;
       this.expand3 = false;
-      this.expand2 = !this.expand2;
+      this.expand2 = true;
     },
     selec3: function () {
       this.expand = false;
       this.expand2 = false;
-      this.expand3 = !this.expand3;
+      this.expand3 = true;
     },
   },
 };
 </script>
 <style lang='css'>
+.centrado {
+    margin-left: 33% !important;
+}
 #imagenTecnologias {
   margin-bottom: 30px;
 }
 .background {
   background-image: url("../assets/background-circle-tech.svg");
-}
-.vergas{
-    color: yellow;
 }
 </style>
