@@ -48,6 +48,11 @@
 
 @media (max-width: 1540px) { 
     .container__angle {
+        background-position-x: -25px;
+      }
+}
+@media (max-width: 1240px) { 
+    .container__angle {
         position: relative;
         background-color: #161e2eff;
         height: 35% !important;

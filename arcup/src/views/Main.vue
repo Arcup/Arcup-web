@@ -8,7 +8,7 @@
           <v-carousel
             :show-arrows="false"
             cycle
-            height="400"
+            height="250"
             hide-delimiter-background
           >
             <v-carousel-item
@@ -19,37 +19,63 @@
           </v-carousel>
         </v-col>
       </v-row>
-      <v-row class="d-flex justify-end mr-5" id="rowMainCards" >
-        <v-card
-          elevation="6"
-          class="mx-3 mb-5 card__main"
-          max-width="280"
-          height="340"
-          v-for="(item, index) in itemsPaquetes"
-          :key="index"
-        >
-        <v-card-title class="display-1 text--primary font-weight-bold">
-          {{ item.name }}
-        </v-card-title>
-        <v-card-subtitle class="subtitle-1 font-weight-thin">
-          {{ item.pages }}
-        </v-card-subtitle>
-        <v-divider></v-divider>
-          <v-card-text>
-            <p class="text--primary">
-              {{ item.description }}
-            </p>
-            <p class="deep-purple--text font-italic">{{ item.price }}</p>
-          </v-card-text>
-          <v-divider></v-divider>
-          <v-card-actions>
-            <v-btn text outlined rounded color="deep-purple accent-4 justify-center"> Ver más </v-btn>
-          </v-card-actions>
-        </v-card>
+      <v-row class="d-flex justify-end mr-5" id="rowMainCards">
+        <v-hover v-for="(item, index) in itemsPaquetes" :key="index">
+          <template v-slot:default="{ hover }">
+            <v-card
+              class="mr-0 ml-4 mb-5 card__main"
+              max-width="270"
+              height="335"
+              :elevation="hover ? 24 : 2"
+              :class="{ 'on-hover': hover }"
+            >
+              <v-img
+                :src="item.src"
+                height="100px"
+                class="white--text align-end"
+                gradient="to bottom, rgba(0, 15, 100), rgba(0,0,0,.8)"
+              >
+                <v-card-title class="display-1 white--text">
+                  {{ item.name }}
+                </v-card-title>
+                <v-card-subtitle
+                  class="subtitle-1 font-weight-thin white--text"
+                >
+                  {{ item.pages }}
+                </v-card-subtitle>
+              </v-img>
+              <v-divider></v-divider>
+              <v-card-text>
+                <p class="text--primary text-justify">
+                  {{ item.description }}
+                </p>
+                <p class="gray--text font-italic">{{ item.price }}</p>
+              </v-card-text>
+              <v-divider></v-divider>
+              <v-card-actions>
+                <v-btn
+                  depressed
+                  text
+                  outlined
+                  color="cyan"
+                >
+                  Ver más
+                </v-btn>
+              </v-card-actions>
+            </v-card>
+          </template>
+        </v-hover>
       </v-row>
     </div>
     <div class="container__angle">
-      <v-col lg="7" md="12" sm="12" xl="5" class="ml-12 mt-10" id="columnTextMain">
+      <v-col
+        lg="7"
+        md="12"
+        sm="12"
+        xl="5"
+        class="ml-12 mt-10"
+        id="columnTextMain"
+      >
         <v-col class="white--text">
           <h1>
             Construimos software de calidad a la medida, creamos tu página y se
@@ -82,12 +108,12 @@
   </v-main>
 </template>
 <script>
-import BaseHeader from '@/components/BaseHeader.vue';
+import BaseHeader from "@/components/BaseHeader.vue";
 //  Se importan las imágenes que serán utilizadas en el carousel
-import imgProject from '../assets/title-images/image-project.png';
-import imgCulture from '../assets/title-images/image-culture.png';
-import imgContact from '../assets/title-images/image-contact.png';
-import imgTechnology from '../assets/title-images/image-technology.png';
+import imgProject from "../assets/title-images/image-project.png";
+import imgCulture from "../assets/title-images/image-culture.png";
+import imgContact from "../assets/title-images/image-contact.png";
+import imgTechnology from "../assets/title-images/image-technology.png";
 
 export default {
   name: "Main",
@@ -95,37 +121,46 @@ export default {
     return {
       items: [
         {
-          src:imgProject,
+          src: imgProject,
         },
         {
-          src:imgCulture,
+          src: imgCulture,
         },
         {
-          src:imgContact,
+          src: imgContact,
         },
         {
-          src:imgTechnology,
+          src: imgTechnology,
         },
       ],
       itemsPaquetes: [
         {
+          src:
+            "https://www.senecacollege.ca/content/dam/projects/seneca/program-pages/afp.jpg",
           name: "Ventas",
           price: "$7,199 - $14,899",
           pages: "De 5 a 12 páginas",
-          description: "Administra tu negocio desde internet, háblanos del giro de tu empresa y creamos un sistema a tu medida. Autónomo. Organizado. Funcional",
+          description:
+            "Administra tu negocio desde internet, háblanos del giro de tu empresa y creamos un sistema a tu medida. Autónomo. Organizado. Funcional",
         },
         {
+          src:
+            "https://thumbs.dreamstime.com/b/internet-information-technology-businessman-hand-showing-concept-75784736.jpg",
           name: "Informativo",
           price: "$1,500 - $2,899",
           pages: "De 1 a 4 páginas",
-          description: "Muéstrale al mundo quién eres. Creamos tu página web de manera rápida y eficiente. Emprendedores. Estudiantes. Empresas.",
+          description:
+            "Muéstrale al mundo quién eres. Creamos tu página web de manera rápida y eficiente. Emprendedores. Estudiantes. Empresas.",
         },
-        
+
         {
+          src:
+            "https://www.akamai.com/us/en/multimedia/images/callout/akamai-mobile-app-performance-analysis-report-callout.jpg?imwidth=720",
           name: "App Móvil",
           price: "$5,899 - $19,899",
           pages: "Android y/o iOS",
-          description: "¿Quieres hacer una aplicación móvil?. Crea tu propia app sin ser programador. Descárgala desde la Play Store y/o App Store.",
+          description:
+            "¿Quieres hacer una aplicación móvil?. Crea tu propia app sin ser programador. Descárgala desde la Play Store y/o App Store.",
         },
       ],
     };
@@ -135,10 +170,17 @@ export default {
   },
 };
 </script>
-<style lang='css'>
+<style lang='css' scoped>
 @font-face {
   font-family: RoundedElegance;
   src: url("../assets/Rounded_Elegance.ttf");
+}
+.v-card {
+  transition: opacity 0.4s ease-in-out;
+}
+
+.v-card:not(.on-hover) {
+  opacity: 0.8;
 }
 .card__main {
   z-index: 1;
@@ -148,7 +190,6 @@ export default {
   position: absolute;
   height: 100% auto;
   width: 100%;
-  
 }
 
 .container__angle {

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-toolbar width="100%" color="#161e2eff" v-show="isMobile()">
+    <v-toolbar color="#161e2eff" v-show="isMobile()">
       <div class="d-flex">
         <router-link :to="{ name: 'Main' }" class="text-decoration-none">
           <figure class="icon__arcup mt-4 align-end"></figure>
@@ -73,7 +73,7 @@
         </router-link>
       </v-toolbar-items>
     </v-app-bar>
-    <v-navigation-drawer v-model="drawer" absolute right class="drawer">
+    <v-navigation-drawer v-model="drawer" absolute left class="drawer">
       <v-list>
         <v-subheader>CONTÁCTANOS</v-subheader>
         <v-divider></v-divider>
