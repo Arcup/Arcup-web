@@ -158,6 +158,9 @@
                   ENVIAR
                 </v-btn>
                 <v-btn @click="clear" outlined class="ml-2 icon"> LIMPIAR CAMPOS </v-btn>
+                <div class="text-size-m icon pt-1">
+                  Llena todos los campos para enviar
+                </div>
               </v-col>
             </v-row>
           </v-container>
@@ -290,6 +293,9 @@ export default {
 }
 .text-size {
   font-size: medium;
+}
+.text-size-m{
+  font-size: small;
 }
 .networks {
   color: rgb(119, 119, 119);

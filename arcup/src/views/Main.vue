@@ -33,7 +33,7 @@
                 :src="item.src"
                 height="100px"
                 class="white--text align-end"
-                gradient="to bottom, rgba(0, 15, 100), rgba(0,0,0,.8)"
+                gradient="to bottom, #161e2eff, rgba(22,30,45,.8)"
               >
                 <v-card-title class="display-1 white--text">
                   {{ item.name }}
