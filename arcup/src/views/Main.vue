@@ -4,11 +4,11 @@
     <v-divider></v-divider>
     <div class="container__deep" id="containerDeep">
       <v-row class="mb-6" no-gutters>
-        <v-col offset-md="5" id="colMainCarousel">
+        <v-col offset-md="3" id="colMainCarousel">
           <v-carousel
             :show-arrows="false"
             cycle
-            height="300"
+            height="400"
             hide-delimiter-background
           >
             <v-carousel-item
@@ -19,29 +19,37 @@
           </v-carousel>
         </v-col>
       </v-row>
-      <v-row class="d-flex justify-end mr-2" id="rowMainSheets">
+      <v-row class="d-flex justify-end mr-5" id="rowMainCards" >
         <v-card
-          class="ma-3 card__main"
+          elevation="6"
+          class="mx-3 mb-5 card__main"
           max-width="280"
-          height="270"
+          height="340"
           v-for="(item, index) in itemsPaquetes"
           :key="index"
         >
+        <v-card-title class="display-1 text--primary font-weight-bold">
+          {{ item.name }}
+        </v-card-title>
+        <v-card-subtitle class="subtitle-1 font-weight-thin">
+          {{ item.pages }}
+        </v-card-subtitle>
+        <v-divider></v-divider>
           <v-card-text>
-            <p class="display-1 text--primary">{{ item.name }}</p>
-            <p class="deep-purple--text">{{ item.price }}</p>
-            <div class="text--primary">
+            <p class="text--primary">
               {{ item.description }}
-            </div>
+            </p>
+            <p class="deep-purple--text font-italic">{{ item.price }}</p>
           </v-card-text>
+          <v-divider></v-divider>
           <v-card-actions>
-            <v-btn text color="deep-purple accent-4"> Ver más </v-btn>
+            <v-btn text outlined rounded color="deep-purple accent-4 justify-center"> Ver más </v-btn>
           </v-card-actions>
         </v-card>
       </v-row>
     </div>
     <div class="container__angle">
-      <v-col lg="6" md="12" sm="12" class="ml-12 mt-10" id="columnTextMain">
+      <v-col lg="7" md="12" sm="12" xl="5" class="ml-12 mt-10" id="columnTextMain">
         <v-col class="white--text">
           <h1>
             Construimos software de calidad a la medida, creamos tu página y se
@@ -74,7 +82,12 @@
   </v-main>
 </template>
 <script>
-import BaseHeader from "@/components/BaseHeader.vue";
+import BaseHeader from '@/components/BaseHeader.vue';
+//  Se importan las imágenes que serán utilizadas en el carousel
+import imgProject from '../assets/title-images/image-project.png';
+import imgCulture from '../assets/title-images/image-culture.png';
+import imgContact from '../assets/title-images/image-contact.png';
+import imgTechnology from '../assets/title-images/image-technology.png';
 
 export default {
   name: "Main",
@@ -82,37 +95,37 @@ export default {
     return {
       items: [
         {
-          src:
-            "https://cdn.pixabay.com/photo/2016/02/19/11/19/office-1209640_960_720.jpg",
+          src:imgProject,
         },
         {
-          src:
-            "https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg",
+          src:imgCulture,
         },
         {
-          src:
-            "https://cdn.pixabay.com/photo/2015/01/08/18/26/write-593333_960_720.jpg",
+          src:imgContact,
         },
         {
-          src:
-            "https://scontent.fmex23-1.fna.fbcdn.net/v/t1.0-9/78367546_2717002245022520_6775081467992080384_o.jpg?_nc_cat=109&ccb=2&_nc_sid=e3f864&_nc_eui2=AeE2EzwDBAM5zl0-DVYs_L2LPzZl9SyYmVI_NmX1LJiZUp1_UBE-W6pl8bmuUL8015ooorLi6N7La-yrv6k0wfzX&_nc_ohc=hPI1ghMeGpcAX_3Iif-&_nc_ht=scontent.fmex23-1.fna&oh=b1e7972683aeae20d6f57f9f01680cd5&oe=5FD48991",
+          src:imgTechnology,
         },
       ],
       itemsPaquetes: [
         {
-          name: "Básico",
-          price: "$1,500",
-          description: "Este es un ejemplo de descripción",
+          name: "Ventas",
+          price: "$7,199 - $14,899",
+          pages: "De 5 a 12 páginas",
+          description: "Administra tu negocio desde internet, háblanos del giro de tu empresa y creamos un sistema a tu medida. Autónomo. Organizado. Funcional",
         },
         {
-          name: "Intermedio",
-          price: "$7,000",
-          description: "Esta es otra descripción ejemplo",
+          name: "Informativo",
+          price: "$1,500 - $2,899",
+          pages: "De 1 a 4 páginas",
+          description: "Muéstrale al mundo quién eres. Creamos tu página web de manera rápida y eficiente. Emprendedores. Estudiantes. Empresas.",
         },
+        
         {
-          name: "Avanzado",
-          price: "$12,000",
-          description: "La última descripción de ejemplo",
+          name: "App Móvil",
+          price: "$5,899 - $19,899",
+          pages: "Android y/o iOS",
+          description: "¿Quieres hacer una aplicación móvil?. Crea tu propia app sin ser programador. Descárgala desde la Play Store y/o App Store.",
         },
       ],
     };
@@ -127,17 +140,23 @@ export default {
   font-family: RoundedElegance;
   src: url("../assets/Rounded_Elegance.ttf");
 }
+.card__main {
+  z-index: 1;
+}
+
 .container__deep {
   position: absolute;
   height: 100% auto;
   width: 100%;
+  
 }
+
 .container__angle {
   display: flex;
   position: relative;
   width: 100%;
   height: 100%;
-  background-size: 85%;
+  background-size: cover;
   background-image: url("../assets/background-darkBlueMain.svg");
 }
 

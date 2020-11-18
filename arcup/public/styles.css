@@ -1,28 +1,66 @@
-@media (max-width: 1395px) {
+@media (min-width: 1921px) {
+    .card__main {
+        width: 400px;
+    }
     .container__angle {
-        width: 120%;
-        background-size: 100%;
+        background-position-x: -300px;
+      }
+    #rowMainCards {
+        display: flex;
+        justify-content: center !important;
+        margin-left: 30%;
+    }
+}
+@media (max-width: 1920px) {
+    .container__angle {
+        width: 90% !important;
       } 
     .card__main {
-        width: 200px;
+        width: 400px;
     }
     #columnTextMain {
         margin-left: 10px !important;
     }
 }
+@media (max-width: 1700px) {
+    .container__angle {
+        width: 80% !important;
+      }
+    #columnTextMain {
+        margin-left: 10px !important;
+    }
+}
+@media (max-width: 1660px) {
+    .container__angle {
+        background-position-x: -50px;
+      }
+}
+@media (max-width: 1615px) {
+    .container__angle {
+        background-position-x: -80px;
+      }
+}
+@media (max-width: 1580px) {
+    .container__angle {
+        background-position-x: -120px;
+      }
+}
 
-@media (max-width: 1264px) { 
+@media (max-width: 1540px) { 
     .container__angle {
         position: relative;
         background-color: #161e2eff;
+        height: 35% !important;
+        width: 100% !important;
+        background-size: 100%;
     }
     .card__main {
-        width: 250px;
+        width: 350px;
     }
     #containerDeep {
         position: relative;
     }
-    #rowMainSheets {
+    #rowMainCards {
         display: flex;
         justify-content: center !important;
         width: 100%;
