@@ -153,6 +153,7 @@ export default {
           this.$router.push({ name: "Technology" });
           break;
         case 1:
+          this.$router.push({ name: 'Story' });
           break;
         case 2:
           this.$router.push({ name: "About" });
@@ -166,6 +167,7 @@ export default {
         case 0:
           break;
         case 1:
+          this.$router.push({ name: 'Package' })
           break;
         case 2:
           this.$router.push({ name: "Project" });
