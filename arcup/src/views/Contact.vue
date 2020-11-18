@@ -167,6 +167,7 @@
         </div>
       </form>
     </validation-observer>
+    <base-footer> </base-footer>
   </div>
 </template>
 
@@ -174,6 +175,7 @@
 import BaseHeader from "@/components/BaseHeader.vue";
 import axios from "axios";
 import { required, email, max } from "vee-validate/dist/rules";
+import BaseFooter from "@/components/BaseFooter.vue";
 import {
   extend,
   ValidationObserver,
@@ -204,6 +206,7 @@ export default {
     BaseHeader,
     ValidationProvider,
     ValidationObserver,
+    BaseFooter,
   },
 
   created() {

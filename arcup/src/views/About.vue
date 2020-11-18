@@ -83,6 +83,7 @@
       </v-col>
     </v-row>
   </v-container>
+  <base-footer> </base-footer>
 </div>
 </template>
 
@@ -90,12 +91,13 @@
 <script>
 
 import BaseHeader from '@/components/BaseHeader.vue'
-
+import BaseFooter from "@/components/BaseFooter.vue";
 
 export default {
   name: "About",
   components: {
       BaseHeader,
+      BaseFooter,
     },
   data: () => ({
     attrs: {

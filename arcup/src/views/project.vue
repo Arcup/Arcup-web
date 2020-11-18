@@ -76,7 +76,7 @@
       </v-col>
     </v-row>
 
-    <div class="background-color padding-top padding-bottom">
+    <div class="background-color padding-top">
       <v-row class="">
         <v-col class="text-center " cols="12" sm="4" md="4" lg="4">
           <v-card class="mx-auto" max-width="344">
@@ -135,17 +135,21 @@
         </v-col>
       </v-row>
     </div>
+    <base-footer> </base-footer>
   </div>
 </template>
 
 
 <script>
 import BaseHeader from "@/components/BaseHeader.vue";
+import BaseFooter from "@/components/BaseFooter.vue";
+
 export default {
   
   name: "Project",
   components: {
     BaseHeader,
+    BaseFooter,
   },
 };
 </script>
