@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-footer color="#161E2E" absolute padless>
+    <v-footer  color="#161E2E" >
       <v-card
         color="#161E2E"
         width="100%"
