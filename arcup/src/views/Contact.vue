@@ -154,6 +154,8 @@
                   color="primary"
                   type="submit"
                   :disabled="invalid"
+                  :loading="loading3"
+                  @click="loader = 'loading3'"
                 >
                   ENVIAR
                 </v-btn>
@@ -169,22 +171,53 @@
         </div>
       </form>
     </validation-observer>
-    <v-dialog v-model="dialog" width="600">
+    <v-dialog v-model="dialog201" width="600">
       <v-card>
         <v-card-title class="headline lighten-2">
           Se envió el formulario con éxito!
         </v-card-title>
 
         <v-card-text>
-          Gracias por comunicarte con nosotros, a la brevedad nuestro equipo de trabajo
-          se pondrá en contacto contigo.
+          Gracias por comunicarte con nosotros, a la brevedad nuestro equipo de
+          trabajo se pondrá en contacto contigo.
         </v-card-text>
 
         <v-divider></v-divider>
 
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary" text @click="dialog = false">ACEPTAR</v-btn>
+          <v-btn color="primary" v-on:click="clear" text @click="dialog201 = false">ACEPTAR</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+    <v-dialog v-model="dialogError" width="600">
+      <v-card>
+        <v-card-title class="headline lighten-2 error-color">
+          Algo salió mal...
+        </v-card-title>
+
+        <v-card-text class="text-size">
+          Ocurrio un error al enviar el formulario, por favor intentelo de
+          nuevo.</v-card-text
+        ><br />
+        <v-card-text>
+          <div>
+            Si el error persiste comunicate directamente con nostros a traves de
+            nuestras fuentes de contacto.
+          </div>
+          <div class="text-size">E-mail:</div>
+          <div>arcup.management@outlook.com</div>
+          <div class="text-size">Teléfono:</div>
+          <div>(+52) 2281132016</div>
+          <div>(+52) 2281458744</div>
+        </v-card-text>
+        <v-divider></v-divider>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" text @click="dialogError = false"
+            >ACEPTAR</v-btn
+          >
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -256,7 +289,7 @@ export default {
       this.$refs.observer.validate();
 
       let contactInfo = {
-        date: new Date().toISOString(),
+        date: new Date(),
         userName: this.name,
         userLastNameF: this.lastNameF,
         userLastNameM: this.lastNameM,
@@ -271,8 +304,14 @@ export default {
         .post("https://localhost:44344/api/contacts", contactInfo)
         .then((result) => {
           console.log(result);
-          if(result != null){
-            this.dialog = true;
+          if (result != null) {
+            this.dialog201 = true;
+            
+          }
+        })
+        .catch((error) => {
+          if (error != null) {
+            this.dialogError = true;
           }
         });
     },
@@ -305,8 +344,23 @@ export default {
     cityArray: [],
     citySelected: [],
 
-    dialog: false,
+    dialog201: false,
+    dialogError: false,
+
+    loader: null,
+    loading3: false,
   }),
+
+  watch: {
+      loader () {
+        const l = this.loader
+        this[l] = !this[l]
+
+        setTimeout(() => (this[l] = false), 4000)
+
+        this.loader = null
+      },
+    },
 };
 </script>
 
@@ -359,4 +413,43 @@ export default {
 .white_color {
   color: aliceblue;
 }
+.error-color {
+  color: rgb(238, 122, 122);
+}
+.custom-loader {
+    animation: loader 1s infinite;
+    display: flex;
+  }
+  @-moz-keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @-o-keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes loader {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
 </style>

@@ -34,10 +34,10 @@ const routes = [
     component: () => import('../views/Technology.vue')
   },
   {
-    path: '/project',
-    name: 'Project',
+    path: '/yourproject',
+    name: 'YourProject',
 
-    component: () => import('../views/Project.vue')
+    component: () => import('../views/YourProject.vue')
   },
   {
     path: '/story',

@@ -170,7 +170,7 @@ export default {
           this.$router.push({ name: 'Package' })
           break;
         case 2:
-          this.$router.push({ name: "Project" });
+          this.$router.push({ name: "YourProject" });
           break;
         default:
           break;
