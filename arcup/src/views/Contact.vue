@@ -157,7 +157,9 @@
                 >
                   ENVIAR
                 </v-btn>
-                <v-btn @click="clear" outlined class="ml-2 icon"> LIMPIAR CAMPOS </v-btn>
+                <v-btn @click="clear" outlined class="ml-2 icon">
+                  LIMPIAR CAMPOS
+                </v-btn>
                 <div class="text-size-m icon pt-1">
                   Llena todos los campos para enviar
                 </div>
@@ -167,6 +169,25 @@
         </div>
       </form>
     </validation-observer>
+    <v-dialog v-model="dialog" width="600">
+      <v-card>
+        <v-card-title class="headline lighten-2">
+          Se envió el formulario con éxito!
+        </v-card-title>
+
+        <v-card-text>
+          Gracias por comunicarte con nosotros, a la brevedad nuestro equipo de trabajo
+          se pondrá en contacto contigo.
+        </v-card-text>
+
+        <v-divider></v-divider>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn color="primary" text @click="dialog = false">ACEPTAR</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
     <base-footer> </base-footer>
   </div>
 </template>
@@ -233,6 +254,27 @@ export default {
     },
     submit() {
       this.$refs.observer.validate();
+
+      let contactInfo = {
+        date: new Date().toISOString(),
+        userName: this.name,
+        userLastNameF: this.lastNameF,
+        userLastNameM: this.lastNameM,
+        phoneNumber: this.phoneNumber,
+        email: this.email,
+        state: this.statesSelected,
+        city: this.citySelected,
+        projectName: this.projectName,
+        projectDescription: this.projectDescription,
+      };
+      axios
+        .post("https://localhost:44344/api/contacts", contactInfo)
+        .then((result) => {
+          console.log(result);
+          if(result != null){
+            this.dialog = true;
+          }
+        });
     },
     clear() {
       this.name = "";
@@ -262,6 +304,8 @@ export default {
     statesSelected: [],
     cityArray: [],
     citySelected: [],
+
+    dialog: false,
   }),
 };
 </script>
@@ -297,7 +341,7 @@ export default {
 .text-size {
   font-size: medium;
 }
-.text-size-m{
+.text-size-m {
   font-size: small;
 }
 .networks {
