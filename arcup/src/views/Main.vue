@@ -4,11 +4,11 @@
     <v-divider></v-divider>
     <div class="container__deep" id="containerDeep">
       <v-row class="mb-6" no-gutters>
-        <v-col offset-md="3" id="colMainCarousel">
+        <v-col :offset-md="isSizeLapTop() ? 3 : 12" offset-lg="3">
           <v-carousel
             :show-arrows="false"
             cycle
-            height="250"
+            :height="isLarge() || isExtraLarge() ? 400 : 250"
             hide-delimiter-background
           >
             <v-carousel-item
@@ -23,9 +23,9 @@
         <v-hover v-for="(item, index) in itemsPaquetes" :key="index">
           <template v-slot:default="{ hover }">
             <v-card
-              class="mr-0 ml-4 mb-5 card__main"
-              max-width="270"
-              height="335"
+              class="mr-0 ml-4 mb-5 transition-swing card__main"
+              :max-width="sizeCard"
+              height="380"
               :elevation="hover ? 24 : 2"
               :class="{ 'on-hover': hover }"
             >
@@ -53,14 +53,9 @@
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions>
-                <v-btn
-                  depressed
-                  text
-                  outlined
-                  color="cyan"
-                >
-                  Ver más
-                </v-btn>
+                <router-link :to="{ name: 'Package' }" class="text-decoration-none">
+                <v-btn depressed text outlined color="cyan"> Ver más </v-btn>
+                </router-link>
               </v-card-actions>
             </v-card>
           </template>
@@ -70,9 +65,9 @@
     <div class="container__angle">
       <v-col
         lg="7"
-        md="12"
+        :md="isSizeLapTop() ? 8 : 12"
         sm="12"
-        xl="5"
+        xl="7"
         class="ml-12 mt-10"
         id="columnTextMain"
       >
@@ -83,10 +78,10 @@
           </h1>
         </v-col>
         <v-col class="mt-16">
-          <v-row justify-sm="left">
+          <v-row>
             <v-col md="4">
               <router-link :to="{ name: 'About' }" class="text-decoration-none">
-                <v-btn elevation="2" large rounded color="white">
+                <v-btn elevation="2" large  color="white">
                   <strong class="">Conócemos </strong></v-btn
                 >
               </router-link>
@@ -96,7 +91,7 @@
                 :to="{ name: 'Contact' }"
                 class="text-decoration-none"
               >
-                <v-btn elevation="2" large outlined rounded color="white">
+                <v-btn elevation="2" large outlined color="white">
                   <strong>Empecemos </strong>
                 </v-btn>
               </router-link>
@@ -164,6 +159,37 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    isLarge: function () {
+      return this.$vuetify.breakpoint.lgOnly;
+    },
+    isExtraLarge: function () {
+      return this.$vuetify.breakpoint.xlOnly;
+    },
+    isSizeLapTop: function () {
+      return this.$vuetify.breakpoint.width > 1241 &&
+        this.$vuetify.breakpoint.width < 1400
+        ? true
+        : false;
+    },
+  },
+  computed: {
+    sizeCard() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return 300
+        case "sm":
+          return 280
+        case "md":
+          return this.isSizeLapTop() ? 210 : 300;
+        case "lg":
+          return this.isSizeLapTop() ? 210 : 280;
+        case "xl":
+          return 310
+      }
+      return 0
+    },
   },
   components: {
     BaseHeader,
