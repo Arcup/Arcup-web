@@ -67,7 +67,7 @@
           </v-list>
         </v-menu>
         <router-link :to="{ name: 'Contact' }" class="text-decoration-none">
-          <v-btn text rounded color="white" class="mt-3 pt-1">
+          <v-btn text color="white" class="mt-3 pt-1">
             Contáctanos
           </v-btn>
         </router-link>
