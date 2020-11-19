@@ -6,57 +6,35 @@
       max-width="100%"
       max-height="300"
     ></v-img>
-    <v-container>
-      <v-row justify="space-around">
-        <v-card width="400">
-          <v-img
-            height="200px"
-            src="https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg"
-          >
-            <v-app-bar flat color="rgba(0, 0, 0, 0)">
-              <v-app-bar-nav-icon color="white"></v-app-bar-nav-icon>
-
-              <v-toolbar-title class="title white--text pl-0">
-                Messages
-              </v-toolbar-title>
-
-              <v-spacer></v-spacer>
-
-              <v-btn color="white" icon>
-                <v-icon>mdi-dots-vertical</v-icon>
-              </v-btn>
-            </v-app-bar>
-
-            <v-card-title class="white--text mt-8">
-              <v-avatar size="56">
-                <img
-                  alt="user"
-                  src="https://cdn.pixabay.com/photo/2020/06/24/19/12/cabbage-5337431_1280.jpg"
-                />
-              </v-avatar>
-              <p class="ml-3">John Doe</p>
-            </v-card-title>
-          </v-img>
-
-          <v-card-text>
-            <div class="font-weight-bold ml-8 mb-2">Today</div>
-
-            <v-timeline align-top dense>
-              <v-timeline-item
-                v-for="message in messages"
-                :key="message.time"
-                :color="message.color"
-                small
-              >
-                <div>
-                  <div class="font-weight-normal">
-                    <strong>{{ message.from }}</strong> @{{ message.time }}
-                  </div>
-                  <div>{{ message.message }}</div>
-                </div>
-              </v-timeline-item>
-            </v-timeline>
-          </v-card-text>
+    <v-container class="containerPackage">
+      <v-row>
+        <v-col cols="12">
+          <h1 class="text-center">Páginas web</h1>
+          <h4 class="text-center">Encuentra tu paquete ideal o personalízalo con nosotros</h4>
+        </v-col>
+      </v-row>
+      <v-row class="mx-2">
+        <v-card width="100%" elevation="2">
+          <v-row>
+            <v-col cols="8">
+            <h2>Es es el segundo row</h2>
+          </v-col>
+          <v-col cols="4">
+            <h3>Estoy a la derecha</h3>
+          </v-col>
+          </v-row>
+        </v-card>
+      </v-row>
+      <v-row class="mx-2 my-4">
+        <v-card width="100%" elevation="2">
+          <v-row>
+            <v-col cols="8">
+            <h2>Es es el segundo row</h2>
+          </v-col>
+          <v-col cols="4">
+            <h3>Estoy a la derecha</h3>
+          </v-col>
+          </v-row>
         </v-card>
       </v-row>
     </v-container>
@@ -97,3 +75,9 @@ export default {
   },
 };
 </script>
+<style lang="css" scoped>
+.containerPackage {
+  background-size: 100% 50%;
+  background-image: url("https://www.strugal.com/sites/default/files/acabados-pvc/GrisClaro.png");
+}
+</style>
