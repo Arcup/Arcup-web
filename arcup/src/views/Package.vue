@@ -46,10 +46,7 @@
                         {{ item.titlePrice }}
                       </p>
                       <h3 class="mt-2">{{ item.price }}</h3>
-                      <div class="align-end">
                         <v-btn dark block> Adquirir </v-btn>
-                      </div>
-                      
                     </v-sheet>
                   </template>
                 </v-hover>
