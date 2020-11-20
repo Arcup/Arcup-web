@@ -1,25 +1,58 @@
 <template>
   <v-main>
     <base-header></base-header>
-    <v-divider></v-divider>
     <div class="container__deep" id="containerDeep">
-      <v-row class="mb-6" no-gutters>
-        <v-col :offset-md="isSizeLapTop() ? 3 : 12" offset-lg="3">
+      <v-row no-gutters>
+        <v-col>
           <v-carousel
             :show-arrows="false"
             cycle
-            :height="isLarge() || isExtraLarge() ? 400 : 250"
+            :height="sizeCarousel"
             hide-delimiter-background
           >
             <v-carousel-item
-              v-for="(item, i) in items"
+              v-for="(item, i) in itemsCarousel"
               :key="i"
-              :src="item.src"
+              :src="isMobile ? item.srcMobil : item.src"
             ></v-carousel-item>
           </v-carousel>
         </v-col>
       </v-row>
-      <v-row class="d-flex justify-end mr-5" id="rowMainCards">
+      <v-row v-show="isMobile" class="container__description mb-6">
+        <v-col no-gutters lg="6" md="6" sm="12" xs="12" xl="8" id="columnTextMain">
+          <v-col class="white--text">
+            <h1 class="font__main-alter">
+              Construimos software de calidad a la medida, creamos tu página y
+              se la mostramos al <strong>mundo.</strong>
+            </h1>
+          </v-col>
+          <v-col class="mt-16">
+            <v-row>
+              <v-col md="4">
+                <router-link
+                  :to="{ name: 'About' }"
+                  class="text-decoration-none"
+                >
+                  <v-btn elevation="2" large color="white">
+                    <strong class="">Conócemos </strong></v-btn
+                  >
+                </router-link>
+              </v-col>
+              <v-col md="4">
+                <router-link
+                  :to="{ name: 'Contact' }"
+                  class="text-decoration-none"
+                >
+                  <v-btn elevation="2" large outlined color="white">
+                    <strong>Empecemos </strong>
+                  </v-btn>
+                </router-link>
+              </v-col>
+            </v-row>
+          </v-col>
+        </v-col>
+      </v-row>
+      <v-row class="d-flex justify-center mr-5 mt-6" id="rowMainCards">
         <v-hover v-for="(item, index) in itemsPaquetes" :key="index">
           <template v-slot:default="{ hover }">
             <v-card
@@ -53,8 +86,11 @@
               </v-card-text>
               <v-divider></v-divider>
               <v-card-actions>
-                <router-link :to="{ name: 'Package' }" class="text-decoration-none">
-                <v-btn depressed text outlined color="cyan"> Ver más </v-btn>
+                <router-link
+                  :to="{ name: 'Package' }"
+                  class="text-decoration-none"
+                >
+                  <v-btn depressed text outlined color="cyan"> Ver más </v-btn>
                 </router-link>
               </v-card-actions>
             </v-card>
@@ -62,17 +98,17 @@
         </v-hover>
       </v-row>
     </div>
-    <div class="container__angle">
+    <div class="container__angle" v-show="!isMobile">
       <v-col
-        lg="7"
-        :md="isSizeLapTop() ? 8 : 12"
+        lg="6"
+        md="5"
         sm="12"
         xl="7"
         class="ml-12 mt-10"
         id="columnTextMain"
       >
         <v-col class="white--text">
-          <h1>
+          <h1 class="font__main-alter">
             Construimos software de calidad a la medida, creamos tu página y se
             la mostramos al <strong>mundo.</strong>
           </h1>
@@ -81,7 +117,7 @@
           <v-row>
             <v-col md="4">
               <router-link :to="{ name: 'About' }" class="text-decoration-none">
-                <v-btn elevation="2" large  color="white">
+                <v-btn elevation="2" large color="white">
                   <strong class="">Conócemos </strong></v-btn
                 >
               </router-link>
@@ -105,27 +141,42 @@
 <script>
 import BaseHeader from "@/components/BaseHeader.vue";
 //  Se importan las imágenes que serán utilizadas en el carousel
-import imgProject from "../assets/title-images/image-project.png";
-import imgCulture from "../assets/title-images/image-culture.png";
-import imgContact from "../assets/title-images/image-contact.png";
-import imgTechnology from "../assets/title-images/image-technology.png";
+import imgMobileProject from "../assets/title-images/image-project.png";
+import imgMobileCulture from "../assets/title-images/image-culture.png";
+import imgMobileContact from "../assets/title-images/image-contact.png";
+import imgMobileTechnology from "../assets/title-images/image-technology.png";
+import imgMobileStory from "../assets/title-images/image-story.png";
+import imgMobilePackage from "../assets/title-images/image-package.png";
+import prueba from "../assets/title-images/paquetes-carousel.jpg";
 
 export default {
   name: "Main",
   data() {
     return {
-      items: [
+      itemsCarousel: [
         {
-          src: imgProject,
+          src: prueba,
+          srcMobil: imgMobileContact,
         },
         {
-          src: imgCulture,
+          src: prueba,
+          srcMobil: imgMobilePackage,
         },
         {
-          src: imgContact,
+          src: prueba,
+          srcMobil: imgMobileTechnology,
         },
         {
-          src: imgTechnology,
+          src: prueba,
+          srcMobil: imgMobileProject,
+        },
+        {
+          src: prueba,
+          srcMobil: imgMobileCulture,
+        },
+        {
+          src: prueba,
+          srcMobil: imgMobileStory,
         },
       ],
       itemsPaquetes: [
@@ -175,20 +226,38 @@ export default {
     },
   },
   computed: {
+    isMobile() {
+      return this.$vuetify.breakpoint.smOnly || this.$vuetify.breakpoint.xsOnly;
+    },
     sizeCard() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return 300
+          return 300;
         case "sm":
-          return 280
+          return 280;
         case "md":
-          return this.isSizeLapTop() ? 210 : 300;
+          return 310;
         case "lg":
-          return this.isSizeLapTop() ? 210 : 280;
+          return 310;
         case "xl":
-          return 310
+          return 310;
       }
-      return 0
+      return 0;
+    },
+    sizeCarousel() {
+      switch (this.$vuetify.breakpoint.name) {
+        case "xs":
+          return 250;
+        case "sm":
+          return 250;
+        case "md":
+          return 420;
+        case "lg":
+          return 400;
+        case "xl":
+          return 400;
+      }
+      return 0;
     },
   },
   components: {
@@ -197,21 +266,19 @@ export default {
 };
 </script>
 <style lang='css' scoped>
-@font-face {
-  font-family: RoundedElegance;
-  src: url("../assets/Rounded_Elegance.ttf");
-}
 .v-card {
   transition: opacity 0.4s ease-in-out;
 }
-
 .v-card:not(.on-hover) {
   opacity: 0.8;
 }
 .card__main {
   z-index: 1;
 }
-
+.container__description {
+  background-color: #161e2eff;
+  background-size: 100%;
+}
 .container__deep {
   position: absolute;
   height: 100% auto;
@@ -224,7 +291,6 @@ export default {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-image: url("../assets/background-darkBlueMain.svg");
 }
 
 .size__fontText {
