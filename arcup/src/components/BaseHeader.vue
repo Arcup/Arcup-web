@@ -183,10 +183,6 @@ export default {
 };
 </script>
 <style lang='css'>
-.font__arcup {
-  font-family: RoundedElegance;
-  font-size: 40px;
-}
 .icon__arcup {
   background-image: url("../assets/formaLogo-Arcup.svg");
   width: 30px;
@@ -198,4 +194,5 @@ export default {
 .drawer {
   z-index: 2 !important;
 }
+
 </style>
