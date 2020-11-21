@@ -1,33 +1,15 @@
 
-@media (max-width: 1000px) { 
+@media (max-width: 959px) { 
     .container__angle {
         position: relative;
         background-color: #161e2eff;
-        height: 35% !important;
-        width: 100% !important;
         background-size: 100%;
-    }
-    #containerDeep {
-        position: relative;
-    }
-    #rowMainCards {
-        display: flex;
-        justify-content: center !important;
-        width: 100%;
-    }
-    #colMainCarousel {
-        justify-content: center;
-        margin-left: 0px;
-        max-width: 100% !important;
-    }  
-    #columnTextMain {
-        grid-template-columns: 100% !important;
     }
 }
 
 @media (max-width: 600px) {
     h1 {
-        font-size: 18px;
+        font-size: 22px;
     }
 }
 .font__arcup {

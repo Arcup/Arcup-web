@@ -18,32 +18,43 @@
           </v-carousel>
         </v-col>
       </v-row>
-      <v-row v-show="isMobile" class="container__description mb-6">
-        <v-col no-gutters lg="6" md="6" sm="12" xs="12" xl="8" id="columnTextMain">
+      <v-container v-show="isMobile" class="container__description mb-6">
+        <v-col md="6" sm="12" xs="12">
           <v-col class="white--text">
             <h1 class="font__main-alter">
               Construimos software de calidad a la medida, creamos tu página y
               se la mostramos al <strong>mundo.</strong>
             </h1>
           </v-col>
-          <v-col class="mt-16">
+          <v-col class="mt-4" md="6" sm="12" xs="12">
             <v-row>
-              <v-col md="4">
+              <v-col xs="2" sm="4" md="6" class="d-flex">
                 <router-link
                   :to="{ name: 'About' }"
                   class="text-decoration-none"
                 >
-                  <v-btn elevation="2" large color="white">
-                    <strong class="">Conócemos </strong></v-btn
+                  <v-btn
+                    elevation="2"
+                    :large="!isSuperSmall"
+                    :small="isSuperSmall"
+                    color="white"
+                    class="d-flex mr-4"
                   >
+                    <strong class="">Conócemos </strong>
+                  </v-btn>
                 </router-link>
-              </v-col>
-              <v-col md="4">
                 <router-link
                   :to="{ name: 'Contact' }"
                   class="text-decoration-none"
                 >
-                  <v-btn elevation="2" large outlined color="white">
+                  <v-btn
+                    elevation="2"
+                    outlined
+                    :large="!isSuperSmall"
+                    :small="isSuperSmall"
+                    color="white"
+                    class="d-flex"
+                  >
                     <strong>Empecemos </strong>
                   </v-btn>
                 </router-link>
@@ -51,14 +62,14 @@
             </v-row>
           </v-col>
         </v-col>
-      </v-row>
-      <v-row class="d-flex justify-center mr-5 mt-6" id="rowMainCards">
+      </v-container>
+      <v-row class="d-flex justify-center mx-2 mt-6">
         <v-hover v-for="(item, index) in itemsPaquetes" :key="index">
           <template v-slot:default="{ hover }">
             <v-card
-              class="mr-0 ml-4 mb-5 transition-swing card__main"
+              class="mx-4 mb-5 transition-swing card__main"
               :max-width="sizeCard"
-              height="380"
+              height="auto"
               :elevation="hover ? 24 : 2"
               :class="{ 'on-hover': hover }"
             >
@@ -66,7 +77,6 @@
                 :src="item.src"
                 height="100px"
                 class="white--text align-end"
-                gradient="to bottom, #161e2eff, rgba(22,30,45,.8)"
               >
                 <v-card-title class="display-1 white--text">
                   {{ item.name }}
@@ -77,52 +87,61 @@
                   {{ item.pages }}
                 </v-card-subtitle>
               </v-img>
-              <v-divider></v-divider>
-              <v-card-text>
-                <p class="text--primary text-justify">
-                  {{ item.description }}
+
+              <v-card-text class="mt-4 ml-4">
+                <p class="fontPrice">
+                  {{ item.price }} <span class="fontPriceMx">/mx</span>
                 </p>
-                <p class="gray--text font-italic">{{ item.price }}</p>
+                <span class="fontDescriptionCard mr-5">
+                  {{ item.description }}
+                </span>
               </v-card-text>
               <v-divider></v-divider>
-              <v-card-actions>
+              <v-container>
+                <v-list>
+                  <v-subheader>Incluye</v-subheader>
+                  <v-list-item
+                    v-for="(advantage, i) in item.advantages"
+                    :key="i"
+                  >
+                    <v-icon color="green"> mdi-check </v-icon>
+                    <v-list-item-title class="fontAdvantage ml-4">
+                      {{ advantage }}</v-list-item-title
+                    >
+                  </v-list-item>
+                </v-list>
                 <router-link
                   :to="{ name: 'Package' }"
                   class="text-decoration-none"
                 >
-                  <v-btn depressed text outlined color="cyan"> Ver más </v-btn>
+                  <v-btn block outlined color="blue-grey" class="fontVerMas">
+                    Ver más
+                  </v-btn>
                 </router-link>
-              </v-card-actions>
+              </v-container>
             </v-card>
           </template>
         </v-hover>
       </v-row>
     </div>
     <div class="container__angle" v-show="!isMobile">
-      <v-col
-        lg="6"
-        md="5"
-        sm="12"
-        xl="7"
-        class="ml-12 mt-10"
-        id="columnTextMain"
-      >
+      <v-col lg="6" md="5" class="ml-12 mt-8" id="columnTextMain">
         <v-col class="white--text">
           <h1 class="font__main-alter">
             Construimos software de calidad a la medida, creamos tu página y se
             la mostramos al <strong>mundo.</strong>
           </h1>
         </v-col>
-        <v-col class="mt-16">
+        <v-col class="mt-10">
           <v-row>
-            <v-col md="4">
+            <v-col md="5" lg="3" xl="4">
               <router-link :to="{ name: 'About' }" class="text-decoration-none">
                 <v-btn elevation="2" large color="white">
                   <strong class="">Conócemos </strong></v-btn
                 >
               </router-link>
             </v-col>
-            <v-col md="4">
+            <v-col md="5" lg="3" xl="4">
               <router-link
                 :to="{ name: 'Contact' }"
                 class="text-decoration-none"
@@ -139,15 +158,31 @@
   </v-main>
 </template>
 <script>
+//  Adding components to use insade Main component
 import BaseHeader from "@/components/BaseHeader.vue";
-//  Se importan las imágenes que serán utilizadas en el carousel
+
+//  Adding image to Carousel resolution: md, lg, xl
+import imgMonitorProject from "../assets/carousel-images/carousel-project.png";
+import imgMonitorCulture from "../assets/carousel-images/carousel-culture.png";
+import imgMonitorContact from "../assets/carousel-images/carousel-contact.png";
+import imgMonitorTechnology from "../assets/carousel-images/carousel-technology.png";
+import imgMonitorStory from "../assets/carousel-images/carousel-history.png";
+import imgMonitorPackage from "../assets/carousel-images/carousel-packages.png";
+import imgMonitorSoftware from "../assets/carousel-images/carousel-software.png";
+
+//  Adding image to Carousel resolution: sm, xs
 import imgMobileProject from "../assets/title-images/image-project.png";
 import imgMobileCulture from "../assets/title-images/image-culture.png";
 import imgMobileContact from "../assets/title-images/image-contact.png";
 import imgMobileTechnology from "../assets/title-images/image-technology.png";
 import imgMobileStory from "../assets/title-images/image-story.png";
 import imgMobilePackage from "../assets/title-images/image-package.png";
-import prueba from "../assets/title-images/paquetes-carousel.jpg";
+import imgMobileSoftware from "../assets/title-images/image-software.png";
+
+//  Adding images to Card
+import imgCardApp from "../assets/card-images/card-app.png";
+import imgCardInfo from "../assets/card-images/card-info.png";
+import imgCardSales from "../assets/card-images/card-sales.png";
 
 export default {
   name: "Main",
@@ -155,92 +190,98 @@ export default {
     return {
       itemsCarousel: [
         {
-          src: prueba,
+          src: imgMonitorContact,
           srcMobil: imgMobileContact,
         },
         {
-          src: prueba,
+          src: imgMonitorPackage,
           srcMobil: imgMobilePackage,
         },
         {
-          src: prueba,
+          src: imgMonitorSoftware,
+          srcMobil: imgMobileSoftware,
+        },
+        {
+          src: imgMonitorTechnology,
           srcMobil: imgMobileTechnology,
         },
         {
-          src: prueba,
+          src: imgMonitorProject,
           srcMobil: imgMobileProject,
         },
         {
-          src: prueba,
+          src: imgMonitorCulture,
           srcMobil: imgMobileCulture,
         },
         {
-          src: prueba,
+          src: imgMonitorStory,
           srcMobil: imgMobileStory,
         },
       ],
       itemsPaquetes: [
         {
-          src:
-            "https://www.senecacollege.ca/content/dam/projects/seneca/program-pages/afp.jpg",
+          src: imgCardSales,
           name: "Ventas",
-          price: "$7,199 - $14,899",
+          price: "$7,199",
           pages: "De 5 a 12 páginas",
           description:
-            "Administra tu negocio desde internet, háblanos del giro de tu empresa y creamos un sistema a tu medida. Autónomo. Organizado. Funcional",
+            "Administra tu negocio desde internet. Autónomo. Organizado. Funcional",
+          advantages: [
+            "Código QR ",
+            "Página de administrador",
+            "Hosting por 1 año",
+            "Dominio personalizado (.com)",
+          ],
         },
         {
-          src:
-            "https://thumbs.dreamstime.com/b/internet-information-technology-businessman-hand-showing-concept-75784736.jpg",
+          src: imgCardInfo,
           name: "Informativo",
-          price: "$1,500 - $2,899",
+          price: "$1,500",
           pages: "De 1 a 4 páginas",
           description:
-            "Muéstrale al mundo quién eres. Creamos tu página web de manera rápida y eficiente. Emprendedores. Estudiantes. Empresas.",
+            "Muéstrale al mundo quién eres. Emprendedores. Estudiantes. Empresas.",
+          advantages: [
+            "Código QR ",
+            "Hosting por 1 año",
+            "Dominio personalizado (.com)",
+          ],
         },
 
         {
-          src:
-            "https://www.akamai.com/us/en/multimedia/images/callout/akamai-mobile-app-performance-analysis-report-callout.jpg?imwidth=720",
+          src: imgCardApp,
           name: "App Móvil",
-          price: "$5,899 - $19,899",
+          price: "$5,899",
           pages: "Android y/o iOS",
           description:
-            "¿Quieres hacer una aplicación móvil?. Crea tu propia app sin ser programador. Descárgala desde la Play Store y/o App Store.",
+            "Crea tu propia app sin ser programador. Con descarga desde Play Store y/o App Store.",
+          advantages: [
+            "Código QR ",
+            "Aplicación en una tienda",
+            "Mantenimiento 24/7",
+          ],
         },
       ],
     };
   },
-  methods: {
-    isLarge: function () {
-      return this.$vuetify.breakpoint.lgOnly;
-    },
-    isExtraLarge: function () {
-      return this.$vuetify.breakpoint.xlOnly;
-    },
-    isSizeLapTop: function () {
-      return this.$vuetify.breakpoint.width > 1241 &&
-        this.$vuetify.breakpoint.width < 1400
-        ? true
-        : false;
-    },
-  },
   computed: {
+    isSuperSmall() {
+      return this.$vuetify.breakpoint.width <= 320 ? true : false;
+    },
     isMobile() {
       return this.$vuetify.breakpoint.smOnly || this.$vuetify.breakpoint.xsOnly;
     },
     sizeCard() {
       switch (this.$vuetify.breakpoint.name) {
         case "xs":
-          return 300;
+          return 260;
         case "sm":
           return 280;
         case "md":
           return 310;
         case "lg":
-          return 310;
+          return 340;
         case "xl":
-          return 310;
+          return 400;
       }
       return 0;
     },
@@ -251,11 +292,11 @@ export default {
         case "sm":
           return 250;
         case "md":
-          return 420;
+          return 430;
         case "lg":
-          return 400;
+          return 430;
         case "xl":
-          return 400;
+          return 430;
       }
       return 0;
     },
@@ -277,7 +318,6 @@ export default {
 }
 .container__description {
   background-color: #161e2eff;
-  background-size: 100%;
 }
 .container__deep {
   position: absolute;
@@ -295,5 +335,25 @@ export default {
 
 .size__fontText {
   font-size: 28px;
+}
+.fontPrice {
+  font-family: GilroyBold;
+  font-size: 36px;
+}
+.fontPriceMx {
+  font-family: Mazzard;
+  font-size: 20px;
+}
+.fontVerMas {
+  font-family: GilroyLight;
+  font-size: 16px;
+}
+.fontDescriptionCard {
+  font-family: GilroyLight;
+  font-size: 13px;
+}
+.fontAdvantage {
+  font-family: GilroyLight;
+  font-size: 14px;
 }
 </style>

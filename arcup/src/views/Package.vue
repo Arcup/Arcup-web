@@ -27,8 +27,17 @@
             <v-row no-gutters>
               <v-col cols="8">
                 <v-container class="ml-4 my-5">
-                  <h2>{{ item.title }}</h2>
-                  <p class="font-weight-light">{{ item.description }}</p>
+                  <v-row>
+                    <v-col>
+                      <h2>{{ item.title }}</h2>
+                      <p class="font-weight-light">{{ item.description }}</p>
+                      <span>hello</span>
+                      <v-divider inset></v-divider>
+                    </v-col>
+                  </v-row>
+                  <v-row>
+                    <div>otro row</div>
+                  </v-row>
                 </v-container>
               </v-col>
               <v-col cols="4" align="center">
@@ -42,11 +51,13 @@
                       width="100%"
                       class="transition-swing rounded-r-xl"
                     >
-                      <p class="font-weight-bold pt-8">
-                        {{ item.titlePrice }}
-                      </p>
-                      <h3 class="mt-2">{{ item.price }}</h3>
+                      <v-container>
+                        <p class="font-weight-bold pt-8">
+                          {{ item.titlePrice }}
+                        </p>
+                        <h3 class="mt-2">{{ item.price }}</h3>
                         <v-btn dark block> Adquirir </v-btn>
+                      </v-container>
                     </v-sheet>
                   </template>
                 </v-hover>
@@ -156,6 +167,13 @@ export default {
         titlePrice: "Paquete app & página web",
         price: "20,900 pesudos",
         description: "Esta página web es aún más cara OMG!",
+      },
+      {
+        title: "App móvil",
+        titlePrice: "Android y/o iOS",
+        price: "$5,899 - $19,899",
+        description:
+          "¿Quieres hacer una aplicación móvil?. Crea tu propia app sin ser programador. Descárgala desde la Play Store y/o App Store.",
       },
     ],
   }),
