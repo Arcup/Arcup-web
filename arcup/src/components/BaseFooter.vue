@@ -6,14 +6,13 @@
         width="100%"
         tile
         class="lighten-1 white--text text-center"
+        flat
       >
         <v-card-text class="d-flex justify-center pa-0"> 
           <figure class="icon__arcup"></figure>          
         </v-card-text>
 
-        <v-divider></v-divider>
-
-        <v-card-text  class="d-flex justify-center">
+        <v-card-text class="d-flex justify-center">
           <div>
             <v-btn
               target="_blank"
