@@ -10,13 +10,13 @@
   <v-container>
     
     
-    <v-row>
+    <v-row class="">
       
       <v-col cols="12" md="6" sm="6">
         <v-card-title class="title margin-text">Misión</v-card-title>
 
           <v-card-text class="text--primary">
-            <div class="text-justify text-card padding-button ">
+            <div class="text-justify text-card padding-button">
               Desarrollar y diseñar software de calidad basado en las nuevas
               tendencias tecnológicas, utilizando herramientas modernas y
               haciendo énfasis en la completitud de los requerimientos del
@@ -37,14 +37,18 @@
         <div class="card"></div>
 
         <v-card-title>Nuestros valores</v-card-title>
-
-
+        
           <v-card-text class="text--primary">
-            <div class="text-card">⚫ Responsabilidad</div>
-            <div class="text-card">⚫ Honestidad</div>
-            <div class="text-card">⚫ Competitividad</div>
-            <div class="text-card">⚫ Superar expectativas</div>
-            <div class="text-card padding-button">⚫ Innovación</div>
+            <div class="text-card"><v-icon color="cyan">
+               mdi-check </v-icon> Responsabilidad</div>
+            <div class="text-card"><v-icon color="cyan">
+               mdi-check </v-icon> Honestidad</div>
+            <div class="text-card"><v-icon color="cyan">
+               mdi-check </v-icon> Competitividad</div>
+            <div class="text-card"><v-icon color="cyan"
+            > mdi-check </v-icon> Superar expectativas</div>
+            <div class="text-card padding-button"><v-icon color="cyan">
+               mdi-check </v-icon> Innovación</div>
           </v-card-text>
       </v-col>
 
@@ -134,6 +138,9 @@ export default {
 
 .padding-button{
   padding-bottom: 30px;
+}
+.background-gray{
+  background-color: rgb(238, 238, 238);
 }
 
 
