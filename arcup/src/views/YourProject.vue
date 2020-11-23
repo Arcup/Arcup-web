@@ -7,27 +7,32 @@
       max-width="100%"
       max-height="200"
     ></v-img>
-    <h2 class="text-center padding-top color-title pr-4 pl-4">
+    <div class="background-gray">
+    <h2 class="text-center padding-top pb-2 color-title pr-4 pl-4">
       DESCUBRE LAS CARACTERÍSTICAS DE NUESTROS SERVICIOS
+      <v-icon color="cyan">mdi-information-outline </v-icon>
     </h2>
-
-    <v-card class="mx-auto pt-3 pr-3 pl-3" flat width="950">
-      <p class="text-justify">
+    <v-container>
+      <v-card class="mx-auto pt-3 pr-3 pl-3 background-gray" flat width="950">
+      <p class="text-justify ">
         Nuestros valores nos guían para construir proyectos software de calidad
         que cumplan con todos los estandares tecnológicos actuales y así poder
         asegurar integridad de los proyectos que desarrollamos, por lo tanto,
         todos nuestros servicios de construcción de software incluyen:
       </p>
     </v-card>
+    </v-container>
+    </div>
+    
 
-    <v-divider class="padding-top"></v-divider>
-
-    <v-row class="padding-bottom">
+    <v-container class="padding-top">
+      <v-row class="padding-bottom ">
       <v-col class="text-center" cols="12" sm="6" md="3" lg="3">
         <v-avatar size="100" class="background">
-          <v-icon size="60" dark> mdi-clock-time-eight-outline </v-icon>
+          <v-icon size="60" color="#00ffff"> mdi-clock-time-eight-outline </v-icon>
         </v-avatar>
         <h3 class="text-center m-padding-top color-title">Atención 24/7</h3>
+        
         <v-card-text class="text-justify">
           Respondemos tus dudas o solicitudes en cualquier momento del día.
           Nuestro equipo de trabajo se encuntra disponible y capacitado para
@@ -36,7 +41,7 @@
       </v-col>
       <v-col class="text-center" cols="12" sm="6" md="3" lg="3">
         <v-avatar size="100" class="background">
-          <v-icon size="50" dark>mdi-message-processing-outline</v-icon>
+          <v-icon size="50" color="#00ffff">mdi-message-processing-outline</v-icon>
         </v-avatar>
         <h3 class="text-center m-padding-top color-title">
           Comunicación constante
@@ -50,7 +55,7 @@
 
       <v-col class="text-center" cols="12" sm="6" md="3" lg="3">
         <v-avatar size="100" class="background">
-          <v-icon size="60" dark>mdi-progress-check</v-icon>
+          <v-icon size="60" color="#00ffff">mdi-progress-check</v-icon>
         </v-avatar>
         <h3 class="text-center m-padding-top color-title">
           Revisión de avances
@@ -63,7 +68,7 @@
 
       <v-col class="text-center" cols="12" sm="6" md="3" lg="3">
         <v-avatar size="100" class="background">
-          <v-icon size="60" dark> mdi-cog </v-icon>
+          <v-icon size="60" color="#00ffff"> mdi-cog </v-icon>
         </v-avatar>
         <h3 class="text-center m-padding-top color-title">
           Asesorias tecnológicas
@@ -75,9 +80,12 @@
         </v-card-text>
       </v-col>
     </v-row>
+    </v-container>
+    
 
     <div class="background-color padding-top">
-      <v-row class="">
+      <v-container>
+        <v-row class="">
         <v-col class="text-center " cols="12" sm="4" md="4" lg="4">
           <v-card class="mx-auto" max-width="344">
             <v-card-text>
@@ -134,6 +142,7 @@
           </v-card>
         </v-col>
       </v-row>
+      </v-container>
     </div>
     <base-footer> </base-footer>
   </div>
@@ -173,5 +182,8 @@ export default {
 }
 .background-color {
   background-color: #161e2eff;
+}
+.background-gray{
+  background-color: rgb(238, 238, 238);
 }
 </style>

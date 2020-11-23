@@ -21,6 +21,7 @@
                 </v-card-text>
                 <v-card-text class="text-justify text-size">
                   <h2 class="h2">E-mail</h2>
+                  
                   <br />
                   arcup.management@outlook.com
                   <h2 class="h2"><br />Teléfono</h2>
