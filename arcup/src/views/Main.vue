@@ -21,7 +21,7 @@
       <v-container v-show="isMobile" class="container__description mb-6">
         <v-col md="6" sm="12" xs="12">
           <v-col class="white--text">
-            <h1 class="font__main-alter">
+            <h1 class="fontMainText">
               Construimos software de calidad a la medida, creamos tu página y
               se la mostramos al <strong>mundo.</strong>
             </h1>
@@ -63,8 +63,12 @@
           </v-col>
         </v-col>
       </v-container>
-      <v-row class="d-flex justify-center mx-2 mt-6">
-        <v-hover v-for="(item, index) in itemsPaquetes" :key="index">
+      <v-row class="d-flex justify-center container__cards">
+        <v-hover
+          v-for="(item, index) in itemsPaquetes"
+          :key="index"
+          class="mt-5"
+        >
           <template v-slot:default="{ hover }">
             <v-card
               class="mx-4 mb-5 transition-swing card__main"
@@ -114,7 +118,11 @@
                   :to="{ name: 'Package' }"
                   class="text-decoration-none"
                 >
-                  <v-btn block outlined color="blue-grey" class="fontVerMas">
+                  <v-btn
+                    block
+                    class="fontVerMas white-button"
+                    color="#161e2eff"
+                  >
                     Ver más
                   </v-btn>
                 </router-link>
@@ -127,9 +135,11 @@
     <div class="container__angle" v-show="!isMobile">
       <v-col lg="6" md="5" class="ml-12 mt-8" id="columnTextMain">
         <v-col class="white--text">
-          <h1 class="font__main-alter">
-            Construimos software de calidad a la medida, creamos tu página y se
-            la mostramos al <strong>mundo.</strong>
+          <h1 class="fontMainText">
+            Construimos software de
+            <span class="fontMainTextUp">calidad</span> a la medida, creamos tu
+            <span class="fontMainTextUp">página</span> y se la mostramos al
+            <span class="fontMainTextUp">mundo.</span>
           </h1>
         </v-col>
         <v-col class="mt-10">
@@ -225,7 +235,7 @@ export default {
           price: "$7,199",
           pages: "De 5 a 12 páginas",
           description:
-            "Administra tu negocio desde internet. Autónomo. Organizado. Funcional",
+            "Administra tu negocio desde internet. Autónomo. Organizado. Funcional.",
           advantages: [
             "Código QR ",
             "Página de administrador",
@@ -253,7 +263,7 @@ export default {
           price: "$5,899",
           pages: "Android y/o iOS",
           description:
-            "Crea tu propia app sin ser programador. Con descarga desde Play Store y/o App Store.",
+            "Crea tu propia app sin ser programador. Accesible. Personalizada. Ligera.",
           advantages: [
             "Código QR ",
             "Aplicación en una tienda",
@@ -311,13 +321,16 @@ export default {
   transition: opacity 0.4s ease-in-out;
 }
 .v-card:not(.on-hover) {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 .card__main {
   z-index: 1;
 }
 .container__description {
   background-color: #161e2eff;
+}
+.container__cards {
+  background-color: #f4f3f3;
 }
 .container__deep {
   position: absolute;
@@ -332,9 +345,17 @@ export default {
   height: 100%;
   background-size: cover;
 }
+.white-button {
+  color: white;
+}
 
-.size__fontText {
-  font-size: 28px;
+.fontMainText {
+  font-family: GilroyLight;
+  font-size: 30px;
+}
+.fontMainTextUp {
+  font-family: GilroyBold;
+  font-size: 32px;
 }
 .fontPrice {
   font-family: GilroyBold;
@@ -350,10 +371,10 @@ export default {
 }
 .fontDescriptionCard {
   font-family: GilroyLight;
-  font-size: 13px;
+  font-size: 14px;
 }
 .fontAdvantage {
   font-family: GilroyLight;
-  font-size: 14px;
+  font-size: 15px;
 }
 </style>

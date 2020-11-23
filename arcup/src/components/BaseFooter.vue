@@ -7,8 +7,8 @@
         tile
         class="lighten-1 white--text text-center"
       >
-        <v-card-text class="white--text pt-0"> 
-          Icon arcup 
+        <v-card-text class="d-flex justify-center pa-0"> 
+          <figure class="icon__arcup"></figure>          
         </v-card-text>
 
         <v-divider></v-divider>
@@ -79,6 +79,11 @@ export default {
 <style lang='css'>
   h5 {
     color: blanchedalmond;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: GilroyLight;
   }
+  .icon__arcup {
+  background-image: url("../assets/formaLogo-Arcup.svg");
+  width: 45px;
+  height: 45px;  
+}
 </style>

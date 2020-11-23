@@ -16,47 +16,80 @@
       >
         <v-row>
           <v-col cols="12">
-            <h1 class="text-center">Páginas web</h1>
-            <h4 class="text-center">
+            <h1 class="text-center fontTitleContainer">Páginas web</h1>
+            <h4 class="text-center fontSubtitleContainer">
               Encuentra tu paquete ideal o personalízalo con nosotros
             </h4>
+            <p class="text-center fontDescriptionPrice">
+              Los precios pueden variar dependiendo del proyecto*
+            </p>
           </v-col>
         </v-row>
         <v-row v-for="(item, i) in itemWebPages" :key="i" class="mx-4 my-4">
           <v-card width="100%" elevation="2" class="rounded-r-xl">
             <v-row no-gutters>
               <v-col cols="8">
-                <v-container class="ml-4 my-5">
-                  <v-row>
+                <v-container class="ml-4">
+                  <v-row class="mr-4">
                     <v-col>
-                      <h2>{{ item.title }}</h2>
-                      <p class="font-weight-light">{{ item.description }}</p>
-                      <span>hello</span>
-                      <v-divider inset></v-divider>
+                      <h2 class="fontTitleCard">{{ item.title }}</h2>
+                      <p class="fontDescriptionCard mb-0">
+                        {{ item.description }}
+                      </p>
                     </v-col>
                   </v-row>
-                  <v-row>
-                    <div>otro row</div>
+                  <v-divider></v-divider>
+                  <v-row class="mr-4">
+                    <v-col>
+                      <v-row
+                        v-for="(advantageOne,
+                        i) in item.groupAdvantageOne"
+                        :key="i"
+                      >
+                        <p>
+                          <v-icon color="green"> mdi-check-circle </v-icon>
+                          <span class="ml-2">{{ advantageOne }}</span>
+                        </p>
+                      </v-row>
+                    </v-col>
+                    <v-col>
+                      <v-row
+                        v-for="(advantageTwo,
+                        i) in item.groupAdvantageTwo"
+                        :key="i"
+                      >
+                        <p>
+                          <v-icon color="green"> mdi-check-circle </v-icon>
+                          <span class="ml-2">{{ advantageTwo }}</span>
+                        </p>
+                      </v-row>
+                    </v-col>
                   </v-row>
                 </v-container>
               </v-col>
-              <v-col cols="4" align="center">
+              <v-col cols="4" align="center" >
                 <v-hover>
                   <template v-slot:default="{ hover }">
                     <v-sheet
                       color="grey lighten-4"
                       :elevation="hover ? 5 : 0"
-                      height="250"
+                      height="100%"
                       rounded
                       width="100%"
                       class="transition-swing rounded-r-xl"
                     >
-                      <v-container>
-                        <p class="font-weight-bold pt-8">
+                      <v-container fill-height align-content-center justify-center>
+                        <h3 class="fontTitlePrice">
                           {{ item.titlePrice }}
+                        </h3>
+                        <p class="fontPrice">
+                          {{ item.price }}
+                          <span class="fontPriceMx">/mx</span>
                         </p>
-                        <h3 class="mt-2">{{ item.price }}</h3>
-                        <v-btn dark block> Adquirir </v-btn>
+                        <p class="fontDescriptionPrice">
+                          {{ item.descriptionPrice }}
+                        </p>
+                          <v-btn dark block> Adquirir </v-btn>
                       </v-container>
                     </v-sheet>
                   </template>
@@ -121,38 +154,45 @@ import BaseFooter from "@/components/BaseFooter.vue";
 export default {
   name: "Package",
   data: () => ({
-    messages: [
-      {
-        from: "You",
-        message: `Sure, I'll see you later.`,
-        time: "10:42am",
-        color: "deep-purple lighten-1",
-      },
-      {
-        from: "John Doe",
-        message: "Yeah, sure. Does 1:00pm work?",
-        time: "10:37am",
-        color: "green",
-      },
-      {
-        from: "You",
-        message: "Did you still want to grab lunch today?",
-        time: "9:47am",
-        color: "deep-purple lighten-1",
-      },
-    ],
     itemWebPages: [
       {
         title: "Informativo",
         titlePrice: "Paquete informativo",
-        price: "3,500 pesotes",
-        description: "Este es un ejemplo de descripción",
+        price: "$2,800",
+        groupAdvantageOne: [
+          "Código QR",
+          "Servicio de atención 24/7",
+          "De 1 a 5 páginas",
+        ],
+        groupAdvantageTwo: [
+          "Entrega entre 10 - 15 días",
+          "Página totalmente responsiva",
+          "Dominio incluido por 1 año (.com)",
+        ],
+        descriptionPrice:
+          "Un pago al inicio del proyecto y se liquida una vez entregada la página web.",
+        description:
+          "¿Quieres mostrarle al mundo quién eres, qué haces y cómo lo haces?. Este paquete " +
+          "es el ideal para ti.",
       },
       {
         title: "Administrativo",
         titlePrice: "Paquete administrativo",
-        price: "7,900 pelucholares",
-        description: "Esta página web es aún más cara OMG!",
+        price: "$7,900",
+        groupAdvantageOne: [
+          "Código QR",
+          "Servicio de atención 24/7",
+          "De 6 a 12 páginas",
+          "Página de administrador"
+        ],
+        groupAdvantageTwo: [
+          "Entrega entre 15 - 30 días",
+          "Página totalmente responsiva",
+          "Dominio incluido por 1 año (.com)",
+        ],
+        descriptionPrice:
+          "Un pago al inicio del proyecto y se liquida una vez entregada la página web.",
+        description: "Administra tu negocio desde internet. Contacta de manera directa con tus clientes. Mantén tu información seguro y accesible en cualquier momento.",
       },
     ],
     itemApp: [
@@ -184,6 +224,38 @@ export default {
 };
 </script>
 <style lang="css" scoped>
+.fontTitleContainer {
+  font-family: Mazzard;
+  font-size: 46px;
+}
+.fontSubtitleContainer {
+  font-family: GilroyLight;
+  font-size: 16px;
+}
+.fontTitleCard {
+  font-family: Mazzard;
+  font-size: 34px;
+}
+.fontDescriptionCard {
+  font-family: GilroyLight;
+  font-size: 18px;
+}
+.fontDescriptionPrice {
+  font-family: GilroyLight;
+  font-size: 12px;
+}
+.fontTitlePrice {
+  font-family: Mazzard;
+  font-size: 26px;
+}
+.fontPrice {
+  font-family: GilroyBold;
+  font-size: 40px;
+}
+.fontPriceMx {
+  font-family: Mazzard;
+  font-size: 20px;
+}
 .bottom-gradient {
   background-image: linear-gradient(
     to bottom,

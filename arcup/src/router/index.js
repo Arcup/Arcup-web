@@ -51,6 +51,12 @@ const routes = [
 
     component: () => import('../views/Package.vue')
   },
+  {
+    path: '/software',
+    name: 'Software',
+
+    component: () => import('../views/Software.vue')
+  },
 ]
 
 const router = new VueRouter({
