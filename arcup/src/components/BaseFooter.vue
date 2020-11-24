@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-footer  color="#161E2E" >
+    <v-footer color="#161E2E" >
       <v-card
         color="#161E2E"
         width="100%"
@@ -12,7 +12,7 @@
           <figure class="icon__arcup"></figure>          
         </v-card-text>
 
-        <v-card-text class="d-flex justify-center">
+        <v-card-text  class="d-flex justify-center">
           <div>
             <v-btn
               target="_blank"
