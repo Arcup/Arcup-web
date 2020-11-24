@@ -13,6 +13,7 @@
   "dependencies": {
     "axios": "^0.21.0",
     "core-js": "^3.6.5",
+    "emailjs-com": "^2.6.4",
     "vee-validate": "^3.4.5",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
