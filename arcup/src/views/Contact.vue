@@ -21,7 +21,7 @@
                 </v-card-text>
                 <v-card-text class="text-justify text-size">
                   <h2 class="h2">E-mail</h2>
-                  
+
                   <br />
                   arcup.management@outlook.com
                   <h2 class="h2"><br />Teléfono</h2>
@@ -101,10 +101,11 @@
                 >
                   <v-select
                     v-model="statesSelected"
+                    :disabled="stateDisabled"
                     :items="statesArray"
                     :error-messages="errors"
-                    label="Estado"
                     required
+                    label="Estado"
                     @change="onChangeStates()"
                   ></v-select>
                 </validation-provider>
@@ -114,14 +115,23 @@
                   rules="required"
                 >
                   <v-select
-                    :disabled="selectDisabled === true"
+                    :disabled="cityDisabled"
                     v-model="citySelected"
                     :items="cityArray"
+                    required
                     :error-messages="errors"
                     label="Ciudad"
-                    required
+                    
                   ></v-select>
                 </validation-provider>
+                <v-checkbox
+                  v-model="checkbox"
+                  value="1"
+                  label="No soy de México"
+                  type="checkbox"
+                  @click="checkboxclick"
+                  required
+                ></v-checkbox>
                 <validation-provider
                   v-slot="{ errors }"
                   name="Nombre del Proyecto"
@@ -187,7 +197,13 @@
 
         <v-card-actions>
           <v-spacer></v-spacer>
-          <v-btn color="primary" v-on:click="clear" text @click="dialog201 = false">ACEPTAR</v-btn>
+          <v-btn
+            color="primary"
+            v-on:click="clear"
+            text
+            @click="dialog201 = false"
+            >ACEPTAR</v-btn
+          >
         </v-card-actions>
       </v-card>
     </v-dialog>
@@ -283,7 +299,20 @@ export default {
           .then((response) =>
             (this.cityArray = response.data.response.municipios).sort()
           );
-        this.selectDisabled = false;
+        this.cityDisabled = false;
+      }
+    },
+    checkboxclick() {
+      if (this.stateDisabled == false) {
+        this.stateDisabled = true;
+        this.statesSelected = "N/A";
+        this.cityDisabled = true;
+        this.citySelected = "N/A"
+      }else{
+        this.stateDisabled = false;
+        this.statesSelected = null;
+        this.cityDisabled = true;
+        this.citySelected = null;
       }
     },
     submit() {
@@ -307,7 +336,6 @@ export default {
           console.log(result);
           if (result != null) {
             this.dialog201 = true;
-            
           }
         })
         .catch((error) => {
@@ -338,12 +366,16 @@ export default {
     email: "",
     projectName: "",
     projectDescription: "",
+    checkbox: null,
 
-    selectDisabled: true,
+    cityDisabled: true,
+    stateDisabled: false,
     statesArray: [],
     statesSelected: [],
     cityArray: [],
     citySelected: [],
+
+    test: "",
 
     dialog201: false,
     dialogError: false,
@@ -353,15 +385,15 @@ export default {
   }),
 
   watch: {
-      loader () {
-        const l = this.loader
-        this[l] = !this[l]
+    loader() {
+      const l = this.loader;
+      this[l] = !this[l];
 
-        setTimeout(() => (this[l] = false), 4000)
+      setTimeout(() => (this[l] = false), 4000);
 
-        this.loader = null
-      },
+      this.loader = null;
     },
+  },
 };
 </script>
 
@@ -418,39 +450,39 @@ export default {
   color: rgb(238, 122, 122);
 }
 .custom-loader {
-    animation: loader 1s infinite;
-    display: flex;
+  animation: loader 1s infinite;
+  display: flex;
+}
+@-moz-keyframes loader {
+  from {
+    transform: rotate(0);
   }
-  @-moz-keyframes loader {
-    from {
-      transform: rotate(0);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
   }
-  @-webkit-keyframes loader {
-    from {
-      transform: rotate(0);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+}
+@-webkit-keyframes loader {
+  from {
+    transform: rotate(0);
   }
-  @-o-keyframes loader {
-    from {
-      transform: rotate(0);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
   }
-  @keyframes loader {
-    from {
-      transform: rotate(0);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+}
+@-o-keyframes loader {
+  from {
+    transform: rotate(0);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 </style>
