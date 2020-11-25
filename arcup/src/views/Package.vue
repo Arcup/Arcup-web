@@ -8,11 +8,10 @@
     ></v-img>
     <v-container class="mt-4">
       <v-sheet
-        elevation="5"
         height="100%"
-        rounded
         width="100%"
-        class="fill-height bottom-gradient"
+        class="fill-height"
+        flat
       >
         <v-row>
           <v-col cols="12">
@@ -71,8 +70,7 @@
                 <v-hover>
                   <template v-slot:default="{ hover }">
                     <v-sheet
-                      color="grey lighten-4"
-                      :elevation="hover ? 5 : 0"
+                      :elevation="hover ? 5 : 1"
                       height="100%"
                       rounded
                       width="100%"
@@ -98,50 +96,98 @@
             </v-row>
           </v-card>
         </v-row>
-        <v-divider></v-divider>
       </v-sheet>
     </v-container>
-    <v-container class="mt-4">
+        <v-container class="mt-4">
       <v-sheet
-        elevation="5"
         height="100%"
-        rounded
         width="100%"
-        class="fill-height bottom-gradient"
+        class="fill-height"
+        flat
       >
         <v-row>
           <v-col cols="12">
-            <h1 class="text-center">App móvil</h1>
-            <h4 class="text-center">
-              Ponte en contacto con nosotros y háblanos de tu idea
+            <h1 class="text-center fontTitleContainer">App Móvil</h1>
+            <h4 class="text-center fontSubtitleContainer">
+              Háblanos de tu idea y hagámosla realidad
             </h4>
+            <p class="text-center fontDescriptionPrice">
+              Los precios pueden variar dependiendo del proyecto*
+            </p>
           </v-col>
         </v-row>
         <v-row v-for="(item, i) in itemApp" :key="i" class="mx-4 my-4">
           <v-card width="100%" elevation="2" class="rounded-r-xl">
             <v-row no-gutters>
               <v-col cols="8">
-                <h2 class="ml-2">{{ item.title }}</h2>
+                <v-container class="ml-4">
+                  <v-row class="mr-4">
+                    <v-col>
+                      <h2 class="fontTitleCard">{{ item.title }}</h2>
+                      <p class="fontDescriptionCard mb-0">
+                        {{ item.description }}
+                      </p>
+                    </v-col>
+                  </v-row>
+                  <v-divider></v-divider>
+                  <v-row class="mr-4">
+                    <v-col>
+                      <v-row
+                        v-for="(advantageOne,
+                        i) in item.groupAdvantageOne"
+                        :key="i"
+                      >
+                        <p>
+                          <v-icon color="green"> mdi-check-circle </v-icon>
+                          <span class="ml-2">{{ advantageOne }}</span>
+                        </p>
+                      </v-row>
+                    </v-col>
+                    <v-col>
+                      <v-row
+                        v-for="(advantageTwo,
+                        i) in item.groupAdvantageTwo"
+                        :key="i"
+                      >
+                        <p>
+                          <v-icon color="green"> mdi-check-circle </v-icon>
+                          <span class="ml-2">{{ advantageTwo }}</span>
+                        </p>
+                      </v-row>
+                    </v-col>
+                  </v-row>
+                </v-container>
               </v-col>
-              <v-col cols="4">
+              <v-col cols="4" align="center" >
                 <v-hover>
                   <template v-slot:default="{ hover }">
                     <v-sheet
-                      color="grey lighten-4"
-                      :elevation="hover ? 5 : 0"
-                      height="250"
+                      :elevation="hover ? 5 : 1"
+                      height="100%"
+                      rounded
                       width="100%"
                       class="transition-swing rounded-r-xl"
                     >
-                      <h3 class="text-center">{{ item.price }}</h3></v-sheet
-                    >
+                      <v-container fill-height align-content-center justify-center>
+                        <h3 class="fontTitlePrice">
+                          {{ item.titlePrice }}
+                        </h3>
+                        <p class="fontPrice">
+                          {{ item.price }}
+                          <span class="fontPriceMx">/mx</span>
+                        </p>
+                        <p class="fontDescriptionPrice">
+                          {{ item.descriptionPrice }}
+                        </p>
+                          <v-btn dark block> Adquirir </v-btn>
+                      </v-container>
+                    </v-sheet>
                   </template>
                 </v-hover>
               </v-col>
             </v-row>
           </v-card>
         </v-row>
-        <v-divider></v-divider>
       </v-sheet>
     </v-container>
     <base-footer></base-footer>
@@ -199,19 +245,19 @@ export default {
       {
         title: "Simple App Móvil",
         titlePrice: "Paquete simple app móvil",
-        price: "5,500 pesetas",
+        price: "5,500",
         description: "Este es un ejemplo de descripción",
       },
       {
         title: "App & Página web",
         titlePrice: "Paquete app & página web",
-        price: "20,900 pesudos",
+        price: "20,900",
         description: "Esta página web es aún más cara OMG!",
       },
       {
         title: "App móvil",
         titlePrice: "Android y/o iOS",
-        price: "$5,899 - $19,899",
+        price: "$19,899",
         description:
           "¿Quieres hacer una aplicación móvil?. Crea tu propia app sin ser programador. Descárgala desde la Play Store y/o App Store.",
       },
