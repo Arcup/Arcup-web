@@ -19,7 +19,7 @@
     <v-app-bar color="#161e2eff" v-show="!isMobile()">
       <v-toolbar-items>
         <router-link :to="{ name: 'Main' }" class="text-decoration-none">
-          <figure class="icon__arcup mt-4"></figure>
+          <figure class="icon__arcup mt-2"></figure>
         </router-link>
         <router-link :to="{ name: 'Main' }" class="text-decoration-none">
           <span class="white--text font__arcup ml-2 mr-16">arcup</span>
