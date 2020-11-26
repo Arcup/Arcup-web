@@ -6,79 +6,19 @@
       src="../assets/title-images/image-software.png"
       max-width="100%"
       max-height="250"
+      class="mb-10"
     >
     </v-img>
-    <v-container>
-      <v-row>
-        <v-col cols="12" sm="6" md="6" lg="4">
-          <v-parallax
-            dark
-            src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-            height="200"
-            width="300"
-          >
-            <v-row align="center" justify="center">
-              <v-col class="text-center" cols="12">
-                <h1 class="display-1 font-weight-thin mb-6">Páginas web</h1>
-                <h4 class="subheading">Build your application today!</h4>
-              </v-col>
-            </v-row>
-          </v-parallax>
-        </v-col>
-        <v-col cols="12" sm="6" md="6" lg="8">
-          Texto texto texto texto texto texto texto texto texto
-          texto texto texto texto texto texto
-        </v-col>
-      </v-row>
-    </v-container>
-    <v-divider></v-divider>
-    <v-container>
-      <v-row>
-        <v-col cols="12" sm="6" md="6" lg="4">
-          <v-parallax
-            dark
-            src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-            height="200"
-            width="300"
-          >
-            <v-row align="center" justify="center">
-              <v-col class="text-center" cols="12">
-                <h1 class="display-1 font-weight-thin mb-6">Páginas web</h1>
-                <h4 class="subheading">Build your application today!</h4>
-              </v-col>
-            </v-row>
-          </v-parallax>
-        </v-col>
-        <v-col cols="12" sm="6" md="6" lg="8">
-          Texto texto texto texto texto texto texto texto texto
-          texto texto texto texto texto texto
-        </v-col>
-      </v-row>
-    </v-container>
-    <v-divider></v-divider>
-    <v-container>
-      <v-row>
-        <v-col cols="12" sm="6" md="6" lg="4">
-          <v-parallax
-            dark
-            src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-            height="200"
-            width="300"
-          >
-            <v-row align="center" justify="center">
-              <v-col class="text-center" cols="12">
-                <h1 class="display-1 font-weight-thin mb-6">Páginas web</h1>
-                <h4 class="subheading">Build your application today!</h4>
-              </v-col>
-            </v-row>
-          </v-parallax>
-        </v-col>
-        <v-col cols="12" sm="6" md="6" lg="8">
-          Texto texto texto texto texto texto texto texto texto
-          texto texto texto texto texto texto
-        </v-col>
-      </v-row>
-    </v-container>
+    <div v-for="(item, index) in sections" :key="index">
+      <v-card class="text-center" height="150">
+        <h2>{{ item.title }}</h2>
+        <v-card-text class="text-start">{{ item.description }}</v-card-text>
+      </v-card>
+
+      <v-parallax dark :src="item.src" height="270" class="mb-16">        
+      </v-parallax>
+    </div>
+
     <base-footer> </base-footer>
   </div>
 </template>
@@ -90,6 +30,42 @@ export default {
   components: {
     BaseHeader,
     BaseFooter,
+  },
+  data() {
+    return {
+      sections: [
+        {
+          title: "Obtención de requisitos",
+          description: "Compatibilidad con los navegadores",
+          src:
+            "https://cdn.pixabay.com/photo/2017/01/14/10/56/men-1979261_960_720.jpg",
+        },
+        {
+          title: "Análisis",
+          description: "Compatibilidad con los navegadores",
+          src:
+            "https://cdn.pixabay.com/photo/2019/03/07/16/48/hands-4040619_960_720.jpg",
+        },
+        {
+          title: "Diseño",
+          description: "Compatibilidad con los navegadores",
+          src:
+            "https://cdn.pixabay.com/photo/2015/09/29/22/49/blueprint-964629_960_720.jpg",
+        },
+        {
+          title: "Codificación",
+          description: "Compatibilidad con los navegadores",
+          src:
+            "https://cdn.pixabay.com/photo/2019/06/17/19/48/source-4280758_960_720.jpg",
+        },
+        {
+          title: "Pruebas",
+          description: "Compatibilidad con los navegadores",
+          src:
+            "https://ichef.bbci.co.uk/news/640/cpsprodpb/113AC/production/_113427507_solar_orbiter_eui-fullsun01.jpg",
+        },
+      ],
+    };
   },
 };
 </script>

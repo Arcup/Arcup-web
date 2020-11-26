@@ -16,11 +16,11 @@
           <div>
             <v-btn
               target="_blank"
-              href="https://vuetifyjs.com/en/api/v-btn/#v-btn-api"
+              href="https://www.facebook.com/arcupdev"
               class="mx-4 white--text"
               icon
             >
-              <v-icon color="#05F5FB" size="30px"> 
+              <v-icon color="whithe" size="30px"> 
                 mdi-facebook 
               </v-icon>
             </v-btn>
@@ -29,11 +29,11 @@
           <div>
             <v-btn
               target="_blank"
-              href="https://vuetifyjs.com/en/api/v-btn/#v-btn-api"
+              href="https://www.instagram.com/arcupdev/"
               class="mx-4 white--text"
               icon
             >
-              <v-icon color="#05F5FB" size="30px"> 
+              <v-icon color="whithe" size="30px"> 
                 mdi-instagram 
               </v-icon>
             </v-btn>
@@ -42,11 +42,11 @@
           <div>
             <v-btn
               target="_blank"
-              href="https://vuetifyjs.com/en/api/v-btn/#v-btn-api"
+              href="https://twitter.com/arcupdev"
               class="mx-4 white--text"
               icon
             >
-              <v-icon color="#05F5FB" size="30px"> mdi-twitter </v-icon>
+              <v-icon color="whithe" size="30px"> mdi-twitter </v-icon>
             </v-btn>
             <h5>Twitter</h5>
           </div>
@@ -57,7 +57,7 @@
               class="mx-4 white--text"
               icon
             >
-              <v-icon color="#05F5FB" size="30px"> mdi-linkedin </v-icon>
+              <v-icon color="whithe" size="30px"> mdi-linkedin </v-icon>
             </v-btn>
             <h5>Linkedin</h5>
           </div>
@@ -77,7 +77,7 @@ export default {
 
 <style lang='css'>
   h5 {
-    color: blanchedalmond;
+    color: rgb(255, 235, 205);
     font-family: GilroyLight;
   }
   .icon__arcup {

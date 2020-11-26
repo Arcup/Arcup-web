@@ -12,7 +12,7 @@
     <v-container v-show="!isMobile()">
       <!-- Avatars -->
       <v-row class="ma-0">
-        <v-col tag="center" cols="12" sm="4" md="4" lg="4">
+        <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
           <v-hover v-slot="{ hover }" open-delay="200">
             <v-card
               rounded="circle"
@@ -22,13 +22,13 @@
               max-width="100"
             >
               <v-avatar size="100" class="background" @click="selecWeb">
-                <v-icon size="60" dark> mdi-web </v-icon>
+                <v-icon color="#00ffff" size="60" dark> mdi-web </v-icon>
               </v-avatar>
             </v-card>
           </v-hover>
         </v-col>
 
-        <v-col tag="center" cols="12" sm="4" md="4" lg="4">
+        <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
           <v-hover v-slot="{ hover }" open-delay="200">
             <v-card
               rounded="circle"
@@ -38,13 +38,13 @@
               max-width="100"
             >
               <v-avatar size="100" class="background" @click="selecAndroid">
-                <v-icon size="60" dark>mdi-android</v-icon>
+                <v-icon color="#00ffff" size="60" dark>mdi-server</v-icon>
               </v-avatar>
             </v-card>
           </v-hover>
         </v-col>
 
-        <v-col tag="center" cols="12" sm="4" md="4" lg="4">
+        <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
           <v-hover v-slot="{ hover }" open-delay="200">
             <v-card
               rounded="circle"
@@ -58,7 +58,7 @@
                 class="background"
                 @click="selecConsultation"
               >
-                <v-icon size="50" dark> mdi-account-group </v-icon>
+                <v-icon color="#00ffff" size="50" dark> mdi-cellphone </v-icon>
               </v-avatar>
             </v-card>
           </v-hover>
@@ -78,7 +78,7 @@
             color="#ffffff"
             outlined
           >
-            <v-row>              
+            <v-row>
               <v-col
                 v-for="(item, index) in itemsCards1"
                 :key="index"
@@ -86,6 +86,7 @@
                 sm="6"
                 md="3"
                 lg="3"
+                xl="3"
               >
                 <v-card class="">
                   <v-img :src="item.src" max-height="100"></v-img>
@@ -131,6 +132,7 @@
                 sm="6"
                 md="3"
                 lg="3"
+                xl="3"
               >
                 <v-card>
                   <v-img :src="item.src" max-height="100"></v-img>
@@ -175,6 +177,7 @@
                 sm="6"
                 md="3"
                 lg="3"
+                xl="3"
               >
                 <v-card class="">
                   <v-img :src="item.src" max-height="100"></v-img>
@@ -206,7 +209,7 @@
 
     <!-- Versión movil -->
     <div v-show="isMobile()">
-      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4">
+      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
         <v-hover v-slot="{ hover }" open-delay="200" class="mb-4">
           <v-card
             rounded="circle"
@@ -214,10 +217,14 @@
             :class="{ 'on-hover': hover }"
             class=""
             height="100"
-            max-width="100"            
+            max-width="100"
           >
-            <v-avatar size="100" class="background" @click="expandWebVA = !expandWebVA">
-              <v-icon size="60" dark> mdi-web </v-icon>
+            <v-avatar
+              size="100"
+              class="background"
+              @click="expandWebVA = !expandWebVA"
+            >
+              <v-icon color="#00ffff" size="60" dark> mdi-web </v-icon>
             </v-avatar>
           </v-card>
         </v-hover>
@@ -225,7 +232,7 @@
 
       <v-fade-transition hide-on-leave>
         <v-card
-          v-show="expandWebVA"          
+          v-show="expandWebVA"
           height="100%"
           width="90%"
           class="mx-auto mb-10"
@@ -238,8 +245,9 @@
               :key="index"
               cols="12"
               sm="12"
-              md="12"
-              lg="12"
+              md="3"
+              lg="3"
+              xl="3"
             >
               <v-card class="">
                 <v-img :src="item.src" max-height="120"></v-img>
@@ -266,7 +274,7 @@
         </v-card>
       </v-fade-transition>
 
-      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4">
+      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
         <v-hover v-slot="{ hover }" open-delay="200" class="mb-4">
           <v-card
             rounded="circle"
@@ -276,8 +284,12 @@
             height="100"
             max-width="100"
           >
-            <v-avatar size="100" class="background" @click="expandAndroidVA = !expandAndroidVA">
-              <v-icon size="60" dark>mdi-android</v-icon>
+            <v-avatar
+              size="100"
+              class="background"
+              @click="expandAndroidVA = !expandAndroidVA"
+            >
+              <v-icon color="#00ffff" size="60" dark>mdi-server</v-icon>
             </v-avatar>
           </v-card>
         </v-hover>
@@ -298,8 +310,9 @@
               :key="index"
               cols="12"
               sm="12"
-              md="12"
-              lg="12"
+              md="3"
+              lg="3"
+              xl="3"
             >
               <v-card class="">
                 <v-img :src="item.src" max-height="120"></v-img>
@@ -326,7 +339,7 @@
         </v-card>
       </v-fade-transition>
 
-      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4">
+      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
         <v-hover v-slot="{ hover }" open-delay="200" class="mb-4">
           <v-card
             rounded="circle"
@@ -336,8 +349,12 @@
             height="100"
             max-width="100"
           >
-            <v-avatar size="100" class="background" @click="expandConsultationVA = !expandConsultationVA">
-              <v-icon size="50" dark> mdi-account-group </v-icon>
+            <v-avatar
+              size="100"
+              class="background"
+              @click="expandConsultationVA = !expandConsultationVA"
+            >
+              <v-icon color="#00ffff" size="50" dark> mdi-cellphone </v-icon>
             </v-avatar>
           </v-card>
         </v-hover>
@@ -358,8 +375,9 @@
               :key="index"
               cols="12"
               sm="12"
-              md="12"
-              lg="12"
+              md="3"
+              lg="3"
+              xl="3"
             >
               <v-card class="">
                 <v-img :src="item.src" max-height="120"></v-img>
@@ -432,25 +450,52 @@ export default {
         },
         {
           src:
-            "https://th.bing.com/th/id/OIP.7TaggWnbRJ91hKi8p41q2QHaEK?pid=Api&rs=1",
-          name: ".NET",
-          description: [
-            "Robusto y Seguro",
-            "Soporta multiples lenguajes",
-          ],
-        },
-        {
-          src:
             "https://cdn-images-1.medium.com/max/1600/1*oZqGznbYXJfBlvGp5gQlYQ.jpeg",
           name: "Vue.js",
           description: [
             "Moderno",
             "Estructura ordenada",
-            "Comunidad muy activa",            
+            "Comunidad muy activa",
+          ],
+        },
+        {
+          src:
+            "https://cdn-images-1.medium.com/max/1600/1*oZqGznbYXJfBlvGp5gQlYQ.jpeg",
+          name: "Vuetify",
+          description: [
+            "------",
+            "------",
+            "------",
           ],
         },
       ],
       itemsCards2: [
+        {
+          src:
+            "https://th.bing.com/th/id/OIP.7TaggWnbRJ91hKi8p41q2QHaEK?pid=Api&rs=1",
+          name: ".NET",
+          description: ["Robusto y Seguro", "Soporta multiples lenguajes"],
+        },
+        {
+          src:
+            "https://www.itprotoday.com/sites/itprotoday.com/files/uploads/2015/12/sqlserver-generic_0.jpg",
+          name: "SQLServer",
+          description: ["Escalable", "Soporta procedimientos almacenados"],
+        },
+        {
+          src: "https://pngimg.com/uploads/mysql/mysql_PNG29.png",
+          name: "MySQL",
+          description: ["Buen rendimiento", "Velocidad en las transacciones"],
+        },
+        {
+          src:
+            "https://th.bing.com/th/id/OIP.7TaggWnbRJ91hKi8p41q2QHaEK?pid=Api&rs=1",
+          name: "RestFull",
+          description: ["Robusto y Seguro", "Soporta multiples lenguajes"],
+        },
+        
+      ],
+      itemsCards3: [
         {
           src:
             "https://www.solutionanalysts.com/wp-content/uploads/2017/07/kotlin-course-image.jpg",
@@ -464,10 +509,7 @@ export default {
           src:
             "https://th.bing.com/th/id/OIP.qNbFWTHHkCxEkkI-0Lo4WwHaEK?pid=Api&rs=1",
           name: "Java",
-          description: [
-            "Universal",
-            "Seguro",
-          ],
+          description: ["Universal", "Seguro"],
         },
         {
           src:
@@ -478,23 +520,13 @@ export default {
             "Diseño responsivo",
           ],
         },
-      ],
-      itemsCards3: [
         {
           src:
-            "https://www.itprotoday.com/sites/itprotoday.com/files/uploads/2015/12/sqlserver-generic_0.jpg",
-          name: "SQLServer",
+            "https://th.bing.com/th/id/OIP.yNAPK4wpATuB-cb8ebuqWwHaDt?pid=Api&rs=1",
+          name: "Xamarin",
           description: [
-            "Escalable",
-            "Soporta procedimientos almacenados",
-          ],
-        },
-        {
-          src: "https://pngimg.com/uploads/mysql/mysql_PNG29.png",
-          name: "MySQL",
-          description: [
-            "Buen rendimiento",
-            "Velocidad en las transacciones",
+            "Compatibilidad en los navegadores",
+            "Diseño responsivo",
           ],
         },
       ],
@@ -517,7 +549,7 @@ export default {
       this.expandConsultation = true;
     },
     isMobile: function () {
-      return this.$vuetify.breakpoint.xlOnly || this.$vuetify.breakpoint.xsOnly;
+      return this.$vuetify.breakpoint.xsOnly;
     },
   },
 };
