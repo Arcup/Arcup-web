@@ -23,11 +23,12 @@
                   <h2 class="h2">E-mail</h2>
 
                   <br />
-                  arcup.management@outlook.com
+                  contacto@arcup.com.mx
                   <h2 class="h2"><br />Teléfono</h2>
                   <br />
                   (+52) 2281132016 <br />
-                  (+52) 2281458744
+                  (+52) 2282935090 <br />
+                  (+52) 2281818876
                 </v-card-text>
               </v-col>
               <v-col class="col-input" cols="12" sm="6" md="4" lg="4">
@@ -221,10 +222,11 @@
             nuestras fuentes de contacto.
           </div>
           <div class="text-size">E-mail:</div>
-          <div>arcup.management@outlook.com</div>
+          <div>contacto@arcup.com.mx</div>
           <div class="text-size">Teléfono:</div>
           <div>(+52) 2281132016</div>
-          <div>(+52) 2281458744</div>
+          <div>(+52) 2282935090</div>
+          <div>(+52) 2281818876</div>
         </v-card-text>
         <v-divider></v-divider>
 
