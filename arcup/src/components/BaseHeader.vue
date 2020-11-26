@@ -5,9 +5,6 @@
         <router-link :to="{ name: 'Main' }" class="text-decoration-none">
           <figure class="icon__arcup mt-4 align-end"></figure>
         </router-link>
-        <router-link :to="{ name: 'Main' }" class="text-decoration-none">
-          <span class="white--text font__arcup align-end">arcup</span>
-        </router-link>
       </div>
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon
@@ -20,9 +17,6 @@
       <v-toolbar-items>
         <router-link :to="{ name: 'Main' }" class="text-decoration-none">
           <figure class="icon__arcup mt-2"></figure>
-        </router-link>
-        <router-link :to="{ name: 'Main' }" class="text-decoration-none">
-          <span class="white--text font__arcup ml-2 mr-16">arcup</span>
         </router-link>
         <v-menu offset-y transition="slide-y-transition">
           <template v-slot:activator="{ on, attrs }">
@@ -184,9 +178,9 @@ export default {
 </script>
 <style lang='css'>
 .icon__arcup {
-  background-image: url("../assets/formaLogo-Arcup.svg");
-  width: 30px;
-  height: 30px;
+  background-image: url("../assets/logo-Arcup-SFondo.png");
+  width: 130px;
+  height: 60px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
