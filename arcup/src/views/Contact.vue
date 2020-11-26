@@ -7,7 +7,7 @@
       max-height="200"
     ></v-img>
     <validation-observer ref="observer" v-slot="{ invalid }">
-      <form @submit.prevent="sendEmail">
+      <form @submit.prevent="submit">
         <div>
           <v-container>
             <v-row>
@@ -165,7 +165,7 @@
                   type="submit"
                   :disabled="invalid"
                   :loading="loading3"
-                  @click="sendEmail"
+                  @click="loader = 'loading3'"
                 >
                   ENVIAR
                 </v-btn>
@@ -316,74 +316,36 @@ export default {
         this.citySelected = null;
       }
     },
-    sendEmail(e) {
-      emailjs
-        .sendForm(
-          "service_arcup",
-          "template_vw33gf9",
-          e.target,
-          "user_SmeQlmZFRcDR86wl6vCpl",
-          {
-            userName: this.name,
-            lastNameF: this.lastNameF,
-            lastNameM: this.lastNameM,
-            email: this.email,
-            phoneNumber: this.phoneNumber,
-            date: new Date(),
-            city: this.citySelected,
-            state: this.statesSelected,
-            projectName: this.projectName,
-            projectDescription: this.projectDescription,
-            reply_to:
-              "david_galicia_garcia@outlook.es, jahiirvaldivieso@hotmail.com",
-          }
-        )
-        .then(
-          (result) => {
-            if (result != null) {
-              this.dialog201 = true;
-              console.log("SUCCESS!", result.status, result.text);
-            }
-          },
-          (error) => {
-            if (error != null) {
-              this.dialogError = true;
-              console.log("FAILED...", error);
-            }
-          }
-        );
-    },
     submit() {
       this.$refs.observer.validate();
 
-      /*
-
-      let contactInfo = {
-        date: new Date(),
+      let templateParams = {
         userName: this.name,
-        userLastNameF: this.lastNameF,
-        userLastNameM: this.lastNameM,
-        phoneNumber: this.phoneNumber,
+        lastNameF: this.lastNameF,
+        lastNameM: this.lastNameM,
         email: this.email,
-        state: this.statesSelected,
+        phoneNumber: this.phoneNumber,
+        date: new Date().toLocaleDateString(),
         city: this.citySelected,
+        state: this.statesSelected,
         projectName: this.projectName,
         projectDescription: this.projectDescription,
       };
-      axios
-        .post("https://localhost:44344/api/contacts", contactInfo)
-        .then((result) => {
-          console.log(result);
-          if (result != null) {
+
+      emailjs.send("service_arcup", "template_vw33gf9", templateParams, "user_SmeQlmZFRcDR86wl6vCpl")
+      .then((response) =>  {
+          if (response != null) {
+            console.log("SUCCESS!", response.status, response.text);
             this.dialog201 = true;
           }
-        })
-        .catch((error) => {
+        },
+        (error) => {
           if (error != null) {
             this.dialogError = true;
+            console.log("FAILED...", error);
           }
-        });
-        */
+        }
+      );
     },
     clear() {
       this.name = "";
