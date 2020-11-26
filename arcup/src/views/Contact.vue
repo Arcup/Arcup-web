@@ -7,7 +7,7 @@
       max-height="200"
     ></v-img>
     <validation-observer ref="observer" v-slot="{ invalid }">
-      <form @submit.prevent="sendEmail">
+      <form @submit.prevent="submit">
         <div>
           <v-container>
             <v-row>
@@ -23,11 +23,12 @@
                   <h2 class="h2">E-mail</h2>
 
                   <br />
-                  arcup.management@outlook.com
+                  contacto@arcup.com.mx
                   <h2 class="h2"><br />Teléfono</h2>
                   <br />
                   (+52) 2281132016 <br />
-                  (+52) 2281458744
+                  (+52) 2282935090 <br />
+                  (+52) 2281818876
                 </v-card-text>
               </v-col>
               <v-col class="col-input" cols="12" sm="6" md="4" lg="4">
@@ -164,7 +165,7 @@
                   type="submit"
                   :disabled="invalid"
                   :loading="loading3"
-                  @click="sendEmail"
+                  @click="loader = 'loading3'"
                 >
                   ENVIAR
                 </v-btn>
@@ -221,10 +222,11 @@
             nuestras fuentes de contacto.
           </div>
           <div class="text-size">E-mail:</div>
-          <div>arcup.management@outlook.com</div>
+          <div>contacto@arcup.com.mx</div>
           <div class="text-size">Teléfono:</div>
           <div>(+52) 2281132016</div>
-          <div>(+52) 2281458744</div>
+          <div>(+52) 2282935090</div>
+          <div>(+52) 2281818876</div>
         </v-card-text>
         <v-divider></v-divider>
 
@@ -314,74 +316,36 @@ export default {
         this.citySelected = null;
       }
     },
-    sendEmail(e) {
-      emailjs
-        .sendForm(
-          "service_arcup",
-          "template_vw33gf9",
-          e.target,
-          "user_SmeQlmZFRcDR86wl6vCpl",
-          {
-            userName: this.name,
-            lastNameF: this.lastNameF,
-            lastNameM: this.lastNameM,
-            email: this.email,
-            phoneNumber: this.phoneNumber,
-            date: new Date(),
-            city: this.citySelected,
-            state: this.statesSelected,
-            projectName: this.projectName,
-            projectDescription: this.projectDescription,
-            reply_to:
-              "david_galicia_garcia@outlook.es, jahiirvaldivieso@hotmail.com",
-          }
-        )
-        .then(
-          (result) => {
-            if (result != null) {
-              this.dialog201 = true;
-              console.log("SUCCESS!", result.status, result.text);
-            }
-          },
-          (error) => {
-            if (error != null) {
-              this.dialogError = true;
-              console.log("FAILED...", error);
-            }
-          }
-        );
-    },
     submit() {
       this.$refs.observer.validate();
 
-      /*
-
-      let contactInfo = {
-        date: new Date(),
+      let templateParams = {
         userName: this.name,
-        userLastNameF: this.lastNameF,
-        userLastNameM: this.lastNameM,
-        phoneNumber: this.phoneNumber,
+        lastNameF: this.lastNameF,
+        lastNameM: this.lastNameM,
         email: this.email,
-        state: this.statesSelected,
+        phoneNumber: this.phoneNumber,
+        date: new Date().toLocaleDateString(),
         city: this.citySelected,
+        state: this.statesSelected,
         projectName: this.projectName,
         projectDescription: this.projectDescription,
       };
-      axios
-        .post("https://localhost:44344/api/contacts", contactInfo)
-        .then((result) => {
-          console.log(result);
-          if (result != null) {
+
+      emailjs.send("service_arcup", "template_vw33gf9", templateParams, "user_SmeQlmZFRcDR86wl6vCpl")
+      .then((response) =>  {
+          if (response != null) {
+            console.log("SUCCESS!", response.status, response.text);
             this.dialog201 = true;
           }
-        })
-        .catch((error) => {
+        },
+        (error) => {
           if (error != null) {
             this.dialogError = true;
+            console.log("FAILED...", error);
           }
-        });
-        */
+        }
+      );
     },
     clear() {
       this.name = "";

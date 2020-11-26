@@ -87,6 +87,9 @@
       </v-col>
     </v-row>
   </v-container>
+  <div>
+    
+  </div>
   <base-footer> </base-footer>
 </div>
 </template>

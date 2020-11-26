@@ -3,9 +3,9 @@
     <v-toolbar color="#161e2eff" v-show="isMobile()">
       <div class="d-flex">
         <router-link :to="{ name: 'Main' }" class="text-decoration-none">
-          <figure class="icon__arcup mt-4 align-end"></figure>
+          <figure class="icon__arcup-mobile mt-4 align-end"></figure>
         </router-link>
-        <router-link :to="{ name: 'Main' }" class="text-decoration-none">
+        <router-link :to="{ name: 'Main' }" class="text-decoration-none ">
           <span class="white--text font__arcup align-end">arcup</span>
         </router-link>
       </div>
@@ -19,10 +19,10 @@
     <v-app-bar color="#161e2eff" v-show="!isMobile()">
       <v-toolbar-items>
         <router-link :to="{ name: 'Main' }" class="text-decoration-none">
-          <figure class="icon__arcup mt-4"></figure>
+          <figure class="icon__arcup-no-mobile mt-2"></figure>
         </router-link>
         <router-link :to="{ name: 'Main' }" class="text-decoration-none">
-          <span class="white--text font__arcup ml-2 mr-16">arcup</span>
+          <span class="white--text font__arcup mr-16 ml-1">arcup</span>
         </router-link>
         <v-menu offset-y transition="slide-y-transition">
           <template v-slot:activator="{ on, attrs }">
@@ -165,6 +165,7 @@ export default {
     selectItemServicios: function (index) {
       switch (index) {
         case 0:
+          this.$router.push({ name: "Software" });
           break;
         case 1:
           this.$router.push({ name: 'Package' })
@@ -182,11 +183,19 @@ export default {
   },
 };
 </script>
-<style lang='css'>
-.icon__arcup {
+<style  lang='css'>
+.icon__arcup-mobile {
   background-image: url("../assets/formaLogo-Arcup.svg");
   width: 30px;
   height: 30px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.icon__arcup-no-mobile {
+  background-image: url("../assets/formaLogo-Arcup.svg");
+  width: 20px;
+  height: 43px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
