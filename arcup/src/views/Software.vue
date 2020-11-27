@@ -5,7 +5,7 @@
       id="imagenTecnologias"
       src="../assets/title-images/image-software.png"
       max-width="100%"
-      max-height="250"
+      max-height="300"
       class="mb-10"
     >
     </v-img>

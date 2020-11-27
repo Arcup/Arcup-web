@@ -4,7 +4,7 @@
     <v-img
       src="../assets/title-images/image-technology.png"
       max-width="100%"
-      max-height="250"
+      max-height="300"
       class="mb-4"
     >
     </v-img>
