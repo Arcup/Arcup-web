@@ -14,7 +14,9 @@
               v-for="(item, i) in itemsCarousel"
               :key="i"
               :src="isMobile ? item.srcMobil : item.src"
-            ></v-carousel-item>
+              @click="clickCarousel(item.name)"
+            >
+            </v-carousel-item>
           </v-carousel>
         </v-col>
       </v-row>
@@ -87,7 +89,7 @@
                 :elevation="hover ? 24 : 2"
                 :class="{ 'on-hover': hover }"
               >
-                <div class="text-center pt-1">
+                <div class="text-center pt-5">
                   <h1 class="font__main-alter">
                     {{ item.name }}
                     <v-icon color="cyan">{{ item.icon }}</v-icon>
@@ -130,7 +132,7 @@
                     <v-btn
                       block
                       class="fontVerMas white-button"
-                      color="#161e2eff"
+                      color="#161e2eff" @click="scrollTop"
                     >
                       Ver más
                     </v-btn>
@@ -157,7 +159,7 @@
                 :to="{ name: 'Technology' }"
                 class="text-decoration-none"
               >
-                <v-btn text class="container__cards" color="black"
+                <v-btn outlined color="white" @click="scrollTop"
                   >TECNOLOGÍAS</v-btn
                 >
               </router-link>
@@ -175,7 +177,7 @@
                 :to="{ name: 'Software' }"
                 class="text-decoration-none"
               >
-                <v-btn text class="container__cards" color="black"
+                <v-btn outlined color="white" @click="scrollTop"
                   >PROCESOS</v-btn
                 >
               </router-link>
@@ -194,7 +196,7 @@
                 :to="{ name: 'YourProject' }"
                 class="text-decoration-none"
               >
-                <v-btn text class="container__cards" color="black"
+                <v-btn outlined color="white" @click="scrollTop"
                   >CUALIDADES</v-btn
                 >
               </router-link>
@@ -206,7 +208,7 @@
     </div>
 
     <div class="container__angle" v-show="!isMobile">
-      <v-col lg="6" md="5" class="ml-12 mt-8" id="columnTextMain">
+      <v-col cols="12" md="10" class="ml-12 mt-8" id="columnTextMain">
         <v-col class="white--text">
           <h1 class="font__main-alter">
             Construimos software de
@@ -218,14 +220,14 @@
         </v-col>
         <v-col class="mt-1">
           <v-row>
-            <v-col md="5" lg="3" xl="4">
+            <v-col cols="12" md="4">
               <router-link :to="{ name: 'About' }" class="text-decoration-none">
                 <v-btn elevation="2" large color="white">
                   <strong class="">Conócemos </strong></v-btn
                 >
               </router-link>
             </v-col>
-            <v-col md="5" lg="3" xl="4">
+            <v-col cols="12" md="4">
               <router-link
                 :to="{ name: 'Contact' }"
                 class="text-decoration-none"
@@ -276,33 +278,40 @@ export default {
         {
           src: imgMonitorContact,
           srcMobil: imgMobileContact,
+          name: "Contact",
         },
         {
           src: imgMonitorPackage,
           srcMobil: imgMobilePackage,
+          name: "Package",
         },
         {
           src: imgMonitorSoftware,
           srcMobil: imgMobileSoftware,
+          name: "Software",
         },
         {
           src: imgMonitorTechnology,
           srcMobil: imgMobileTechnology,
+          name: "Technology",
         },
         {
           src: imgMonitorProject,
           srcMobil: imgMobileProject,
+          name: "YourProject",
         },
         {
           src: imgMonitorCulture,
           srcMobil: imgMobileCulture,
+          name: "About",
         },
         {
           src: imgMonitorStory,
           srcMobil: imgMobileStory,
+          name: "Story",
         },
       ],
-
+      contError: 0,
       itemsPaquetes: [
         {
           src: imgCardSales,
@@ -352,6 +361,14 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    clickCarousel(view) {
+          this.$router.push({name: view }).catch(()=>{});
+    },
+    scrollTop() {
+      window.scrollTo(0, 0);
+    },
   },
   computed: {
     isSuperSmall() {
@@ -418,8 +435,8 @@ export default {
 .background-cards-b {
   background: linear-gradient(
     to bottom,
-    rgb(240, 240, 240) 0%,
-    rgb(252, 252, 252) 50%,
+    rgb(235, 235, 235) 0%,
+    rgb(249, 249, 249) 50%,
     rgb(255, 255, 255) 61%
   );
 }
@@ -442,8 +459,8 @@ export default {
 
 .container__angle {
   display: flex;
-  position: relative;
-  width: 100%;
+  position: absolute;
+  width: 60%;
   height: 100%;
   background-size: cover;
 }

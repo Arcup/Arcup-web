@@ -116,7 +116,7 @@
                             :to="{ name: 'Contact' }"
                             class="text-decoration-none with-100" 
                           >
-                          <v-btn dark block> Adquirir </v-btn>
+                          <v-btn dark block @click="scrollTop"> Adquirir </v-btn>
                           </router-link>
                           
                         </v-container>
@@ -243,7 +243,7 @@
                             :to="{ name: 'Contact' }"
                             class="text-decoration-none with-100"
                           >
-                          <v-btn dark block> Adquirir </v-btn>
+                          <v-btn dark block @click="scrollTop"> Adquirir </v-btn>
                           </router-link>
                           
                         </v-container>
@@ -259,13 +259,13 @@
     </div>
     <div class="text-center pt-16 pb-16 color-background-gray">
       <v-container class="pb-10">
-        <v-icon size="40" color="cyan">mdi-information-outline </v-icon>
+        <v-icon size="80" class="pb-3" color="cyan">mdi-clock-check-outline </v-icon>
         <h3 class="fontTitle-contact pb-5">
-          ¿Tienes un proyecto en mente o necesitas asesoría?
+          Descubre las caraterísticas de nuestros servicios
         </h3>
-        <router-link :to="{ name: 'Contact' }" class="text-decoration-none">
-          <v-btn text class="color-background-black" color="white"
-            >CONTÁCTANOS</v-btn
+        <router-link :to="{ name: 'YourProject' }" class="text-decoration-none">
+          <v-btn text class="color-background-black" color="white" @click="scrollTop"
+            >VER MAS</v-btn
           >
         </router-link>
       </v-container>
@@ -410,6 +410,11 @@ export default {
       },
     ],
   }),
+  methods:{
+    scrollTop() {
+      window.scrollTo(0, 0);
+    },
+  },
   components: {
     BaseHeader,
     BaseFooter,

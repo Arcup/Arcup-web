@@ -4,7 +4,7 @@
     <v-img
       src="../assets/title-images/image-contact.png"
       max-width="100%"
-      max-height="200"
+      max-height="300"
     ></v-img>
     <validation-observer ref="observer" v-slot="{ invalid }">
       <form @submit.prevent="submit">

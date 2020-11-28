@@ -132,7 +132,7 @@ export default {
     itemsNosotros: [
       { text: "Tecnologías", icon: "mdi-source-branch" },
       { text: "Historia", icon: "mdi-account-group" },
-      { text: "Cultura", icon: "mdi-home-search" },
+      { text: "Conócenos", icon: "mdi-home-search" },
     ],
     itemsServicios: [
       { text: "Software", icon: "mdi-web" },
@@ -150,13 +150,13 @@ export default {
     selectItemNosotros: function (index) {
       switch (index) {
         case 0:
-          this.$router.push({ name: "Technology" });
+          this.openView("Technology");
           break;
         case 1:
-          this.$router.push({ name: 'Story' });
+          this.openView("Story");
           break;
         case 2:
-          this.$router.push({ name: "About" });
+          this.openView("About");
           break;
         default:
           break;
@@ -165,17 +165,20 @@ export default {
     selectItemServicios: function (index) {
       switch (index) {
         case 0:
-          this.$router.push({ name: "Software" });
+          this.openView("Software");
           break;
         case 1:
-          this.$router.push({ name: 'Package' })
+          this.openView("Package");
           break;
         case 2:
-          this.$router.push({ name: "YourProject" });
+          this.openView("YourProject");
           break;
         default:
           break;
       }
+    },
+    openView: function (view){
+      this.$router.push({ name: view }).catch(()=>{});
     },
     isMobile: function () {
       return this.$vuetify.breakpoint.smOnly || this.$vuetify.breakpoint.xsOnly;
