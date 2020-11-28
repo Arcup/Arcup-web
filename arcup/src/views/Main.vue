@@ -265,11 +265,6 @@ import imgMobileStory from "../assets/title-images/image-story.png";
 import imgMobilePackage from "../assets/title-images/image-package.png";
 import imgMobileSoftware from "../assets/title-images/image-software.png";
 
-//  Adding images to Card
-import imgCardApp from "../assets/card-images/card-app.png";
-import imgCardInfo from "../assets/card-images/card-info.png";
-import imgCardSales from "../assets/card-images/card-sales.png";
-
 export default {
   name: "Main",
   data() {
@@ -314,7 +309,6 @@ export default {
       contError: 0,
       itemsPaquetes: [
         {
-          src: imgCardSales,
           name: "Ventas",
           price: "$7,199",
           icon: "mdi-shopping-outline",
@@ -329,7 +323,6 @@ export default {
           ],
         },
         {
-          src: imgCardInfo,
           name: "Informativo",
           price: "$3,500",
           icon: "mdi-information-outline",
@@ -345,7 +338,6 @@ export default {
         },
 
         {
-          src: imgCardApp,
           name: "App Móvil",
           price: "$5,899",
           icon: "mdi-cellphone",

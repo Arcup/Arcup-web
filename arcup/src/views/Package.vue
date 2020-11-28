@@ -284,11 +284,11 @@ export default {
       {
         title: "Informativo",
         titlePrice: "Paquete Informativo",
-        price: "$2,800",
+        price: "$3,200",
         groupAdvantageOne: [
           "Código QR",
           "Servicio de atención 24/7",
-          "De 1 a 5 páginas",
+          "De 3 a 5 páginas",
         ],
         groupAdvantageTwo: [
           "Entrega entre 10 - 15 días",
@@ -302,17 +302,17 @@ export default {
           "es el ideal para ti.",
       },
       {
-        title: "Administrativo",
+        title: "Auto-administrable",
         titlePrice: "Paquete Administrativo",
-        price: "$7,900",
+        price: "$9,700",
         groupAdvantageOne: [
-          "Código QR",
+          "De 3 a 10 elementos administables",
           "Servicio de atención 24/7",
           "De 6 a 12 páginas",
           "Página de administrador",
         ],
         groupAdvantageTwo: [
-          "Entrega entre 15 - 30 días",
+          "Entrega entre 20 - 45 días",
           "Página totalmente responsiva",
           "Dominio incluido por 1 año (.com)",
         ],
