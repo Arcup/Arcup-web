@@ -413,6 +413,8 @@
 import BaseHeader from "@/components/BaseHeader.vue";
 import BaseFooter from "@/components/BaseFooter.vue";
 //Adding image to card
+import htmlycss3 from "../assets/title-images/image-hmtlcss3.png";
+import javaS from "../assets/title-images/image-js.png";
 
 export default {
   name: "Technology",
@@ -431,21 +433,23 @@ export default {
 
       itemsCards1: [
         {
-          src:
-            "https://colorlib.com/wp/wp-content/uploads/sites/2/html5-logo.png",
+          src: htmlycss3,
           name: "HTML5",
           description: [
             "Compatibilidad con los navegadores",
             "Diseño responsivo",
+            "Estructura limpia",
+            "Mejora la experiencia de usuario",
           ],
         },
         {
-          src:
-            "https://th.bing.com/th/id/OIP.deLqvHQOJl4i8VExhqJtsQHaEK?pid=Api&rs=1",
+          src: javaS,
           name: "JavaScript",
           description: [
             "Adecuado para el desarrollo de páginas web",
             "De los lenguajes más usados",
+            "Versátil",
+            "Modo FullStack",
           ],
         },
         {
@@ -454,8 +458,9 @@ export default {
           name: "Vue.js",
           description: [
             "Moderno",
-            "Estructura ordenada",
+            "Progresivo",
             "Comunidad muy activa",
+            "Trabaja con componentes"
           ],
         },
         {
@@ -463,9 +468,10 @@ export default {
             "https://cdn-images-1.medium.com/max/1600/1*oZqGznbYXJfBlvGp5gQlYQ.jpeg",
           name: "Vuetify",
           description: [
-            "------",
-            "------",
-            "------",
+            "Ligero",
+            "Responsivo",
+            "Enfoque móvil",
+            "Actualización constante",
           ],
         },
       ],
@@ -474,24 +480,44 @@ export default {
           src:
             "https://th.bing.com/th/id/OIP.7TaggWnbRJ91hKi8p41q2QHaEK?pid=Api&rs=1",
           name: ".NET",
-          description: ["Robusto y Seguro", "Soporta multiples lenguajes"],
+          description: [
+            "Robusto y Seguro", 
+            "Interoperabilidad multilenguaje",
+            "Código administrado",
+            "Facilidad de despliegue"
+          ],
         },
         {
           src:
             "https://www.itprotoday.com/sites/itprotoday.com/files/uploads/2015/12/sqlserver-generic_0.jpg",
           name: "SQLServer",
-          description: ["Escalable", "Soporta procedimientos almacenados"],
+          description: [
+            "Escalable", 
+            "Estable y seguro",
+            "Soporta procedimientos almacenados",
+            "Potente entorno gráfico",        
+          ],
         },
         {
           src: "https://pngimg.com/uploads/mysql/mysql_PNG29.png",
           name: "MySQL",
-          description: ["Buen rendimiento", "Velocidad en las transacciones"],
+          description: [
+            "Buen rendimiento", 
+            "Velocidad en las transacciones",
+            "Open source",
+            "Ligero",
+          ],
         },
         {
           src:
             "https://th.bing.com/th/id/OIP.7TaggWnbRJ91hKi8p41q2QHaEK?pid=Api&rs=1",
           name: "RestFull",
-          description: ["Robusto y Seguro", "Soporta multiples lenguajes"],
+          description: [
+            "Independencia de tecnologías", 
+            "Escalabilidad, Fiabilidad, seguridad",
+            "Separación cliente-servidor",
+            "Consume pocos recursos",
+          ],
         },
         
       ],
@@ -501,23 +527,32 @@ export default {
             "https://www.solutionanalysts.com/wp-content/uploads/2017/07/kotlin-course-image.jpg",
           name: "Kotlin",
           description: [
-            "Compatibilidad en los navegadores",
-            "Diseño responsivo",
+            "Facilita el desarrollo",
+            "Seguro",
+            "Multi-plataforma",
+            "Moderno",
           ],
         },
         {
           src:
             "https://th.bing.com/th/id/OIP.qNbFWTHHkCxEkkI-0Lo4WwHaEK?pid=Api&rs=1",
           name: "Java",
-          description: ["Universal", "Seguro"],
+          description: [
+            "Multiplataforma", 
+            "Seguro",
+            "Robusto",
+            "Sencillo",
+          ],
         },
         {
           src:
             "https://th.bing.com/th/id/OIP.yNAPK4wpATuB-cb8ebuqWwHaDt?pid=Api&rs=1",
           name: "AndroidStudio",
           description: [
-            "Compatibilidad en los navegadores",
-            "Diseño responsivo",
+            "Especializado para Android",
+            "Actualizaciones constantes",
+            "Código ordenado y estructurado",
+            "Buen rendimiento",
           ],
         },
         {
@@ -525,8 +560,10 @@ export default {
             "https://th.bing.com/th/id/OIP.yNAPK4wpATuB-cb8ebuqWwHaDt?pid=Api&rs=1",
           name: "Xamarin",
           description: [
-            "Compatibilidad en los navegadores",
-            "Diseño responsivo",
+            "Multiplataforma",
+            "Experiencia nativa",
+            "Reutilización de código",
+            "Tecnología de código abierto",
           ],
         },
       ],
