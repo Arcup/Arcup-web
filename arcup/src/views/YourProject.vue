@@ -87,7 +87,7 @@
       </v-row>
     </v-container>
 
-    <div class="background-color padding-top">
+    <div class="background-color padding-top pb-10">
       <v-container>
         <v-row class="">
           <v-col class="text-center" cols="12" sm="4" md="4" lg="4">
@@ -148,6 +148,7 @@
         </v-row>
       </v-container>
     </div>
+    <v-divider class="color-gray"></v-divider>
     <base-footer> </base-footer>
   </div>
 </template>
@@ -188,5 +189,8 @@ export default {
 }
 .background-gray {
   background-color: rgb(238, 238, 238);
+}
+.color-gray{
+  background-color: rgb(110, 110, 110);
 }
 </style>
