@@ -140,7 +140,7 @@ export default {
     items: [
       {
         src: imgCarousel,
-        name: "Jesús Hernández",
+        name: "Jesús Hernández ",
         degree: "Ingeniero de software",
         photo: photoJesus,
         jobTitle: "Co-Fundador y CEO",
@@ -163,7 +163,7 @@ export default {
         photo: photoJesus,
         jobTitle: "Co-Fundador y CEO",
         tasks: "Front-End y Back-End Developer",
-        email: "jesus.hdez@arcup.com.mx",
+        email: "jahir.landav@arcup.com.mx",
       },
     ],
   }),
