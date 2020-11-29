@@ -11,6 +11,7 @@
             hide-delimiter-background
           >
             <v-carousel-item
+            class="grey darken-4"
               v-for="(item, i) in itemsCarousel"
               :key="i"
               :src="isMobile ? item.srcMobil : item.src"
@@ -29,7 +30,9 @@
               tu proyecto y se lo mostramos al
               <strong class="color-text-cyan">MUNDO</strong>.
             </h1>
-            <h4 class="font__main-alter">Estamos listos para brindarte nuestros servicios.</h4>
+            <h4 class="font__main-alter">
+              Estamos listos para brindarte nuestros servicios.
+            </h4>
           </v-col>
           <v-col class="mt-4" md="6" sm="12" xs="12">
             <v-row>
@@ -104,7 +107,8 @@
                   </div>
                   <v-card-text class="mt-4">
                     <p class="fontPrice">
-                      {{ item.price }} <span class="fontPriceMx">{{item.typePrice}}</span>
+                      {{ item.price }}
+                      <span class="fontPriceMx">{{ item.typePrice }}</span>
                     </p>
                     <span class="fontDescriptionCard mr-5">
                       {{ item.description }}
@@ -132,7 +136,8 @@
                     <v-btn
                       block
                       class="fontVerMas white-button"
-                      color="#161e2eff" @click="scrollTop"
+                      color="#161e2eff"
+                      @click="scrollTop"
                     >
                       Ver más
                     </v-btn>
@@ -147,12 +152,13 @@
         <v-container class="pb-10">
           <v-row>
             <v-col cols="12" md="4" sm="12">
-              <v-icon class="pb-5"  size="50" color="#00ffff"> mdi-vuejs</v-icon><br>
+              <v-icon class="pb-5" size="50" color="#00ffff"> mdi-vuejs</v-icon
+              ><br />
               <span aria-setsize="50" class="white-button pb-5">
-                ACÉRCATE A NOSTROS<br>
+                ACÉRCATE A NOSTROS<br />
               </span>
               <span class="white-button">
-                 Y CONOCE NUESTRAS TECNOLOGÍAS <br>
+                Y CONOCE NUESTRAS TECNOLOGÍAS <br />
               </span>
               <v-divider class="pb-5"></v-divider>
               <router-link
@@ -165,12 +171,14 @@
               </router-link>
             </v-col>
             <v-col cols="12" md="4" sm="12">
-              <v-icon class="pb-5" size="50" color="#00ffff"> mdi-file-document-edit-outline</v-icon><br>
+              <v-icon class="pb-5" size="50" color="#00ffff">
+                mdi-file-document-edit-outline</v-icon
+              ><br />
               <span aria-setsize="50" class="white-button pb-5">
-                ACÉRCATE A NOSTROS<br>
+                ACÉRCATE A NOSTROS<br />
               </span>
               <span class="white-button">
-                 Y CONOCE NUESTROS PROCESOS <br>
+                Y CONOCE NUESTROS PROCESOS <br />
               </span>
               <v-divider class="pb-5"></v-divider>
               <router-link
@@ -181,15 +189,16 @@
                   >PROCESOS</v-btn
                 >
               </router-link>
-              
             </v-col>
-            <v-col cols="12" md="4" sm="12" >
-              <v-icon class="pb-5" size="50" color="#00ffff"> mdi-clock-check-outline</v-icon><br>
+            <v-col cols="12" md="4" sm="12">
+              <v-icon class="pb-5" size="50" color="#00ffff">
+                mdi-clock-check-outline</v-icon
+              ><br />
               <span aria-setsize="50" class="white-button pb-5">
-                ACÉRCATE A NOSTROS<br>
+                ACÉRCATE A NOSTROS<br />
               </span>
               <span class="white-button">
-                 Y CONOCE NUESTRAS CUALIDADES <br>
+                Y CONOCE NUESTRAS CUALIDADES <br />
               </span>
               <v-divider class="pb-5"></v-divider>
               <router-link
@@ -200,7 +209,6 @@
                   >CUALIDADES</v-btn
                 >
               </router-link>
-              
             </v-col>
           </v-row>
         </v-container>
@@ -216,7 +224,9 @@
             medida, creamos tu proyecto y se lo mostramos al
             <span class="font__main-alter color-text-cyan">MUNDO</span>.
           </h1>
-          <h4 class="font__main-alter">Estamos listos para brindarte nuestros servicios.</h4>
+          <h4 class="font__main-alter">
+            Estamos listos para brindarte nuestros servicios.
+          </h4>
         </v-col>
         <v-col class="mt-1">
           <v-row>
@@ -359,7 +369,7 @@ export default {
   },
   methods: {
     clickCarousel(view) {
-          this.$router.push({name: view }).catch(()=>{});
+      this.$router.push({ name: view }).catch(() => {});
     },
     scrollTop() {
       window.scrollTo(0, 0);
