@@ -27,7 +27,7 @@
               Construimos software de
               <span class="color-text-cyan">calidad</span> a la medida, creamos
               tu proyecto y se lo mostramos al
-              <strong class="color-text-cyan">MUNDO</strong>!
+              <strong class="color-text-cyan">MUNDO</strong>.
             </h1>
             <h4 class="font__main-alter">Estamos listos para brindarte nuestros servicios.</h4>
           </v-col>
@@ -102,9 +102,9 @@
                   >
                     Encuentra este paquete desde:
                   </div>
-                  <v-card-text class="mt-4 ml-4">
+                  <v-card-text class="mt-4">
                     <p class="fontPrice">
-                      {{ item.price }} <span class="fontPriceMx">/mx</span>
+                      {{ item.price }} <span class="fontPriceMx">{{item.typePrice}}</span>
                     </p>
                     <span class="fontDescriptionCard mr-5">
                       {{ item.description }}
@@ -113,7 +113,7 @@
                 </div>
                 <v-container class="background-gray">
                   <v-list class="background-gray">
-                    <v-subheader class="">Incluye</v-subheader>
+                    <v-subheader class="">Incluye:</v-subheader>
                     <v-list-item
                       class="background-gray"
                       v-for="(advantage, i) in item.advantages"
@@ -149,7 +149,7 @@
             <v-col cols="12" md="4" sm="12">
               <v-icon class="pb-5"  size="50" color="#00ffff"> mdi-vuejs</v-icon><br>
               <span aria-setsize="50" class="white-button pb-5">
-                ACERCATE A NOSTROS<br>
+                ACÉRCATE A NOSTROS<br>
               </span>
               <span class="white-button">
                  Y CONOCE NUESTRAS TECNOLOGÍAS <br>
@@ -167,7 +167,7 @@
             <v-col cols="12" md="4" sm="12">
               <v-icon class="pb-5" size="50" color="#00ffff"> mdi-file-document-edit-outline</v-icon><br>
               <span aria-setsize="50" class="white-button pb-5">
-                ACERCATE A NOSTROS<br>
+                ACÉRCATE A NOSTROS<br>
               </span>
               <span class="white-button">
                  Y CONOCE NUESTROS PROCESOS <br>
@@ -186,7 +186,7 @@
             <v-col cols="12" md="4" sm="12" >
               <v-icon class="pb-5" size="50" color="#00ffff"> mdi-clock-check-outline</v-icon><br>
               <span aria-setsize="50" class="white-button pb-5">
-                ACERCATE A NOSTROS<br>
+                ACÉRCATE A NOSTROS<br>
               </span>
               <span class="white-button">
                  Y CONOCE NUESTRAS CUALIDADES <br>
@@ -214,7 +214,7 @@
             Construimos software de
             <span class="font__main-alter color-text-cyan">calidad</span> a la
             medida, creamos tu proyecto y se lo mostramos al
-            <span class="font__main-alter color-text-cyan">MUNDO</span>!
+            <span class="font__main-alter color-text-cyan">MUNDO</span>.
           </h1>
           <h4 class="font__main-alter">Estamos listos para brindarte nuestros servicios.</h4>
         </v-col>
@@ -309,10 +309,11 @@ export default {
       contError: 0,
       itemsPaquetes: [
         {
-          name: "Ventas",
-          price: "$7,199",
+          name: "Negocios",
+          price: "$15,500",
+          typePrice: "/mx",
           icon: "mdi-shopping-outline",
-          pages: "De 5 a 12 páginas",
+          pages: "De 6 a 12 páginas",
           description:
             "Administra tu negocio desde internet. Autónomo. Organizado. Funcional.",
           advantages: [
@@ -324,9 +325,10 @@ export default {
         },
         {
           name: "Informativo",
-          price: "$3,500",
+          price: "$3,200",
+          typePrice: "/mx",
           icon: "mdi-information-outline",
-          pages: "De 1 a 4 páginas",
+          pages: "De 3 a 5 páginas",
           description:
             "Muéstrale al mundo quién eres. Emprendedores. Estudiantes. Empresas.",
           advantages: [
@@ -339,16 +341,17 @@ export default {
 
         {
           name: "App Móvil",
-          price: "$5,899",
+          price: "Contáctanos",
+          typePrice: "",
           icon: "mdi-cellphone",
           pages: "Android y/o iOS",
           description:
             "Crea tu propia app sin ser programador. Accesible. Personalizada. Ligera.",
           advantages: [
             "Publicación en una tienda",
-            "Diseño adaptativo",
-            "Funciones con valor agregado",
-            "Mantenimiento 24/7",
+            "Personalizada al 100%",
+            "Alamcenamiento de información",
+            "Diseño moderno",
           ],
         },
       ],

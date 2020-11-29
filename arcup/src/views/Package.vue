@@ -114,11 +114,12 @@
                           </v-row>
                           <router-link
                             :to="{ name: 'Contact' }"
-                            class="text-decoration-none with-100" 
+                            class="text-decoration-none with-100"
                           >
-                          <v-btn dark block @click="scrollTop"> Adquirir </v-btn>
+                            <v-btn dark block @click="scrollTop">
+                              Adquirir
+                            </v-btn>
                           </router-link>
-                          
                         </v-container>
                       </v-sheet>
                     </template>
@@ -217,9 +218,6 @@
                               class="text-center pt-0 mt-0 pb-0 mb-0"
                               cols="12"
                             >
-                              <h4 class="color-text-gray">
-                                Encuentra este paquete desde:
-                              </h4>
                             </v-col>
                             <v-col
                               class="text-center pt-0 mt-0 pb-0 mb-0"
@@ -227,7 +225,7 @@
                             >
                               <p class="fontPrice">
                                 {{ item.price }}
-                                <span class="fontPriceMx">/mx</span>
+                                <span class="fontPriceMx"></span>
                               </p>
                             </v-col>
                             <v-col
@@ -243,9 +241,10 @@
                             :to="{ name: 'Contact' }"
                             class="text-decoration-none with-100"
                           >
-                          <v-btn dark block @click="scrollTop"> Adquirir </v-btn>
+                            <v-btn dark block @click="scrollTop">
+                              Adquirir
+                            </v-btn>
                           </router-link>
-                          
                         </v-container>
                       </v-sheet>
                     </template>
@@ -259,13 +258,19 @@
     </div>
     <div class="text-center pt-16 pb-16 color-background-gray">
       <v-container class="pb-10">
-        <v-icon size="80" class="pb-3" color="cyan">mdi-clock-check-outline </v-icon>
+        <v-icon size="80" class="pb-3" color="cyan"
+          >mdi-clock-check-outline
+        </v-icon>
         <h3 class="fontTitle-contact pb-5">
           Descubre las caraterísticas de nuestros servicios
         </h3>
         <router-link :to="{ name: 'YourProject' }" class="text-decoration-none">
-          <v-btn text class="color-background-black" color="white" @click="scrollTop"
-            >VER MAS</v-btn
+          <v-btn
+            text
+            class="color-background-black"
+            color="white"
+            @click="scrollTop"
+            >VER MÁS</v-btn
           >
         </router-link>
       </v-container>
@@ -286,131 +291,123 @@ export default {
         titlePrice: "Paquete Informativo",
         price: "$3,200",
         groupAdvantageOne: [
-          "Código QR",
-          "Servicio de atención 24/7",
           "De 3 a 5 páginas",
+          "Servicio de atención 24/7",
+          "Código QR",
         ],
         groupAdvantageTwo: [
           "Entrega entre 10 - 15 días",
-          "Página totalmente responsiva",
-          "Dominio incluido por 1 año (.com)",
+          "Sitio totalmente responsiva",
+          "Hosting / Dominio por 1 año",
         ],
-        descriptionPrice:
-          "Un pago al inicio del proyecto y se liquida una vez entregada la página web.",
+        descriptionPrice: "Incluye 3 páginas, dominio y hosting por un año.",
         description:
           "¿Quieres mostrarle al mundo quién eres, qué haces y cómo lo haces?. Este paquete " +
           "es el ideal para ti.",
       },
       {
         title: "Auto-administrable",
-        titlePrice: "Paquete Administrativo",
+        titlePrice: "Paquete Auto-administrable",
         price: "$9,700",
         groupAdvantageOne: [
-          "De 3 a 10 elementos administables",
+          "De 3 a 10 elementos administrables",
           "Servicio de atención 24/7",
           "De 6 a 12 páginas",
           "Página de administrador",
         ],
         groupAdvantageTwo: [
           "Entrega entre 20 - 45 días",
-          "Página totalmente responsiva",
-          "Dominio incluido por 1 año (.com)",
+          "Sitio totalmente responsiva",
+          "Hosting / Dominio por 1 año",
+          "Código QR",
         ],
         descriptionPrice:
-          "Un pago al inicio del proyecto y se liquida una vez entregada la página web.",
+          "Incluye 6 páginas, 3 elementos administrables, hosting y dominio por un año.",
         description:
-          "Administra tu negocio desde internet. Contacta de manera directa con tus clientes. Mantén tu información seguro y accesible en cualquier momento.",
+          "Administra el contenido de tu web en el momento que quieras. Obtén completa libertad con nuestro paquete auto-administrable.",
       },
       {
-        title: "Ventas",
-        titlePrice: "Paquete Ventas",
-        price: "$13,900",
+        title: "Negocios",
+        titlePrice: "Paquete Negocios",
+        price: "$15,500",
         groupAdvantageOne: [
-          "Entrega entre 30 - 40 días",
+          "Entrega entre 1 - 2 meses",
           "Servicio de atención 24/7",
           "De 6 a 12 páginas",
-          "Página de administrador de inventario",
+          "Roles de usuario",
         ],
         groupAdvantageTwo: [
-          "Listado de artículos",
+          "Administrar artículos",
           "Proceso de venta de principio a fin",
-          "Página totalmente responsiva",
-          "Dominio incluido por 1 año (.com)",
+          "De 3 a 10 elementos administrables",
+          "Hosting / Dominio por 1 año",
         ],
         descriptionPrice:
-          "Un pago al inicio del proyecto y se liquida una vez entregada la página web.",
+          "Incluye 6 páginas, 3 elementos administrables, administración de artículos y proceso de venta.",
         description:
-          "Vende tus productos en linea, administra tu tienda y permite que tus clientes " +
-          "puedan comprar a travez de tu página web.",
+          "Controla tu negocio desde internet, ofrece tus servicios, administra tus productos y véndelos en línea.",
       },
     ],
     itemApp: [
       {
         title: "App Móvil",
         titlePrice: "Paquete App Móvil",
-        price: "5,500",
+        price: "",
         groupAdvantageOne: [
-          "Entrega entre 15 - 25 días",
-          "Publicación en Play Store o App Store",
-          "De 5 a 10 vistas",
+          "Publicación Play Store o App Store",
           "Revisiones constantes de avances",
+          "Servicio de atención 12/7",
         ],
         groupAdvantageTwo: [
-          "Funcionalidades que generen un valor agregado",
           "Diseño moderno",
-          "Aplicación responsiva para todos los teléfonos",
-          "Servicio de atención 24/7",
+          "Adaptable para todos los teléfonos",
         ],
         descriptionPrice:
-          "Un pago al inicio del proyecto y se liquida una vez entregada la aplicación móvil.",
+          "Contáctanos para proporcionarte más información y conocer tu proyecto",
         description:
-          "Únete al mundo de los smartphones creando tu propia aplicación móvil",
+          "Únete al mundo de los smartphones creando tu propia aplicación móvil.",
       },
       {
         title: "App Móvil & Página Web",
         titlePrice: "Paquete App & Página Web",
-        price: "20,900",
+        price: "",
         groupAdvantageOne: [
-          "Entrega entre 45 - 55 días",
-          "Publicación de App en Play Store o App Store",
-          "De 5 a 12 páginas web",
+          "Publicación en Play Store o App Store",
           "Revisiones constantes de avances",
+          "Accede a tu información desde tu página web y/o tu dispositivo móvil.",
         ],
         groupAdvantageTwo: [
-          "Aplicación con funcionalidades que generen un valor agregado",
           "Diseño moderno",
-          "Aplicación responsiva para todos los teléfonos",
-          "Servicio de atención 24/7",
+          "Adaptable para todos los teléfonos",
+          "Servicio de atención 12/7",
         ],
         descriptionPrice:
-          "Un pago al inicio del proyecto y se liquida una vez entregadas la página web y aplicación móvil.",
+          "Contáctanos para proporcionarte más información y conocer tu proyecto.",
         description:
-          "El ecosistema completo te ayudará a maximizar tu productividad. Evoluciona el siguiente nivel con nuestro paquete de Página web y Aplicación móvil.",
+          "El ecosistema completo te ayudará a maximizar tu productividad. Evoluciona al siguiente nivel con nuestro paquete de Página web y Aplicación móvil.",
       },
       {
         title: "App móvil multiplataforma",
         titlePrice: "Paquete Android y iOS",
-        price: "$15,899",
+        price: "",
         groupAdvantageOne: [
-          "Entrega entre 40 - 50 días",
-          "Publicación de App en Play Store y App Store",
-          "De 5 a 12 vistas",
+          "Publicación en Play Store y App Store",
+          "Versión para IOS y Android",
           "Revisiones constantes de avances",
         ],
         groupAdvantageTwo: [
-          "Aplicación con funcionalidades que generen un valor agregado",
           "Diseño moderno",
-          "Aplicación responsiva para todos los teléfonos",
-          "Servicio de atención 24/7",
+          "Adaptable para todos los teléfonos",
+          "Servicio de atención 12/7",
         ],
         descriptionPrice:
-          "Un pago al inicio del proyecto y se liquida una vez entregadas las aplicaciones móviles.",
+          "Contáctanos para proporcionarte más información y conocer tu proyecto",
         description:
           "No te cierres solo a un mercado, crea una aplicación multiplataforma para que todos los usuarios puedan conectarse.",
       },
     ],
   }),
-  methods:{
+  methods: {
     scrollTop() {
       window.scrollTo(0, 0);
     },
@@ -474,7 +471,7 @@ export default {
 .color-background-black {
   background-color: #161e2eff;
 }
-.with-100{
+.with-100 {
   width: 100%;
 }
 </style>
