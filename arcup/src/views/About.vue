@@ -124,6 +124,7 @@ import BaseHeader from "@/components/BaseHeader.vue";
 import BaseFooter from "@/components/BaseFooter.vue";
 import imgCarousel from "../assets/carousel-images/carousel-pictures.png";
 import photoJesus from "../assets/photos/photo-jesus.jpg";
+import photoJahir from "../assets/photos/photo-jahir.jpg";
 
 export default {
   name: "About",
@@ -160,7 +161,7 @@ export default {
         src: imgCarousel,
         name: "Jahir Landa",
         degree: "Ingeniero de software",
-        photo: photoJesus,
+        photo: photoJahir,
         jobTitle: "Co-Fundador y CEO",
         tasks: "Front-End y Back-End Developer",
         email: "jahir.landav@arcup.com.mx",
