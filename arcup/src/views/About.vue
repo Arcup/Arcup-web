@@ -3,7 +3,7 @@
     <base-header></base-header>
 
     <div class="pb-15">
-      <v-carousel :show-arrows="false" height="400" >
+      <v-carousel cycle  show-arrows-on-hover height="400" >
         <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
           <div class="height text-center pl-6 pr-6">
             
@@ -145,8 +145,8 @@ export default {
         name: "Jesús Hernández ",
         degree: "Ingeniero de software",
         photo: photoJesus,
-        jobTitle: "Co-Fundador y CEO",
-        tasks: "Front-End y Back-End Developer",
+        jobTitle: "Co-Fundador",
+        tasks: "Front-End Developer y Diseñador Web",
         email: "jesus.hdez@arcup.com.mx",
       },
       {
@@ -154,8 +154,8 @@ export default {
         name: "Luis Galicia",
         degree: "Ingeniero de software",
         photo: photoLuis,
-        jobTitle: "Co-Fundador y CEO",
-        tasks: "Front-End y Back-End Developer",
+        jobTitle: "Co-Fundador",
+        tasks: "Front-End Developer y Documentador",
         email: "luis.galicia@arcup.com.mx",
       },
       {
@@ -163,8 +163,8 @@ export default {
         name: "Jahir Landa",
         degree: "Ingeniero de software",
         photo: photoJahir,
-        jobTitle: "Co-Fundador y CEO",
-        tasks: "Front-End y Back-End Developer",
+        jobTitle: "Co-Fundador",
+        tasks: "Back-End Developer y Web Tester",
         email: "jahir.landav@arcup.com.mx",
       },
     ],
