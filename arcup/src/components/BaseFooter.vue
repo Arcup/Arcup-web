@@ -2,51 +2,59 @@
   <div>
     <v-footer color="#161E2E">
       <v-row>
-        <v-col class="ma-0 " cols="12" sm="12" md="4" lg="4" xl="4">
-          <v-card-text class="text-center white--text">
-            <div class="body-1">Correo: contacto@arcup.com.mx</div>
-            <div class="body-1">Telefonos: 2123123212</div>
-            <div class="body-2">2123123212 </div>
-            <div class="body-2">2123123212 </div>
+        <v-col cols="12" sm="12" md="4" lg="4" xl="4">
+          <v-card-text id="contact" class="ma-0 pt-2 white--text text-center">
+              <div>Correo: </div>
+              <div class="pb-3"> <v-icon color="white">mdi-email-outline</v-icon> contacto@arcup.com.mx</div>
+              <div>Teléfono: </div>
+              <div> <v-icon color="white">mdi-phone</v-icon> (+52) 2281128282</div>
           </v-card-text>
         </v-col>
 
-        <v-col class="ma-0 " cols="12" sm="12" md="4" lg="4" xl="4">
+        <v-col class="ma-0 pa-0" cols="12" sm="12" md="4" lg="4" xl="4">
           <v-row no-gutters class="ml-4 mr-2 mb-2">
-            <v-col class="ma-0 pa-0" cols="12" sm="3" md="3" lg="3" xl="3">
-              <v-card-text class="d-flex justify-center pr-0">
+            <v-col class="ma-0 pa-0" cols="12" sm="12" md="12" lg="12" xl="12">
+              <v-card-text class="ma-0 d-flex justify-center pr-0">
                 <v-img
-                  max-height="54"
-                  max-width="40"
+                  max-height="40"
+                  max-width="35"
                   src="../assets/formaLogo-Arcup.svg"
                 ></v-img>
               </v-card-text>
             </v-col>
-            <v-col cols="12" sm="7" md="7" lg="7" xl="7">
-              <v-card-text id="content" class="text-justify body-2 white--text pa-1">
-                En Arcup nos comprometemos con la entrega puntual del producto y
-                te brindamos soporte las 24 horas los 7 días de la semana
-              </v-card-text>              
+            <v-col class="ma-0 pa-0" cols="12" sm="12" md="12" lg="12" xl="12">
+              <v-card
+                color="#161E2E"
+                width="100%"
+                tile
+                class="text-center"
+                flat
+                
+              >
+                <v-card-text class="ma-0 pa-0 d-flex justify-center">
+                  <div v-for="(item, index) in redesSociales" :key="index">
+                    <v-btn
+                      target="_blank"
+                      :href="item.href"
+                      class="mx-4 white--text"
+                      icon
+                    >
+                      <v-icon color="whithe" size="34px">
+                        {{ item.icon }}
+                      </v-icon>
+                    </v-btn>
+                  </div>
+                </v-card-text>
+              </v-card>
             </v-col>
           </v-row>
         </v-col>
 
-        <v-col class="ma-0 " cols="12" sm="12" md="4" lg="4" xl="4">
-          <v-card color="#161E2E" width="100%" tile class="text-center" flat>
-            <v-card-text class="d-flex justify-center">
-              <div v-for="(item, index) in redesSociales" :key="index">
-                <v-btn
-                  target="_blank"
-                  :href="item.href"
-                  class="mx-4 white--text"
-                  icon
-                >
-                  <v-icon color="whithe" size="34px"> {{ item.icon }} </v-icon>
-                </v-btn>
-                <div class="body-2 white--text">{{ item.name }}</div>
-              </div>
-            </v-card-text>
-          </v-card>
+        <v-col cols="12" sm="12" md="4" lg="4" xl="4">
+          <v-card-text id="content" class="textFooter white--text">
+            En Arcup nos comprometemos con la entrega puntual del producto y te
+            brindamos soporte las 24 horas los 7 días de la semana
+          </v-card-text>
         </v-col>
       </v-row>
     </v-footer>
@@ -87,14 +95,14 @@ h5 {
   color: #00ffff;
   font-family: GilroyLight;
 }
-#text {
-  margin-left: 15%;
-  margin-right: 15%;
-  margin-bottom: 10px;
-  text-align: justify;
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 65%;
+  font-size: 12px;
 }
-#content{
-  max-width: 360px;
+#contact{
+  font-size: 12px;
 }
 </style> 
  <!--../assets/formaLogo-Arcup.svg -->

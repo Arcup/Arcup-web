@@ -89,7 +89,7 @@
                 xl="3"
               >
                 <v-card class="">
-                  <v-img :src="item.src" max-height="100"></v-img>
+                  <v-img :src="item.src" max-height="110"></v-img>
                   <v-card-title> {{ item.name }} </v-card-title>
                   <v-card-subtitle>
                     <v-list>
@@ -99,7 +99,7 @@
                         :key="i"
                       >
                         <v-icon color="black" size="10" class="mr-2"
-                          >mdi-checkbox-blank-circle</v-icon
+                          >mdi-star-four-points-outline</v-icon
                         >
                         <v-list-item-title>
                           {{ description }}
@@ -135,7 +135,7 @@
                 xl="3"
               >
                 <v-card>
-                  <v-img :src="item.src" max-height="100"></v-img>
+                  <v-img :src="item.src" max-height="110"></v-img>
                   <v-card-title> {{ item.name }} </v-card-title>
                   <v-card-subtitle>
                     <v-list>
@@ -145,7 +145,7 @@
                         :key="i"
                       >
                         <v-icon color="black" size="10" class="mr-2"
-                          >mdi-checkbox-blank-circle</v-icon
+                          >mdi-star-four-points-outline</v-icon
                         >
                         <v-list-item-title>
                           {{ description }}
@@ -180,7 +180,7 @@
                 xl="3"
               >
                 <v-card class="">
-                  <v-img :src="item.src" max-height="100"></v-img>
+                  <v-img :src="item.src" max-height="110"></v-img>
                   <v-card-title> {{ item.name }} </v-card-title>
                   <v-card-subtitle>
                     <v-list>
@@ -190,7 +190,7 @@
                         :key="i"
                       >
                         <v-icon color="black" size="10" class="mr-2"
-                          >mdi-checkbox-blank-circle</v-icon
+                          >mdi-star-four-points-outline</v-icon
                         >
                         <v-list-item-title>
                           {{ description }}
@@ -260,7 +260,7 @@
                       :key="i"
                     >
                       <v-icon color="black" size="10" class="mr-2"
-                        >mdi-checkbox-blank-circle</v-icon
+                        >mdi-star-four-points-outline</v-icon
                       >
                       <v-list-item-title>
                         {{ description }}
@@ -325,7 +325,7 @@
                       :key="i"
                     >
                       <v-icon color="black" size="10" class="mr-2"
-                        >mdi-checkbox-blank-circle</v-icon
+                        >mdi-star-four-points-outline</v-icon
                       >
                       <v-list-item-title>
                         {{ description }}
@@ -390,7 +390,7 @@
                       :key="i"
                     >
                       <v-icon color="black" size="10" class="mr-2"
-                        >mdi-checkbox-blank-circle</v-icon
+                        >mdi-star-four-points-outline</v-icon
                       >
                       <v-list-item-title>
                         {{ description }}
@@ -413,8 +413,18 @@
 import BaseHeader from "@/components/BaseHeader.vue";
 import BaseFooter from "@/components/BaseFooter.vue";
 //Adding image to card
-import htmlycss3 from "../assets/title-images/image-hmtlcss3.png";
-import javaS from "../assets/title-images/image-js.png";
+import android from "../assets/card-images/image-android.png";
+import javaS from "../assets/card-images/image-js.png";
+import imgVuetify from "../assets/card-images/image-vuetify.png";
+import net from "../assets/card-images/image-net.png";
+import java from "../assets/card-images/image-java.png";
+import vuejs from "../assets/card-images/image-vuejs.png";
+import htmlcss3 from "../assets/card-images/image-htmlcss3.png";
+import sql from "../assets/card-images/image-sql.png";
+import mysql from "../assets/card-images/image-mysql.png";
+import kotlin from "../assets/card-images/image-kotlin.png";
+import xamarin from "../assets/card-images/image-xamarin.png";
+import restful from "../assets/card-images/image-restful.png";
 
 export default {
   name: "Technology",
@@ -433,13 +443,18 @@ export default {
 
       itemsCards1: [
         {
-          src: htmlycss3,
-          name: "HTML5",
+          src: vuejs,
+          name: "Vue.js",
+          description: ["Moderno", "Progresivo", "Diseño escalable", "Modular"],
+        },
+        {
+          src: imgVuetify,
+          name: "Vuetify",
           description: [
-            "Compatibilidad con los navegadores",
-            "Diseño responsivo",
-            "Estructura limpia",
-            "Mejora la experiencia de usuario",
+            "Ligero",
+            "Responsivo",
+            "Enfoque móvil",
+            "Actualización constante",
           ],
         },
         {
@@ -453,111 +468,91 @@ export default {
           ],
         },
         {
-          src:
-            "https://cdn-images-1.medium.com/max/1600/1*oZqGznbYXJfBlvGp5gQlYQ.jpeg",
-          name: "Vue.js",
+          src: htmlcss3,
+          name: "HTML y CSS",
           description: [
-            "Moderno",
-            "Progresivo",
-            "Comunidad muy activa",
-            "Trabaja con componentes"
-          ],
-        },
-        {
-          src:
-            "https://cdn-images-1.medium.com/max/1600/1*oZqGznbYXJfBlvGp5gQlYQ.jpeg",
-          name: "Vuetify",
-          description: [
-            "Ligero",
-            "Responsivo",
-            "Enfoque móvil",
-            "Actualización constante",
+            "Compatibilidad con los navegadores",
+            "Diseño responsivo",
+            "Estructura limpia",
+            "Mejora la experiencia de usuario",
           ],
         },
       ],
       itemsCards2: [
         {
-          src:
-            "https://th.bing.com/th/id/OIP.7TaggWnbRJ91hKi8p41q2QHaEK?pid=Api&rs=1",
+          src: net,
           name: ".NET",
           description: [
-            "Robusto y Seguro", 
+            "Robusto y Seguro",
             "Interoperabilidad multilenguaje",
             "Código administrado",
-            "Facilidad de despliegue"
+            "Facilidad de despliegue",
           ],
         },
         {
-          src:
-            "https://www.itprotoday.com/sites/itprotoday.com/files/uploads/2015/12/sqlserver-generic_0.jpg",
+          src: sql,
           name: "SQLServer",
           description: [
-            "Escalable", 
+            "Escalable",
             "Estable y seguro",
             "Soporta procedimientos almacenados",
-            "Potente entorno gráfico",        
+            "Potente entorno gráfico",
           ],
         },
         {
-          src: "https://pngimg.com/uploads/mysql/mysql_PNG29.png",
+          src: mysql,
           name: "MySQL",
           description: [
-            "Buen rendimiento", 
+            "Buen rendimiento",
             "Velocidad en las transacciones",
             "Open source",
             "Ligero",
           ],
         },
         {
-          src:
-            "https://th.bing.com/th/id/OIP.7TaggWnbRJ91hKi8p41q2QHaEK?pid=Api&rs=1",
-          name: "RestFull",
+          src: restful,
+          name: "Servicios RestFul",
           description: [
-            "Independencia de tecnologías", 
+            "Independencia de tecnologías",
             "Escalabilidad, Fiabilidad, seguridad",
-            "Separación cliente-servidor",
+            "Arquitectura cliente-servidor",
             "Consume pocos recursos",
           ],
         },
-        
       ],
       itemsCards3: [
         {
-          src:
-            "https://www.solutionanalysts.com/wp-content/uploads/2017/07/kotlin-course-image.jpg",
+          src: kotlin,
           name: "Kotlin",
           description: [
-            "Facilita el desarrollo",
-            "Seguro",
+            "Lenguaje oficial de google",
+            "Manejo de errores",
             "Multi-plataforma",
             "Moderno",
           ],
         },
         {
-          src:
-            "https://th.bing.com/th/id/OIP.qNbFWTHHkCxEkkI-0Lo4WwHaEK?pid=Api&rs=1",
+          src: java,
           name: "Java",
           description: [
-            "Multiplataforma", 
-            "Seguro",
+            "Multi-plataforma",
+            "Manejo de errores",
             "Robusto",
-            "Sencillo",
+            "Facilita el desarrollo",
           ],
         },
         {
-          src:
-            "https://th.bing.com/th/id/OIP.yNAPK4wpATuB-cb8ebuqWwHaDt?pid=Api&rs=1",
-          name: "AndroidStudio",
+          src: android,
+          name: "Android Studio",
           description: [
             "Especializado para Android",
-            "Actualizaciones constantes",
-            "Código ordenado y estructurado",
-            "Buen rendimiento",
+            "Soporte de versiones",
+            "Código ordenado",
+            "Emulador para pruebas",
           ],
         },
         {
-          src:
-            "https://th.bing.com/th/id/OIP.yNAPK4wpATuB-cb8ebuqWwHaDt?pid=Api&rs=1",
+          src: xamarin,
           name: "Xamarin",
           description: [
             "Multiplataforma",

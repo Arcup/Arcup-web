@@ -36,13 +36,13 @@ export default {
       sections: [
         {
           title: "Obtención de requisitos",
-          description: "En Arcup organizamos reuniones con nuestros clientes para descubrir y entender tus necesidades.",
+          description: "En Arcup organizamos reuniones con nuestros clientes para descubrir y entender sus necesidades.",
           src:
             "https://cdn.pixabay.com/photo/2017/01/14/10/56/men-1979261_960_720.jpg",
         },
         {
           title: "Análisis",
-          description: "Revisamos las necesidades expuestas para determinar los requerimientos y generar una propuesta de solución que cumpla tus expectativas.",
+          description: "//Revisamos las necesidades expuestas para determinar los requerimientos y generar una propuesta de solución que cumpla tus expectativas.",
           src:
             "https://cdn.pixabay.com/photo/2019/03/07/16/48/hands-4040619_960_720.jpg",
         },
@@ -54,12 +54,18 @@ export default {
         },
         {
           title: "Codificación",
-          description: "Codificamos el software por iteraciones para mostrarte los avances que se han realizado. ",
+          description: "Codificamos software por iteraciones para mostrarte los avances que se han realizado. ",
           src: "https://cdn.pixabay.com/photo/2019/03/07/16/48/hands-4040619_960_720.jpg",
         },
         {
           title: "Pruebas",
-          description: "Realizamos pruebas en paralelo para garantizar el correcto funcionamiento de tú proyecto. Al finalizar desplegamos tú sistema para que valides su funcionamiento.",
+          description: "Realizamos pruebas en paralelo para garantizar el correcto funcionamiento de tu proyecto. Al finalizar desplegamos tu sistema para que valides su funcionamiento.",
+          src:
+            "https://cdn.pixabay.com/photo/2020/05/22/21/44/review-5207277_960_720.jpg",
+        },
+        {
+          title: "Despliegue",
+          description: "",
           src:
             "https://cdn.pixabay.com/photo/2020/05/22/21/44/review-5207277_960_720.jpg",
         },
