@@ -125,6 +125,7 @@ import BaseFooter from "@/components/BaseFooter.vue";
 import imgCarousel from "../assets/carousel-images/carousel-pictures.png";
 import photoJesus from "../assets/photos/photo-jesus.jpg";
 import photoJahir from "../assets/photos/photo-jahir.jpg";
+import photoLuis from "../assets/photos/photo-luis.jpg";
 
 export default {
   name: "About",
@@ -152,7 +153,7 @@ export default {
         src: imgCarousel,
         name: "Luis Galicia",
         degree: "Ingeniero de software",
-        photo: photoJesus,
+        photo: photoLuis,
         jobTitle: "Co-Fundador y CEO",
         tasks: "Front-End y Back-End Developer",
         email: "luis.galicia@arcup.com.mx",

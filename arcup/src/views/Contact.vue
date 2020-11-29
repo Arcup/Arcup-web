@@ -20,11 +20,13 @@
                   mediante nuestras fuentes de contacto:
                 </v-card-text>
                 <v-card-text class="text-justify text-size">
-                  <h2 class="h2">E-mail</h2>
+                  <h2 class="h2"><v-icon size="23" class="pr-1" color="cyan">
+                  mdi-email-outline</v-icon>E-mail </h2> 
 
                   <br />
                   contacto@arcup.com.mx
-                  <h2 class="h2"><br />Teléfono</h2>
+                  <h2 class="h2"><br /><v-icon size="23" class="pr-1" color="cyan">
+                  mdi-phone</v-icon>Teléfono </h2>
                   <br />
                   (+52) 2281132016 <br />
                   (+52) 2282935090 <br />
@@ -47,11 +49,11 @@
                 </validation-provider>
                 <validation-provider
                   v-slot="{ errors }"
-                  name="Apellido Paterno"
+                  name="Apellido paterno"
                   rules="required|max:50"
                 >
                   <v-text-field
-                    label="Apellido Paterno"
+                    label="Apellido paterno"
                     :error-messages="errors"
                     v-model="lastNameF"
                     required
@@ -59,11 +61,11 @@
                 </validation-provider>
                 <validation-provider
                   v-slot="{ errors }"
-                  name="Apellido Materno"
+                  name="Apellido materno"
                   rules="required|max:50"
                 >
                   <v-text-field
-                    label="Apellido Materno"
+                    label="Apellido materno"
                     :error-messages="errors"
                     v-model="lastNameM"
                     required
@@ -133,11 +135,11 @@
                 ></v-checkbox>
                 <validation-provider
                   v-slot="{ errors }"
-                  name="Nombre del Proyecto"
+                  name="Nombre del proyecto"
                   rules="required|max:50"
                 >
                   <v-text-field
-                    label="Nombre del Proyecto"
+                    label="Nombre del proyecto"
                     v-model="projectName"
                     :error-messages="errors"
                     required
@@ -145,7 +147,7 @@
                 </validation-provider>
                 <validation-provider
                   v-slot="{ errors }"
-                  name="Descripción del Proyecto"
+                  name="Descripción del proyecto"
                   rules="required|max:1000"
                 >
                   <v-textarea
@@ -155,7 +157,7 @@
                     v-model="projectDescription"
                     :counter="1000"
                     no-resize
-                    label="Descripción del Proyecto"
+                    label="Descripción del proyecto"
                     height="121px"
                   ></v-textarea>
                 </validation-provider>
@@ -259,7 +261,7 @@ setInteractionMode("eager");
 
 extend("required", {
   ...required,
-  message: "El campo {_field_} no puede estar vacio",
+  message: "El campo {_field_} no puede estar vacío",
 });
 
 extend("max", {
@@ -269,7 +271,7 @@ extend("max", {
 
 extend("email", {
   ...email,
-  message: "Formato de e-mail no valido",
+  message: "Formato de e-mail no válido",
 });
 
 export default {

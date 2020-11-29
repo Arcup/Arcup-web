@@ -81,7 +81,7 @@ export default {
       {
         title: "En la actualidad...",
         description:
-          "El equipo de arcup se encuentra en un aprendizaje constante de nuevas tecnologías para brindarle a nuestros clientes lo último y más usable en tecnología. " +
+          "El equipo de arcup se encuentra en un aprendizaje constante para brindarle a nuestros clientes lo último y más usable en tecnología. " +
           "De manera individual cada miembro participa activamente en distintos proyectos Open Source para compartir opiniones y experiencias que ayuden a superar la calidad de nuestros productos de software.",
         year: "... 2020",
         color: "light-blue darken-2",

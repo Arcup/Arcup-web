@@ -15,9 +15,9 @@
       <v-container>
         <v-card class="mx-auto pt-3 pr-3 pl-3 background-gray" flat width="950">
           <p class="text-justify">
-            Nuestros valores nos guían para construir proyectos software de
-            calidad que cumplan con todos los estandares tecnológicos actuales y
-            así poder asegurar integridad de los proyectos que desarrollamos,
+            Nuestros valores nos guían para construir proyectos de software de
+            calidad que cumplan con todos los estándares tecnológicos actuales y
+            así poder asegurar la integridad de los proyectos que desarrollamos,
             por lo tanto, todos nuestros servicios de construcción de software
             incluyen:
           </p>
@@ -37,8 +37,8 @@
 
           <v-card-text class="text-justify">
             Respondemos tus dudas o solicitudes en cualquier momento del día.
-            Nuestro equipo de trabajo se encuntra disponible y capacitado para
-            responder tus mensajes a la brevedad y de la forma adecuada.
+            Nuestro equipo de trabajo se encuentra disponible y capacitado para
+            responder tus mensajes a la brevedad.
           </v-card-text>
         </v-col>
         <v-col class="text-center" cols="12" sm="6" md="3" lg="3">
@@ -75,11 +75,11 @@
             <v-icon size="60" color="#00ffff"> mdi-cog </v-icon>
           </v-avatar>
           <h3 class="text-center m-padding-top color-title">
-            Asesorias tecnológicas
+            Asesorías tecnológicas
           </h3>
           <v-card-text class="text-justify">
             Te orientamos para construir la solución tecnológica que tu
-            necesitas, basandonos en tus necesidades y objetivos encontraremos
+            necesitas, basándonos en tus necesidades y objetivos encontraremos
             las herramientas adecuadas para que tu proyecto digital sea un
             éxito.
           </v-card-text>
