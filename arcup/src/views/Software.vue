@@ -8,16 +8,119 @@
       max-height="300"
       class="mb-10"
     >
-    </v-img>
-    <div v-for="(item, index) in sections" :key="index">
-      <v-card flat class="text-center" width="100%" height="140">
-        <h2>{{ item.title }}</h2>        
-        <v-card-text class="text-center">{{ item.description }}</v-card-text>        
-      </v-card>
-      
-      <v-parallax dark :src="item.src" height="300" class="mb-16">        
-      </v-parallax>
+    </v-img>    
+    <div>
+      <h2 class="text-center padding-top pb-2 color-title pr-4 pl-4">
+        CONOCE NUESTRO PROCESO DE DESARROLLO DE SOFTWARE
+        <v-icon color="cyan">mdi-laptop</v-icon>
+      </h2>
+      <v-container>
+        <v-card class="mx-auto pt-3 pr-3 pl-3 background-gray" flat width="950">
+          <p class="text-justify">
+            En Arcup estamos comprometidos con el desarrollo de software de calidad, por tal motivo,
+            nos apegamos al uso de metodologías, procesos y herramientas para su construcción.
+            Conoce nuestro proceso:            
+          </p>
+        </v-card>
+      </v-container>
     </div>
+    <!-- FIla 1 -->
+    <v-row>
+      <v-col class="pa-0" cols="12"  sm="6" md="6" lg="6" xl="6">
+        <v-card class="text-center" color="#F5F5F5" rounded="0" height="300">
+          <h3 class="pa-4">Obtención de requisitos</h3>
+          <v-card-text class="pt-0"> En Arcup organizamos las reuniones necesarias para que nos cuente sobre su proyecto </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col class="pa-0" cols="12"  sm="6" md="6" lg="6" xl="6"> 
+        <v-card rounded="0" height="300">
+          <v-img max-width="100%" max-height="100%"  src="https://cdn.pixabay.com/photo/2016/03/09/09/22/workplace-1245776_960_720.jpg">
+          </v-img>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- FIla 2 -->
+    <v-row>
+      <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
+        <v-card rounded="0" height="300">
+          <v-img height="300"  src="https://cdn.pixabay.com/photo/2020/02/24/16/06/whiteboard-4876651_960_720.jpg">
+          </v-img>
+        </v-card>
+      </v-col>
+      <v-col class="pa-0" cols="12"  sm="6" md="6" lg="6" xl="6">
+        <v-card class="text-center" color="#F5F5F5" rounded="0" height="300">
+          <h3 class="pa-4">Análisis</h3>
+          <v-card-text class="pa-0"> texto </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- FIla 3 -->
+    <v-row>
+      <v-col class="pa-0" cols="12"  sm="6" md="6" lg="6" xl="6">
+        <v-card class="text-center" color="#F5F5F5" rounded="0" height="300">
+          <h3 class="pa-4">Diseño</h3>
+          <v-card-text class="pa-0"> texto </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col class="pa-0" cols="12"  sm="6" md="6" lg="6" xl="6"> 
+        <v-card rounded="0" height="300">
+          <v-img height="300"  src="https://cdn.pixabay.com/photo/2015/12/16/11/28/technology-1095751_960_720.jpg">
+          </v-img>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- FIla 4 -->
+    <v-row>
+      <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
+        <v-card rounded="0" height="300">
+          <v-img height="300"  src="https://cdn.pixabay.com/photo/2016/11/19/15/32/business-1839876_960_720.jpg">
+          </v-img>
+        </v-card>
+      </v-col>
+      <v-col class="pa-0" cols="12"  sm="6" md="6" lg="6" xl="6">
+        <v-card class="text-center" color="#F5F5F5" rounded="0" height="300">
+          <h3 class="pa-4">Codificación</h3>
+          <v-card-text class="pa-0"> texto </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <!-- FIla 5 -->
+    <v-row>
+      <v-col class="pa-0" cols="12"  sm="6" md="6" lg="6" xl="6">
+        <v-card class="text-center" color="#F5F5F5" rounded="0" height="300">
+          <h3 class="pa-4">Pruebas</h3>
+          <v-card-text class="pa-0"> texto </v-card-text>
+        </v-card>
+      </v-col>
+      <v-col class="pa-0" cols="12"  sm="6" md="6" lg="6" xl="6"> 
+        <v-card rounded="0" height="300">
+          <v-img height="300"  src="https://cdn.pixabay.com/photo/2017/05/15/06/08/checklist-2313804_960_720.jpg">
+          </v-img>
+        </v-card>
+      </v-col>
+    </v-row>
+    
+    <!-- FIla 6 -->
+    <v-row>
+      <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
+        <v-card rounded="0" height="300">
+          <v-img height="300"  src="https://cdn.pixabay.com/photo/2019/01/17/19/11/login-3938432_960_720.jpg">
+          </v-img>
+        </v-card>
+      </v-col>
+      <v-col class="pa-0" cols="12"  sm="6" md="6" lg="6" xl="6">
+        <v-card class="text-center" color="#F5F5F5" rounded="0" height="300">
+          <h3 class="pa-4">Despliegue</h3>
+          <v-card-text class="pa-0"> texto </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+  
+
     <base-footer> </base-footer>
   </div>
 </template>
@@ -32,45 +135,7 @@ export default {
     BaseFooter,
   },
   data() {
-    return {
-      sections: [
-        {
-          title: "Obtención de requisitos",
-          description: "En Arcup organizamos reuniones con nuestros clientes para descubrir y entender sus necesidades.",
-          src:
-            "https://cdn.pixabay.com/photo/2017/01/14/10/56/men-1979261_960_720.jpg",
-        },
-        {
-          title: "Análisis",
-          description: "//Revisamos las necesidades expuestas para determinar los requerimientos y generar una propuesta de solución que cumpla tus expectativas.",
-          src:
-            "https://cdn.pixabay.com/photo/2019/03/07/16/48/hands-4040619_960_720.jpg",
-        },
-        {
-          title: "Diseño",
-          description: "Elaboramos prototipos que te permitirán conocer una vista del contenido de tu sistema, también, elegimos las mejores tecnologías y herramientas para su desarrollo.",
-          src:
-            "https://cdn.pixabay.com/photo/2015/09/29/22/49/blueprint-964629_960_720.jpg",
-        },
-        {
-          title: "Codificación",
-          description: "Codificamos software por iteraciones para mostrarte los avances que se han realizado. ",
-          src: "https://cdn.pixabay.com/photo/2019/03/07/16/48/hands-4040619_960_720.jpg",
-        },
-        {
-          title: "Pruebas",
-          description: "Realizamos pruebas en paralelo para garantizar el correcto funcionamiento de tu proyecto. Al finalizar desplegamos tu sistema para que valides su funcionamiento.",
-          src:
-            "https://cdn.pixabay.com/photo/2020/05/22/21/44/review-5207277_960_720.jpg",
-        },
-        {
-          title: "Despliegue",
-          description: "",
-          src:
-            "https://cdn.pixabay.com/photo/2020/05/22/21/44/review-5207277_960_720.jpg",
-        },
-      ],
-    };
+    return {};
   },
 };
 </script>

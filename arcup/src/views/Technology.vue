@@ -16,7 +16,7 @@
           <v-hover v-slot="{ hover }" open-delay="200">
             <v-card
               rounded="circle"
-              :elevation="hover ? 16 : 2"
+              :elevation="hover ? 8 : 2"
               :class="{ 'on-hover': hover }"
               height="100"
               max-width="100"
@@ -32,7 +32,7 @@
           <v-hover v-slot="{ hover }" open-delay="200">
             <v-card
               rounded="circle"
-              :elevation="hover ? 16 : 2"
+              :elevation="hover ? 8 : 2"
               :class="{ 'on-hover': hover }"
               height="100"
               max-width="100"
@@ -48,7 +48,7 @@
           <v-hover v-slot="{ hover }" open-delay="200">
             <v-card
               rounded="circle"
-              :elevation="hover ? 16 : 2"
+              :elevation="hover ? 8 : 2"
               :class="{ 'on-hover': hover }"
               height="100"
               max-width="100"
@@ -101,7 +101,7 @@
                         <v-icon color="black" size="10" class="mr-2"
                           >mdi-star-four-points-outline</v-icon
                         >
-                        <v-list-item-title>
+                        <v-list-item-title> 
                           {{ description }}
                         </v-list-item-title>
                       </v-list-item>
@@ -213,7 +213,7 @@
         <v-hover v-slot="{ hover }" open-delay="200" class="mb-4">
           <v-card
             rounded="circle"
-            :elevation="hover ? 16 : 2"
+            :elevation="hover ? 8 : 2"
             :class="{ 'on-hover': hover }"
             class=""
             height="100"
@@ -278,7 +278,7 @@
         <v-hover v-slot="{ hover }" open-delay="200" class="mb-4">
           <v-card
             rounded="circle"
-            :elevation="hover ? 16 : 2"
+            :elevation="hover ? 8 : 2"
             :class="{ 'on-hover': hover }"
             class=""
             height="100"
@@ -343,7 +343,7 @@
         <v-hover v-slot="{ hover }" open-delay="200" class="mb-4">
           <v-card
             rounded="circle"
-            :elevation="hover ? 16 : 2"
+            :elevation="hover ? 8 : 2"
             :class="{ 'on-hover': hover }"
             class=""
             height="100"
@@ -392,7 +392,7 @@
                       <v-icon color="black" size="10" class="mr-2"
                         >mdi-star-four-points-outline</v-icon
                       >
-                      <v-list-item-title>
+                      <v-list-item-title class="abcd">
                         {{ description }}
                       </v-list-item-title>
                     </v-list-item>
@@ -511,7 +511,7 @@ export default {
         },
         {
           src: restful,
-          name: "Servicios RestFul",
+          name: "Servicios RESTful",
           description: [
             "Independencia de tecnologías",
             "Escalabilidad, Fiabilidad, seguridad",
@@ -590,4 +590,5 @@ export default {
 .background {
   background-image: url("../assets/background-circle-tech.svg");
 }
+
 </style>
