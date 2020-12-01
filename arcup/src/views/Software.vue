@@ -34,7 +34,10 @@
           <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
               <v-card-text> <h2>Obtención de requisitos</h2> </v-card-text>
               <v-card-text>
-                <h3>Recopilamos las caracteristicas para tu sistema, 
+                <h3 class="pl-2 pr-2">
+                  Planificamos una reunión entre nuestros clientes y el 
+                  equipo de Arcup para obtener las caracteristicas que se implementarán
+                  en el sistema de software.
                 </h3>
               </v-card-text>            
           </v-card>
@@ -65,7 +68,11 @@
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
           <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
             <v-card-text><h2>Análisis</h2> </v-card-text>
-            <v-card-text class="pa-0"><h3>texto</h3></v-card-text>
+            <v-card-text class="pa-0">
+              <h3 class="pl-2 pr-2">
+                En acuerdo con nuestros clientes establecemos los caracteristicas con 
+                las cuales contará sus sistema.              
+              </h3></v-card-text>
           </v-card>
         </v-col>
       </v-row>
@@ -75,7 +82,10 @@
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
           <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
             <v-card-text><h2>Diseño</h2></v-card-text>
-            <v-card-text class="pa-0"><h3>texto</h3></v-card-text>
+            <v-card-text class="pa-0"><h3 class="pl-2 pr-2">
+              Creamos prototipos que permiten visualizar de manera clara el 
+              comportamiento del sistema.              
+            </h3></v-card-text>
           </v-card>
         </v-col>
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
@@ -103,7 +113,11 @@
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
           <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
             <v-card-text><h2>Codificación</h2></v-card-text>            
-            <v-card-text class="pa-0"> <h3>texto</h3> </v-card-text>
+            <v-card-text class="pa-0"> 
+              <h3 class="pl-2 pr-2">
+                Codificamos software por iteraciones para mostrarte los avances que se han realizado.
+              </h3> 
+            </v-card-text>
           </v-card>
         </v-col>
       </v-row>
@@ -113,7 +127,10 @@
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
           <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
             <v-card-text><h2>Pruebas</h2></v-card-text>            
-            <v-card-text class="pa-0"> <h3>texto</h3> </v-card-text>
+            <v-card-text class="pt-0"> <h3 class="pl-2 pr-2">
+              Realizamos pruebas en paralelo para garantizar el correcto funcionamiento de tu proyecto. 
+              Al finalizar desplegamos tu sistema para que valides su funcionalidad.  
+            </h3> </v-card-text>
           </v-card>
         </v-col>
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
@@ -141,7 +158,14 @@
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
           <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
             <v-card-text><h2>Despliegue</h2></v-card-text>            
-            <v-card-text class="pa-0"> <h3>texto</h3> </v-card-text>
+            <v-card-text class="pa-0"> 
+              <h3 class="pl-2 pr-2">
+                Te proporcionamos la información necesaria para que puedas tener el control
+                de tu sistema.
+                En el desarrollo web, nos encargamos de alojar tú página con nuestros servicios 
+                de hosting y dominio para que puedas acceder a ella desde cualquier lugar.
+              </h3> 
+            </v-card-text>
           </v-card>
         </v-col>
       </v-row>
