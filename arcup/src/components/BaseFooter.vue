@@ -15,11 +15,14 @@
           <v-row no-gutters class="ml-4 mr-2 mb-2">
             <v-col class="ma-0 pa-0" cols="12" sm="12" md="12" lg="12" xl="12">
               <v-card-text class="ma-0 d-flex justify-center pr-0">
-                <v-img
+                <router-link :to="{ name: 'Main' }">
+                  <v-img
                   max-height="40"
                   max-width="35"
                   src="../assets/formaLogo-Arcup.svg"
                 ></v-img>
+                </router-link>
+                
               </v-card-text>
             </v-col>
             <v-col class="ma-0 pa-0" cols="12" sm="12" md="12" lg="12" xl="12">
@@ -79,11 +82,6 @@ export default {
           name: "Twitter",
           icon: "mdi-twitter",
           href: "https://twitter.com/arcupdev",
-        },
-        {
-          name: "Linkedin",
-          icon: "mdi-linkedin",
-          href: "https://vuetifyjs.com/en/api/v-btn/#v-btn-api",
         },
       ],
     };

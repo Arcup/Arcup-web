@@ -11,7 +11,7 @@
             hide-delimiter-background
           >
             <v-carousel-item
-              class="grey darken-4"
+              class="grey darken-4 pointer"
               v-for="(item, i) in itemsCarousel"
               :key="i"
               :src="isMobile ? item.srcMobil : item.src"
@@ -511,5 +511,8 @@ export default {
 .font__main-alter-xs {
   font-family: Mazzard;
   font-size: 20px;
+}
+.pointer {
+  cursor: pointer;
 }
 </style>
