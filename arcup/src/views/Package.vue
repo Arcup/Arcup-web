@@ -257,7 +257,6 @@
       </v-container>
     </div>
     <div class="text-center pt-16 pb-16 color-background-gray">
-      <v-container class="pb-10">
         <v-icon size="80" class="pb-3" color="cyan"
           >mdi-clock-check-outline
         </v-icon>
@@ -273,7 +272,6 @@
             >VER MÁS</v-btn
           >
         </router-link>
-      </v-container>
     </div>
     <base-footer></base-footer>
   </div>

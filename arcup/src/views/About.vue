@@ -2,11 +2,10 @@
   <div>
     <base-header></base-header>
 
-    <div class="pb-15">
+    <div>
       <v-carousel cycle  show-arrows-on-hover height="400" >
         <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
           <div class="height text-center pl-6 pr-6">
-            
             <v-row>
               <v-col cols="12" md="6" sm="6" xs="12" class="pt-5">
                 <span class="font__main-alter-xs">{{ item.degree }}</span
@@ -34,8 +33,15 @@
         </v-carousel-item>
       </v-carousel>
     </div>
+    <div class="text-center pa-10 background-gray">
+      <v-icon size="50" color="cyan">mdi-account-group </v-icon>
+      
+        <h1 class="font__main-alter">CONÓCENOS</h1>
+        <v-card flat height="3" color="cyan" width="300" class="mx-auto"></v-card>
+        Conoce nuestros valores y motivaciones
+      </div>
     <v-container>
-      <v-row class="">
+      <v-row>
         <v-col cols="12" md="6" sm="6">
           <v-card-title class="title margin-text">Misión</v-card-title>
 
@@ -81,7 +87,7 @@
           </v-card-text>
         </v-col>
 
-        <v-col cols="12" md="6" sm="6">
+        <v-col cols="12" md="6" sm="6" >
           <v-card class="mx-auto">
             <v-img
               class="white--text align-end"
@@ -209,7 +215,7 @@ export default {
   padding-bottom: 30px;
 }
 .background-gray {
-  background-color: rgb(238, 238, 238);
+  background-color: rgb(245, 245, 245);
 }
 .height {
   display: flex;
