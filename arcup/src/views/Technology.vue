@@ -5,10 +5,25 @@
       src="../assets/title-images/image-technology.png"
       max-width="100%"
       max-height="300"
-      class="mb-4"
+      class="mb-10"
     >
     </v-img>
-    <!-- Inicia versión web -->
+    <div>
+      <h1 class="text-center padding-top pb-2 pr-4 pl-4">
+        CONOCE NUESTRA SELECCIÓN DE TECNOLOGÍAS
+        <v-icon color="cyan">mdi-responsive</v-icon>
+      </h1>
+      <v-container>
+        <v-card class="mx-auto pt-3 pr-3 pl-3 background-gray" flat width="950">
+          <p class="text-justify">
+            En arcup nos importa tu proyecto, por ello, seleccionamos
+            tecnologias y herramientas que aportan alto rendimiento,
+            escalabilidad y buen diseño a tu sistema.
+          </p>
+        </v-card>
+      </v-container>
+    </div>
+    <!-- versión WEB -->
     <v-container v-show="!isMobile()">
       <!-- Avatars -->
       <v-row class="ma-0">
@@ -26,6 +41,7 @@
               </v-avatar>
             </v-card>
           </v-hover>
+            <h3 class="text-center">Tecnologías Front-End</h3>          
         </v-col>
 
         <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
@@ -38,10 +54,11 @@
               max-width="100"
             >
               <v-avatar size="100" class="background" @click="selecAndroid">
-                <v-icon color="#00ffff" size="60" dark>mdi-server</v-icon>
+                <v-icon color="#00ffff" size="50" dark>mdi-server</v-icon>
               </v-avatar>
             </v-card>
           </v-hover>
+          <h3 class="text-center">Tecnologías Back-End</h3>
         </v-col>
 
         <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
@@ -58,10 +75,11 @@
                 class="background"
                 @click="selecConsultation"
               >
-                <v-icon color="#00ffff" size="50" dark> mdi-cellphone </v-icon>
+                <v-icon color="#00ffff" size="52" dark> mdi-cellphone </v-icon>
               </v-avatar>
             </v-card>
           </v-hover>
+          <h3 class="text-center">Tecnologías Móviles</h3>
         </v-col>
       </v-row>
       <!-- Finaliza avatars -->
@@ -73,7 +91,7 @@
           <v-card
             v-show="expandWeb"
             height="100%"
-            width="97%"
+            min-width="97%"
             class="mx-auto"
             color="#ffffff"
             outlined
@@ -84,26 +102,24 @@
                 :key="index"
                 cols="12"
                 sm="6"
-                md="3"
+                md="6"
                 lg="3"
                 xl="3"
               >
-                <v-card class="">
+                <v-card>
                   <v-img :src="item.src" max-height="110"></v-img>
-                  <v-card-title> {{ item.name }} </v-card-title>
+                  <v-card-title class="text-center"><h2 >{{ item.name }}</h2>
+                  </v-card-title>
                   <v-card-subtitle>
                     <v-list>
                       <v-list-item
-                        class="pa-0"
                         v-for="(description, i) in item.description"
                         :key="i"
                       >
-                        <v-icon color="black" size="10" class="mr-2"
-                          >mdi-star-four-points-outline</v-icon
-                        >
-                        <v-list-item-title> 
-                          {{ description }}
-                        </v-list-item-title>
+                        <v-icon color="black" size="10" class="mr-2">
+                          mdi-star-four-points-outline
+                        </v-icon>
+                        {{ description }}
                       </v-list-item>
                     </v-list>
                   </v-card-subtitle>
@@ -130,26 +146,25 @@
                 :key="index"
                 cols="12"
                 sm="6"
-                md="3"
+                md="6"
                 lg="3"
                 xl="3"
               >
                 <v-card>
                   <v-img :src="item.src" max-height="110"></v-img>
-                  <v-card-title> {{ item.name }} </v-card-title>
+                  <v-card-title>
+                    <h2>{{ item.name }}</h2>
+                  </v-card-title>
                   <v-card-subtitle>
                     <v-list>
                       <v-list-item
-                        class="pa-0"
                         v-for="(description, i) in item.description"
                         :key="i"
                       >
-                        <v-icon color="black" size="10" class="mr-2"
-                          >mdi-star-four-points-outline</v-icon
-                        >
-                        <v-list-item-title>
-                          {{ description }}
-                        </v-list-item-title>
+                        <v-icon color="black" size="10" class="mr-2">
+                          mdi-star-four-points-outline
+                        </v-icon>
+                        {{ description }}
                       </v-list-item>
                     </v-list>
                   </v-card-subtitle>
@@ -175,26 +190,25 @@
                 :key="index"
                 cols="12"
                 sm="6"
-                md="3"
+                md="6"
                 lg="3"
                 xl="3"
               >
                 <v-card class="">
                   <v-img :src="item.src" max-height="110"></v-img>
-                  <v-card-title> {{ item.name }} </v-card-title>
+                  <v-card-title>
+                    <h2>{{ item.name }}</h2>
+                  </v-card-title>
                   <v-card-subtitle>
                     <v-list>
                       <v-list-item
-                        class="pa-0"
                         v-for="(description, i) in item.description"
                         :key="i"
                       >
-                        <v-icon color="black" size="10" class="mr-2"
-                          >mdi-star-four-points-outline</v-icon
-                        >
-                        <v-list-item-title>
-                          {{ description }}
-                        </v-list-item-title>
+                        <v-icon color="black" size="10" class="mr-2">
+                          mdi-star-four-points-outline
+                        </v-icon>
+                        {{ description }}
                       </v-list-item>
                     </v-list>
                   </v-card-subtitle>
@@ -209,6 +223,12 @@
 
     <!-- Versión movil -->
     <div v-show="isMobile()">
+      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
+        <v-card flat max-width="80%">
+          <h3 class="pt-5 pb-4">Tecnologías WEB</h3>
+        </v-card>
+      </v-row>
+
       <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
         <v-hover v-slot="{ hover }" open-delay="200" class="mb-4">
           <v-card
@@ -249,22 +269,21 @@
               lg="3"
               xl="3"
             >
-              <v-card class="">
+              <v-card>
                 <v-img :src="item.src" max-height="120"></v-img>
-                <v-card-title> {{ item.name }} </v-card-title>
+                <v-card-title>
+                  <h2>{{ item.name }}</h2>
+                </v-card-title>
                 <v-card-subtitle>
                   <v-list>
                     <v-list-item
-                      class="pa-0"
                       v-for="(description, i) in item.description"
                       :key="i"
                     >
-                      <v-icon color="black" size="10" class="mr-2"
-                        >mdi-star-four-points-outline</v-icon
-                      >
-                      <v-list-item-title>
-                        {{ description }}
-                      </v-list-item-title>
+                      <v-icon color="black" size="10" class="mr-2">
+                        mdi-star-four-points-outline
+                      </v-icon>
+                      {{ description }}
                     </v-list-item>
                   </v-list>
                 </v-card-subtitle>
@@ -273,6 +292,12 @@
           </v-row>
         </v-card>
       </v-fade-transition>
+
+      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
+        <v-card flat max-width="80%">
+          <h3 class="pt-5 pb-4">Tecnoogías de Bases de Datos</h3>
+        </v-card>
+      </v-row>
 
       <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
         <v-hover v-slot="{ hover }" open-delay="200" class="mb-4">
@@ -289,7 +314,7 @@
               class="background"
               @click="expandAndroidVA = !expandAndroidVA"
             >
-              <v-icon color="#00ffff" size="60" dark>mdi-server</v-icon>
+              <v-icon color="#00ffff" size="50" dark>mdi-server</v-icon>
             </v-avatar>
           </v-card>
         </v-hover>
@@ -314,22 +339,21 @@
               lg="3"
               xl="3"
             >
-              <v-card class="">
+              <v-card>
                 <v-img :src="item.src" max-height="120"></v-img>
-                <v-card-title> {{ item.name }} </v-card-title>
+                <v-card-title>
+                  <h2>{{ item.name }}</h2>
+                </v-card-title>
                 <v-card-subtitle>
                   <v-list>
                     <v-list-item
-                      class="pa-0"
                       v-for="(description, i) in item.description"
                       :key="i"
                     >
-                      <v-icon color="black" size="10" class="mr-2"
-                        >mdi-star-four-points-outline</v-icon
-                      >
-                      <v-list-item-title>
-                        {{ description }}
-                      </v-list-item-title>
+                      <v-icon color="black" size="10" class="mr-2">
+                        mdi-star-four-points-outline
+                      </v-icon>
+                      {{ description }}
                     </v-list-item>
                   </v-list>
                 </v-card-subtitle>
@@ -338,6 +362,12 @@
           </v-row>
         </v-card>
       </v-fade-transition>
+
+      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
+        <v-card flat max-width="80%">
+          <h3 class="pt-4 pb-4">Tecnoogías para desarrollo móvil</h3>
+        </v-card>
+      </v-row>
 
       <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
         <v-hover v-slot="{ hover }" open-delay="200" class="mb-4">
@@ -354,7 +384,7 @@
               class="background"
               @click="expandConsultationVA = !expandConsultationVA"
             >
-              <v-icon color="#00ffff" size="50" dark> mdi-cellphone </v-icon>
+              <v-icon color="#00ffff" size="52" dark> mdi-cellphone </v-icon>
             </v-avatar>
           </v-card>
         </v-hover>
@@ -379,22 +409,23 @@
               lg="3"
               xl="3"
             >
-              <v-card class="">
+              <v-card>
                 <v-img :src="item.src" max-height="120"></v-img>
-                <v-card-title> {{ item.name }} </v-card-title>
+                <v-card-title>
+                  <h2>{{ item.name }}</h2>
+                </v-card-title>
                 <v-card-subtitle>
                   <v-list>
                     <v-list-item
-                      class="pa-0"
                       v-for="(description, i) in item.description"
                       :key="i"
                     >
-                      <v-icon color="black" size="10" class="mr-2"
-                        >mdi-star-four-points-outline</v-icon
-                      >
-                      <v-list-item-title class="abcd">
+                      <v-list-item>
+                        <v-icon color="black" size="10" class="mr-2">
+                          mdi-star-four-points-outline
+                        </v-icon>
                         {{ description }}
-                      </v-list-item-title>
+                      </v-list-item>
                     </v-list-item>
                   </v-list>
                 </v-card-subtitle>
@@ -413,18 +444,18 @@
 import BaseHeader from "@/components/BaseHeader.vue";
 import BaseFooter from "@/components/BaseFooter.vue";
 //Adding image to card
-import android from "../assets/card-images/image-android.png";
-import javaS from "../assets/card-images/image-js.png";
-import imgVuetify from "../assets/card-images/image-vuetify.png";
-import net from "../assets/card-images/image-net.png";
-import java from "../assets/card-images/image-java.png";
 import vuejs from "../assets/card-images/image-vuejs.png";
+import imgVuetify from "../assets/card-images/image-vuetify.png";
+import javaS from "../assets/card-images/image-js.png";
 import htmlcss3 from "../assets/card-images/image-htmlcss3.png";
+import net from "../assets/card-images/image-net.png";
 import sql from "../assets/card-images/image-sql.png";
 import mysql from "../assets/card-images/image-mysql.png";
-import kotlin from "../assets/card-images/image-kotlin.png";
-import xamarin from "../assets/card-images/image-xamarin.png";
 import restful from "../assets/card-images/image-restful.png";
+import kotlin from "../assets/card-images/image-kotlin.png";
+import java from "../assets/card-images/image-java.png";
+import android from "../assets/card-images/image-android.png";
+import xamarin from "../assets/card-images/image-xamarin.png";
 
 export default {
   name: "Technology",
@@ -588,7 +619,22 @@ export default {
 </script>
 <style lang='css'>
 .background {
-  background-image: url("../assets/background-circle-tech.svg");
+  background-image: url("../assets/background-circle.svg");
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 25px;
+  font-family: Mazzard;
+}
+h3 {
+  padding-top: 12px;
+  font-size: 14px;
+}
+p {
+  color: black;
+  font-size: medium;
 }
 
 </style>
