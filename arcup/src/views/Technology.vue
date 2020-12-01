@@ -5,9 +5,25 @@
       src="../assets/title-images/image-technology.png"
       max-width="100%"
       max-height="300"
-      class="mb-4"
+      class="mb-10"
     >
     </v-img>
+    <div>
+      <h1 class="text-center padding-top pb-2 pr-4 pl-4">
+        CONOCE NUESTRA SELECCIÓN DE TECNOLOGÍAS
+        <v-icon color="cyan">mdi-responsive</v-icon>
+      </h1>
+      <v-container>
+        <v-card class="mx-auto pt-3 pr-3 pl-3 background-gray" flat width="950">
+          <p class="text-justify">            
+            En arcup nos importa tu proyecto, por ello, 
+            seleccionamos tecnologias y herramientas que aportan alto rendimiento,
+            escalabilidad y buen diseño a tu sistema. 
+
+          </p>
+        </v-card>
+      </v-container>
+    </div>
     <!-- Inicia versión web -->
     <v-container v-show="!isMobile()">
       <!-- Avatars -->
@@ -88,9 +104,9 @@
                 lg="3"
                 xl="3"
               >
-                <v-card class="">
+                <v-card>
                   <v-img :src="item.src" max-height="110"></v-img>
-                  <v-card-title> {{ item.name }} </v-card-title>
+                  <v-card-title> <h2>{{ item.name }}</h2>  </v-card-title>
                   <v-card-subtitle>
                     <v-list>
                       <v-list-item
@@ -102,7 +118,7 @@
                           >mdi-star-four-points-outline</v-icon
                         >
                         <v-list-item-title> 
-                          {{ description }}
+                          {{ description }} 
                         </v-list-item-title>
                       </v-list-item>
                     </v-list>
@@ -136,7 +152,7 @@
               >
                 <v-card>
                   <v-img :src="item.src" max-height="110"></v-img>
-                  <v-card-title> {{ item.name }} </v-card-title>
+                  <v-card-title> <h2>{{ item.name }}</h2>  </v-card-title>
                   <v-card-subtitle>
                     <v-list>
                       <v-list-item
@@ -181,7 +197,7 @@
               >
                 <v-card class="">
                   <v-img :src="item.src" max-height="110"></v-img>
-                  <v-card-title> {{ item.name }} </v-card-title>
+                  <v-card-title> <h2>{{ item.name }} </h2> </v-card-title>
                   <v-card-subtitle>
                     <v-list>
                       <v-list-item
@@ -251,7 +267,7 @@
             >
               <v-card class="">
                 <v-img :src="item.src" max-height="120"></v-img>
-                <v-card-title> {{ item.name }} </v-card-title>
+                <v-card-title> <h2>{{ item.name }}</h2>  </v-card-title>
                 <v-card-subtitle>
                   <v-list>
                     <v-list-item
@@ -316,7 +332,7 @@
             >
               <v-card class="">
                 <v-img :src="item.src" max-height="120"></v-img>
-                <v-card-title> {{ item.name }} </v-card-title>
+                <v-card-title> <h2>{{ item.name }}</h2>  </v-card-title>
                 <v-card-subtitle>
                   <v-list>
                     <v-list-item
@@ -381,7 +397,7 @@
             >
               <v-card class="">
                 <v-img :src="item.src" max-height="120"></v-img>
-                <v-card-title> {{ item.name }} </v-card-title>
+                <v-card-title> <h2>{{ item.name }} </h2> </v-card-title>
                 <v-card-subtitle>
                   <v-list>
                     <v-list-item
@@ -590,5 +606,19 @@ export default {
 .background {
   background-image: url("../assets/background-circle-tech.svg");
 }
-
+h1{
+  font-size: 30px;
+}
+h2{
+  font-size: 25px;
+  font-family: Mazzard;  
+}
+h3{
+  font-size: 14px;
+  color:black;
+}
+p{
+  color: black;
+  font-size: medium;
+}
 </style>
