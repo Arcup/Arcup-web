@@ -2,7 +2,7 @@
   <div>
     <v-footer color="#161E2E">
       <v-row>
-        <v-col cols="12" sm="12" md="4" lg="4" xl="4">
+        <v-col cols="12" sm="6" md="4" lg="4" xl="4">
           <v-card-text id="contact" class="ma-0 pt-2 white--text text-center">
               <div>Correo: </div>
               <div class="pb-3"> <v-icon color="white">mdi-email-outline</v-icon> contacto@arcup.com.mx</div>
@@ -11,7 +11,7 @@
           </v-card-text>
         </v-col>
 
-        <v-col class="ma-0 pa-0" cols="12" sm="12" md="4" lg="4" xl="4">
+        <v-col class="ma-0 pa-0" cols="12" sm="6" md="4" lg="4" xl="4">
           <v-row no-gutters class="ml-4 mr-2 mb-2">
             <v-col class="ma-0 pa-0" cols="12" sm="12" md="12" lg="12" xl="12">
               <v-card-text class="ma-0 d-flex justify-center pr-0">
