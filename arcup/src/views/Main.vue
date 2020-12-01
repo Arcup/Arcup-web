@@ -11,7 +11,7 @@
             hide-delimiter-background
           >
             <v-carousel-item
-            class="grey darken-4"
+              class="grey darken-4"
               v-for="(item, i) in itemsCarousel"
               :key="i"
               :src="isMobile ? item.srcMobil : item.src"

@@ -4,7 +4,7 @@
 
     <div class="pb-15">
       <v-carousel cycle  show-arrows-on-hover height="400" >
-        <v-carousel-item v-for="(item, i) in items" :key="i" :src="item.src">
+        <v-carousel-item class="grey darken-4" v-for="(item, i) in items" :key="i" :src="item.src">
           <div class="height text-center pl-6 pr-6">
             
             <v-row>
