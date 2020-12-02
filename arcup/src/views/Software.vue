@@ -252,7 +252,7 @@ export default {
         {
           title: "Despliegue",
           description: "En esta fase nos aseguramos de que tu sistema se encuentre disponible y "
-            + "funcionando acorde a los requisitos establecidos en cada una de las fases"
+            + "funcionando acorde a los requisitos establecidos en cada una de las fases "
             + "del proceso de desarrollo.",
           src: despliegue,
         },

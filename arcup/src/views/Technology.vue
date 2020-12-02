@@ -17,7 +17,7 @@
         <v-card class="mx-auto pt-3 pr-3 pl-3 background-gray" flat width="950">
           <p class="text-justify">
             En arcup nos importa tu proyecto, por ello, seleccionamos
-            tecnologias y herramientas que aportan alto rendimiento,
+            tecnologías y herramientas que aportan alto rendimiento,
             escalabilidad y buen diseño a tu sistema.
           </p>
         </v-card>
@@ -247,7 +247,7 @@
 
       <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
         <v-card flat max-width="80%">
-          <h3 class="pt-1 pb-6">Tecnologías WEB</h3>
+          <h3 class="pt-1 pb-6">Tecnologías Front-End</h3>
         </v-card>
       </v-row>
 
@@ -317,7 +317,7 @@
 
       <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
         <v-card flat max-width="80%">
-          <h3 class="pt-1 pb-6">Tecnoogías de Bases de Datos</h3>
+          <h3 class="pt-1 pb-6">Tecnologías Back-End</h3>
         </v-card>
       </v-row>
 
@@ -387,7 +387,7 @@
 
       <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
         <v-card flat max-width="80%">
-          <h3 class="pt-1 pb-6">Tecnoogías para desarrollo móvil</h3>
+          <h3 class="pt-1 pb-6">Tecnoogías Móviles</h3>
         </v-card>
       </v-row>
 
@@ -546,7 +546,7 @@ export default {
           name: "Servicios RESTful",
           description: [
             "Independencia de tecnologías",
-            "Escalabilidad, Fiabilidad, seguridad",
+            "Escalabilidad, Fiabilidad, Seguridad",
             "Arquitectura cliente-servidor",
             "Consume pocos recursos",
           ],
