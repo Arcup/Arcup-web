@@ -319,21 +319,6 @@ export default {
       contError: 0,
       itemsPaquetes: [
         {
-          name: "Negocios",
-          price: "$15,500",
-          typePrice: "/mx",
-          icon: "mdi-shopping-outline",
-          pages: "De 6 a 12 páginas",
-          description:
-            "Administra tu negocio desde internet. Autónomo. Organizado. Funcional.",
-          advantages: [
-            "Página de administrador",
-            "Control de usuarios",
-            "Hosting por 1 año",
-            "Dominio personalizado (.com)",
-          ],
-        },
-        {
           name: "Informativo",
           price: "$3,200",
           typePrice: "/mx",
@@ -348,7 +333,21 @@ export default {
             "Dominio personalizado (.com)",
           ],
         },
-
+        {
+          name: "Negocios",
+          price: "$15,500",
+          typePrice: "/mx",
+          icon: "mdi-shopping-outline",
+          pages: "De 6 a 12 páginas",
+          description:
+            "Administra tu negocio desde internet. Autónomo. Organizado. Funcional.",
+          advantages: [
+            "Página de administrador",
+            "Control de usuarios",
+            "Hosting por 1 año",
+            "Dominio personalizado (.com)",
+          ],
+        },
         {
           name: "App Móvil",
           price: "Contáctanos",

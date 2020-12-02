@@ -7,7 +7,7 @@
               <div>Correo: </div>
               <div class="pb-3"> <v-icon size="20" color="white">mdi-email-outline</v-icon> contacto@arcup.com.mx</div>
               <div>Teléfono: </div>
-              <div> <v-icon size="20" color="white">mdi-phone</v-icon> (+52) 2281128282</div>
+              <div> <v-icon size="20" color="white">mdi-phone</v-icon> (+52) 2281818876</div>
           </v-card-text>
         </v-col>
 
