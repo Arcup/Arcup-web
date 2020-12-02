@@ -37,8 +37,8 @@
               <v-card-text> <h2>Obtención de requisitos</h2> </v-card-text>
               <v-card-text>
                 <h3>
-                  Planificamos una reunión entre el clientes y el 
-                  equipo de trabajo para obtener las caracteristicas, funcionalidades y reglas
+                  Planificamos una reunión entre el cliente y el 
+                  equipo de trabajo para obtener las características, funcionalidades y reglas
                   del negocio que se implementarán en el sistema de software.                  
                 </h3>
               </v-card-text>            
@@ -96,7 +96,7 @@
           <v-card rounded="0" height="300">
             <v-img
               height="300"
-              src="../assets/software-images/image-diseño.jpg"
+              src="../assets/software-images/image-diseno.jpg"
             >
             </v-img>
           </v-card>
@@ -133,7 +133,7 @@
           <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
             <v-card-text><h2>Pruebas</h2></v-card-text>            
             <v-card-text class="pt-0"> <h3>
-              Realizamos un plan de pruebas por iteración para validar los modulos implementados, asegurando así la calidad
+              Realizamos un plan de pruebas por iteración para validar los módulos implementados, asegurando así la calidad
               del producto final. 
             </h3> </v-card-text>
           </v-card>
@@ -165,7 +165,7 @@
             <v-card-text><h2>Despliegue</h2></v-card-text>            
             <v-card-text class="pa-0 text-center"> 
               <h3>
-                En esta fase no aseguramos de que tu sistema se encuentre disponible y 
+                En esta fase nos aseguramos de que tu sistema se encuentre disponible y 
                 funcionando acorde a los requisitos establecidos en cada una de las fases 
                 del proceso de desarrollo.
               </h3> 
@@ -202,7 +202,7 @@ import BaseFooter from "@/components/BaseFooter.vue";
 
 import obtencionReque from "../assets/software-images/image-obtencionReque.jpg";
 import analisis from "../assets/software-images/image-analisis.jpg";
-import diseño from "../assets/software-images/image-diseño.jpg";
+import diseno from "../assets/software-images/image-diseno.jpg";
 import codificacion from "../assets/software-images/image-codificacion.jpg";
 import pruebas from "../assets/software-images/image-pruebas.jpg";
 import despliegue from "../assets/software-images/image-despliegue.jpg";
@@ -218,8 +218,8 @@ export default {
       sections: [
         {
           title: "Obtención de requisitos",
-          description: "Planificamos una reunión entre el clientes y el equipo " 
-           + "de trabajo para obtener las caracteristicas, funcionalidades y reglas " 
+          description: "Planificamos una reunión entre el cliente y el equipo " 
+           + "de trabajo para obtener las características, funcionalidades y reglas " 
            + "del negocio que se implementarán en el sistema de software.",
           src: obtencionReque,
         },
@@ -235,7 +235,7 @@ export default {
           description: "Creamos prototipos funcionales que guían el proceso de construcción y "
             + "permiten a los desarrolladores y al cliente visualizar de manera clara el "
             + "comportamiento del sistema.",
-          src: diseño,
+          src: diseno,
         },
         {
           title: "Codificación",
@@ -251,7 +251,7 @@ export default {
         },
         {
           title: "Despliegue",
-          description: "En esta fase no aseguramos de que tu sistema se encuentre disponible y "
+          description: "En esta fase nos aseguramos de que tu sistema se encuentre disponible y "
             + "funcionando acorde a los requisitos establecidos en cada una de las fases"
             + "del proceso de desarrollo.",
           src: despliegue,

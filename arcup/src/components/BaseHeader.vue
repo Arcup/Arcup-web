@@ -27,26 +27,6 @@
         <v-menu offset-y transition="slide-y-transition">
           <template v-slot:activator="{ on, attrs }">
             <v-btn text rounded v-bind="attrs" v-on="on" color="white">
-              Nosotros
-              <v-icon right> mdi-chevron-down </v-icon>
-            </v-btn>
-          </template>
-          <v-list dense>
-            <v-list-item
-              v-for="(item, index) in itemsNosotros"
-              :key="index"
-              @click="selectItemNosotros(index)"
-            >
-              <v-list-item-icon>
-                <v-icon color="#161e2eff" v-text="item.icon"></v-icon>
-              </v-list-item-icon>
-              <v-list-item-title>{{ item.text }}</v-list-item-title>
-            </v-list-item>
-          </v-list>
-        </v-menu>
-        <v-menu offset-y transition="slide-y-transition">
-          <template v-slot:activator="{ on, attrs }">
-            <v-btn text rounded v-bind="attrs" v-on="on" color="white">
               Servicios
               <v-icon right> mdi-chevron-down </v-icon>
             </v-btn>
@@ -66,6 +46,26 @@
             </v-list-item>
           </v-list>
         </v-menu>
+        <v-menu offset-y transition="slide-y-transition">
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn text rounded v-bind="attrs" v-on="on" color="white">
+              Nosotros
+              <v-icon right> mdi-chevron-down </v-icon>
+            </v-btn>
+          </template>
+          <v-list dense>
+            <v-list-item
+              v-for="(item, index) in itemsNosotros"
+              :key="index"
+              @click="selectItemNosotros(index)"
+            >
+              <v-list-item-icon>
+                <v-icon color="#161e2eff" v-text="item.icon"></v-icon>
+              </v-list-item-icon>
+              <v-list-item-title>{{ item.text }}</v-list-item-title>
+            </v-list-item>
+          </v-list>
+        </v-menu>        
         <router-link :to="{ name: 'Contact' }" class="text-decoration-none">
           <v-btn text color="white" class="mt-3 pt-1">
             Contáctanos
@@ -130,13 +130,13 @@ export default {
     group: null,
     collapseOnScroll: true,
     itemsNosotros: [
+      { text: "Conócenos", icon: "mdi-home-search" },
       { text: "Tecnologías", icon: "mdi-source-branch" },
       { text: "Historia", icon: "mdi-account-group" },
-      { text: "Conócenos", icon: "mdi-home-search" },
     ],
     itemsServicios: [
-      { text: "Software", icon: "mdi-web" },
       { text: "Paquetes", icon: "mdi-package-variant" },
+      { text: "Software", icon: "mdi-web" },
       { text: "Tu proyecto", icon: "mdi-vector-polyline-edit" },
     ],
   }),
@@ -150,13 +150,13 @@ export default {
     selectItemNosotros: function (index) {
       switch (index) {
         case 0:
-          this.openView("Technology");
+          this.openView("About");
           break;
         case 1:
-          this.openView("Story");
+          this.openView("Technology");
           break;
         case 2:
-          this.openView("About");
+          this.openView("Story");
           break;
         default:
           break;
@@ -165,10 +165,10 @@ export default {
     selectItemServicios: function (index) {
       switch (index) {
         case 0:
-          this.openView("Software");
+          this.openView("Package");
           break;
         case 1:
-          this.openView("Package");
+          this.openView("Software");
           break;
         case 2:
           this.openView("YourProject");
