@@ -41,7 +41,7 @@
               </v-avatar>
             </v-card>
           </v-hover>
-            <h3 class="text-center">Tecnologías Front-End</h3>          
+          <h3 class="text-center">Tecnologías Front-End</h3>
         </v-col>
 
         <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
@@ -108,7 +108,8 @@
               >
                 <v-card>
                   <v-img :src="item.src" max-height="110"></v-img>
-                  <v-card-title class="text-center"><h2 >{{ item.name }}</h2>
+                  <v-card-title class="text-center"
+                    ><h2>{{ item.name }}</h2>
                   </v-card-title>
                   <v-card-subtitle>
                     <v-list>
@@ -224,12 +225,6 @@
     <!-- Versión movil -->
     <div v-show="isMobile()">
       <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
-        <v-card flat max-width="80%">
-          <h3 class="pt-5 pb-4">Tecnologías WEB</h3>
-        </v-card>
-      </v-row>
-
-      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
         <v-hover v-slot="{ hover }" open-delay="50" class="mb-4">
           <v-card
             rounded="circle"
@@ -248,6 +243,12 @@
             </v-avatar>
           </v-card>
         </v-hover>
+      </v-row>
+
+      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
+        <v-card flat max-width="80%">
+          <h3 class="pt-1 pb-6">Tecnologías WEB</h3>
+        </v-card>
       </v-row>
 
       <v-fade-transition hide-on-leave>
@@ -294,12 +295,6 @@
       </v-fade-transition>
 
       <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
-        <v-card flat max-width="80%">
-          <h3 class="pt-5 pb-4">Tecnoogías de Bases de Datos</h3>
-        </v-card>
-      </v-row>
-
-      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
         <v-hover v-slot="{ hover }" open-delay="50" class="mb-4">
           <v-card
             rounded="circle"
@@ -318,6 +313,12 @@
             </v-avatar>
           </v-card>
         </v-hover>
+      </v-row>
+
+      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
+        <v-card flat max-width="80%">
+          <h3 class="pt-1 pb-6">Tecnoogías de Bases de Datos</h3>
+        </v-card>
       </v-row>
 
       <v-fade-transition hide-on-leave>
@@ -364,12 +365,6 @@
       </v-fade-transition>
 
       <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
-        <v-card flat max-width="80%">
-          <h3 class="pt-4 pb-4">Tecnoogías para desarrollo móvil</h3>
-        </v-card>
-      </v-row>
-
-      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
         <v-hover v-slot="{ hover }" open-delay="50" class="mb-4">
           <v-card
             rounded="circle"
@@ -388,6 +383,12 @@
             </v-avatar>
           </v-card>
         </v-hover>
+      </v-row>
+
+      <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
+        <v-card flat max-width="80%">
+          <h3 class="pt-1 pb-6">Tecnoogías para desarrollo móvil</h3>
+        </v-card>
       </v-row>
 
       <v-fade-transition hide-on-leave>
@@ -636,5 +637,4 @@ p {
   color: black;
   font-size: medium;
 }
-
 </style>
