@@ -17,6 +17,7 @@
               <v-card-text class="ma-0 d-flex justify-center pr-0">
                 <router-link :to="{ name: 'Main' }">
                   <v-img
+                  @click="scrollTop"
                   max-height="40"
                   max-width="35"
                   src="../assets/formaLogo-Arcup.svg"
@@ -85,6 +86,11 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    scrollTop() {
+      window.scrollTo(0, 0);
+    },
   },
 };
 </script>
