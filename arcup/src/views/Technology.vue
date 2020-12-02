@@ -41,7 +41,7 @@
               </v-avatar>
             </v-card>
           </v-hover>
-          <h3>Tecnologías WEB</h3>
+            <h3 class="text-center">Tecnologías Front-End</h3>          
         </v-col>
 
         <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
@@ -58,7 +58,7 @@
               </v-avatar>
             </v-card>
           </v-hover>
-          <h3>Tecnologías de Bases de Datos</h3>
+          <h3 class="text-center">Tecnologías Back-End</h3>
         </v-col>
 
         <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
@@ -79,7 +79,7 @@
               </v-avatar>
             </v-card>
           </v-hover>
-          <h3>Tecnologías para desarrollo móvil</h3>
+          <h3 class="text-center">Tecnologías Móviles</h3>
         </v-col>
       </v-row>
       <!-- Finaliza avatars -->
@@ -619,7 +619,7 @@ export default {
 </script>
 <style lang='css'>
 .background {
-  background-image: url("../assets/background-circle-tech.svg");
+  background-image: url("../assets/background-circle.svg");
 }
 h1 {
   font-size: 30px;

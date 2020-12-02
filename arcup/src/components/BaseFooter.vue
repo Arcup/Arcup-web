@@ -1,13 +1,13 @@
 <template>
   <div>
-    <v-footer color="#161E2E">
+    <v-footer color="#161E2E" class="pt-7">
       <v-row>
         <v-col cols="12" sm="6" md="4" lg="4" xl="4">
-          <v-card-text id="contact" class="ma-0 pt-2 white--text text-center">
+          <v-card-text id="contact" class="ma-0 pt-0 white--text text-center">
               <div>Correo: </div>
-              <div class="pb-3"> <v-icon color="white">mdi-email-outline</v-icon> contacto@arcup.com.mx</div>
+              <div class="pb-3"> <v-icon size="20" color="white">mdi-email-outline</v-icon> contacto@arcup.com.mx</div>
               <div>Teléfono: </div>
-              <div> <v-icon color="white">mdi-phone</v-icon> (+52) 2281128282</div>
+              <div> <v-icon size="20" color="white">mdi-phone</v-icon> (+52) 2281128282</div>
           </v-card-text>
         </v-col>
 
@@ -15,11 +15,14 @@
           <v-row no-gutters class="ml-4 mr-2 mb-2">
             <v-col class="ma-0 pa-0" cols="12" sm="12" md="12" lg="12" xl="12">
               <v-card-text class="ma-0 d-flex justify-center pr-0">
-                <v-img
+                <router-link :to="{ name: 'Main' }">
+                  <v-img
                   max-height="40"
                   max-width="35"
                   src="../assets/formaLogo-Arcup.svg"
                 ></v-img>
+                </router-link>
+                
               </v-card-text>
             </v-col>
             <v-col class="ma-0 pa-0" cols="12" sm="12" md="12" lg="12" xl="12">
@@ -51,7 +54,7 @@
         </v-col>
 
         <v-col cols="12" sm="12" md="4" lg="4" xl="4">
-          <v-card-text id="content" class="textFooter white--text">
+          <v-card-text id="content" class="textFooter white--text text-justify">
             En Arcup nos comprometemos con la entrega puntual del producto y te
             brindamos soporte las 24 horas los 7 días de la semana
           </v-card-text>
@@ -79,11 +82,6 @@ export default {
           name: "Twitter",
           icon: "mdi-twitter",
           href: "https://twitter.com/arcupdev",
-        },
-        {
-          name: "Linkedin",
-          icon: "mdi-linkedin",
-          href: "https://vuetifyjs.com/en/api/v-btn/#v-btn-api",
         },
       ],
     };
