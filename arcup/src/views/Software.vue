@@ -19,8 +19,10 @@
           <p class="text-justify">
             En Arcup estamos comprometidos con el desarrollo de software de
             calidad, por tal motivo, nos apegamos al uso de metodologías,
-            procesos y herramientas para su construcción. Conoce nuestro
-            proceso:
+            procesos y herramientas para su construcción. 
+            Durante cada etapa de nuestro proceso de desarrollo, mantenemos una comunicación
+            en paralelo con el cliente. 
+            Conoce nuestro proceso:
           </p>
         </v-card>
       </v-container>
@@ -35,9 +37,9 @@
               <v-card-text> <h2>Obtención de requisitos</h2> </v-card-text>
               <v-card-text>
                 <h3>
-                  Planificamos una reunión entre nuestros clientes y el 
-                  equipo de Arcup para obtener las caracteristicas que se implementarán
-                  en el sistema de software.
+                  Planificamos una reunión entre el clientes y el 
+                  equipo de trabajo para obtener las caracteristicas, funcionalidades y reglas
+                  del negocio que se implementarán en el sistema de software.                  
                 </h3>
               </v-card-text>            
           </v-card>
@@ -70,8 +72,9 @@
             <v-card-text><h2>Análisis</h2> </v-card-text>
             <v-card-text class="pa-0">
               <h3>
-                En acuerdo con nuestros clientes establecemos los caracteristicas con 
-                las cuales contará sus sistema.              
+                Reunimos los requerimientos acordados en las reuniones para determinar los posibles flujos que 
+                pueden tener las funcionalidades, con ello hacer una elección de las tecnologías y metodologías 
+                que mejor se adapten al desarrollo del proyecto.            
               </h3></v-card-text>
           </v-card>
         </v-col>
@@ -83,7 +86,8 @@
           <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
             <v-card-text><h2>Diseño</h2></v-card-text>
             <v-card-text class="pa-0"><h3>
-              Creamos prototipos que permiten visualizar de manera clara el 
+              Creamos prototipos funcionales que guían el proceso de construcción y permiten a los
+              desarrolladores y al cliente visualizar de manera clara el 
               comportamiento del sistema.              
             </h3></v-card-text>
           </v-card>
@@ -115,7 +119,8 @@
             <v-card-text><h2>Codificación</h2></v-card-text>            
             <v-card-text class="pa-0"> 
               <h3>
-                Codificamos software por iteraciones para mostrarte los avances que se han realizado.
+                Codificamos software por iteraciones para mostrar los avances que se han realizado. Mantenemos comunicación
+                constante con el cliente para validar las funcionalidades realizadas.
               </h3> 
             </v-card-text>
           </v-card>
@@ -128,8 +133,8 @@
           <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
             <v-card-text><h2>Pruebas</h2></v-card-text>            
             <v-card-text class="pt-0"> <h3>
-              Realizamos pruebas en paralelo para garantizar el correcto funcionamiento de tu proyecto. 
-              Al finalizar desplegamos tu sistema para que valides su funcionalidad.  
+              Realizamos un plan de pruebas por iteración para validar los modulos implementados, asegurando así la calidad
+              del producto final. 
             </h3> </v-card-text>
           </v-card>
         </v-col>
@@ -160,10 +165,9 @@
             <v-card-text><h2>Despliegue</h2></v-card-text>            
             <v-card-text class="pa-0 text-center"> 
               <h3>
-                Te proporcionamos la información necesaria para que puedas tener el control
-                de tu sistema.
-                En el desarrollo web, nos encargamos de alojar tú página con nuestros servicios 
-                de hosting y dominio para que puedas acceder a ella desde cualquier lugar.
+                En esta fase no aseguramos de que tu sistema se encuentre disponible y 
+                funcionando acorde a los requisitos establecidos en cada una de las fases 
+                del proceso de desarrollo.
               </h3> 
             </v-card-text>
           </v-card>
@@ -214,32 +218,42 @@ export default {
       sections: [
         {
           title: "Obtención de requisitos",
-          description: "Aqui va una descripción bien perrona y bien larga asdasdasds asdasdsadas asdasdsadasd adasdasdasd adasdasdasd adasdasdsad ",
+          description: "Planificamos una reunión entre el clientes y el equipo " 
+           + "de trabajo para obtener las caracteristicas, funcionalidades y reglas " 
+           + "del negocio que se implementarán en el sistema de software.",
           src: obtencionReque,
         },
         {
           title: "Análisis",
-          description: "",
+          description: "Reunimos los requerimientos acordados en las reuniones para determinar los posibles "
+            + "flujos que pueden tener las funcionalidades, con ello hacer una elección de las tecnologías y metodologías "
+            + "que mejor se adapten al desarrollo del proyecto.",
           src: analisis,
         },
         {
           title: "Diseño",
-          description: "",
+          description: "Creamos prototipos funcionales que guían el proceso de construcción y "
+            + "permiten a los desarrolladores y al cliente visualizar de manera clara el "
+            + "comportamiento del sistema.",
           src: diseño,
         },
         {
           title: "Codificación",
-          description: "",
+          description: "Codificamos software por iteraciones para mostrar los avances que se "
+            + "han realizado. Mantenemos comunicación constante con el cliente para validar las funcionalidades realizadas.",
           src: codificacion,
         },
         {
           title: "Pruebas",
-          description: "",
+          description: "Realizamos un plan de pruebas por iteración para validar los modulos implementados, " 
+            + "asegurando así la calidad del producto final.",
           src: pruebas,
         },
         {
           title: "Despliegue",
-          description: "",
+          description: "En esta fase no aseguramos de que tu sistema se encuentre disponible y "
+            + "funcionando acorde a los requisitos establecidos en cada una de las fases"
+            + "del proceso de desarrollo.",
           src: despliegue,
         },
       ],

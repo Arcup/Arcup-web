@@ -28,7 +28,7 @@
       <!-- Avatars -->
       <v-row class="ma-0">
         <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
-          <v-hover v-slot="{ hover }" open-delay="200">
+          <v-hover v-slot="{ hover }" open-delay="50">
             <v-card
               rounded="circle"
               :elevation="hover ? 8 : 2"
@@ -45,7 +45,7 @@
         </v-col>
 
         <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
-          <v-hover v-slot="{ hover }" open-delay="200">
+          <v-hover v-slot="{ hover }" open-delay="50">
             <v-card
               rounded="circle"
               :elevation="hover ? 8 : 2"
@@ -62,7 +62,7 @@
         </v-col>
 
         <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
-          <v-hover v-slot="{ hover }" open-delay="200">
+          <v-hover v-slot="{ hover }" open-delay="50">
             <v-card
               rounded="circle"
               :elevation="hover ? 8 : 2"
@@ -230,7 +230,7 @@
       </v-row>
 
       <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
-        <v-hover v-slot="{ hover }" open-delay="200" class="mb-4">
+        <v-hover v-slot="{ hover }" open-delay="50" class="mb-4">
           <v-card
             rounded="circle"
             :elevation="hover ? 8 : 2"
@@ -300,7 +300,7 @@
       </v-row>
 
       <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
-        <v-hover v-slot="{ hover }" open-delay="200" class="mb-4">
+        <v-hover v-slot="{ hover }" open-delay="50" class="mb-4">
           <v-card
             rounded="circle"
             :elevation="hover ? 8 : 2"
@@ -370,7 +370,7 @@
       </v-row>
 
       <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
-        <v-hover v-slot="{ hover }" open-delay="200" class="mb-4">
+        <v-hover v-slot="{ hover }" open-delay="50" class="mb-4">
           <v-card
             rounded="circle"
             :elevation="hover ? 8 : 2"
