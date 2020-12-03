@@ -412,6 +412,17 @@ export default {
       return 0;
     },
   },
+  metaInfo() {
+    return {
+      title: "Arcup",
+      meta: [
+        {
+          name: "description",
+          content: "Construimos software de calidad a la medida, creamos tu proyecto y se lo mostramos al MUNDO. Desarrollamos tu página web o apliación móvil.",
+        },
+      ],
+    };
+  },
   components: {
     BaseHeader,
   },

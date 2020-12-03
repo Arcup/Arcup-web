@@ -6,7 +6,21 @@
       max-width="100%"
       max-height="300"
     ></v-img>
-    <v-container>
+    <div class="text-center background-gray">
+        <v-icon size="50" color="cyan" class="pt-10 ">mdi-chart-timeline-variant </v-icon>
+      <h2 class="text-center pb-2 color-title pr-4 pl-4">
+        DESCUBRE NUESTRA HISTORIA
+      </h2>
+      <v-card flat height="2" color="cyan" width="350" class="mx-auto"></v-card>
+      <v-container>
+        <v-card class="mx-auto pb-5 pr-3 pl-3 background-gray" flat width="950">
+          <p class="">
+             Conoce el camino de Arcup y de sus fundadores.
+          </p>
+        </v-card>
+      </v-container>
+    </div>
+    <v-container>  
       <v-timeline
         align-top
         :dense="$vuetify.breakpoint.smAndDown"
@@ -91,6 +105,17 @@ export default {
       },
     ],
   }),
+  metaInfo() {
+    return {
+      title: "Historia | Arcup",
+      meta: [
+        {
+          name: "description",
+          content: "Conoce la hististoria de Arcup a través de los años. Xalapa Veracruz.",
+        },
+      ],
+    };
+  },
   components: {
     BaseHeader,
     BaseFooter,
@@ -100,5 +125,8 @@ export default {
 <style lang="css" scoped>
 .timeline {
   z-index: 0;
+}
+.background-gray{
+  background-color: rgb(248, 248, 248);
 }
 </style>

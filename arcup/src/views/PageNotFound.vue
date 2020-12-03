@@ -37,6 +37,11 @@ export default {
     BaseHeader,
     BaseFooter,
   },
+  metaInfo() {
+    return {
+      title: "404 | Arcup",
+    };
+  },
 };
 </script>
 <style scoped>

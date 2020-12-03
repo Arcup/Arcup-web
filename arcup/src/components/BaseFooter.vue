@@ -21,7 +21,7 @@
           <v-row no-gutters class="ml-4 mr-2 mb-2">
             <v-col class="ma-0 pa-0" cols="12" sm="12" md="12" lg="12" xl="12">
               <v-card-text class="ma-0 d-flex justify-center pr-0">                
-                <router-link class="zoom" :to="{ name: 'Main' }">
+                <router-link class="zoom-logo" :to="{ name: 'Main' }">
                   <v-img                    
                     @click="scrollTop"
                     height="45"
@@ -44,7 +44,7 @@
                     <v-btn
                       target="_blank"
                       :href="item.href"
-                      class="mx-4 white--text zoom"
+                      class="mx-4 white--text zoom-icon"
                       icon
                     >
                       <v-icon color="whithe" size="34px">
@@ -61,7 +61,7 @@
         <v-col cols="12" sm="12" md="4" lg="4" xl="4">
           <v-card-text id="content" class="textFooter white--text text-justify">
             En Arcup nos comprometemos con la entrega puntual del producto y te
-            brindamos soporte las 24 horas los 7 días de la semana
+            brindamos soporte las 24 horas, los 7 días de la semana.
           </v-card-text>
         </v-col>
       </v-row>
@@ -112,9 +112,14 @@ h5 {
 #contact {
   font-size: 12px;
 }
-.zoom :hover {
-  transition-duration: 2s;
+.zoom-logo :hover {
+  transition-duration: 0.5s;
   transform: rotate(360deg);
   transform: scale(1.4);
+}
+.zoom-icon :hover {
+  transition-duration: 0.5s;
+  transform: rotate(360deg);
+  transform: scale(1.1);
 }
 </style> 

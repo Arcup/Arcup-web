@@ -185,6 +185,17 @@ export default {
       }
     },
   },
+  metaInfo() {
+    return {
+      title: "Conócenos | Arcup",
+      meta: [
+        {
+          name: "description",
+          content: "Conoce nuestro equipo de trabajo, nuestros valores y nuestras metas. Conoce nuestra visión y misión como empresa de desarrollo de software.",
+        },
+      ],
+    };
+  },
 };
 </script>
 

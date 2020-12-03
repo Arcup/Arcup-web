@@ -164,6 +164,17 @@ export default {
     BaseHeader,
     BaseFooter,
   },
+  metaInfo() {
+    return {
+      title: "Tu Proyecto | Arcup",
+      meta: [
+        {
+          name: "description",
+          content: "Descubre las características de nuestros servicios de desarrollo de software.",
+        },
+      ],
+    };
+  },
 };
 </script>
 

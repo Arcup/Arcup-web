@@ -623,6 +623,17 @@ export default {
       return this.$vuetify.breakpoint.xsOnly;
     },
   },
+  metaInfo() {
+    return {
+      title: "Tecnologías | Arcup",
+      meta: [
+        {
+          name: "description",
+          content: "Seleccionamos tecnologías y herramientas que aportan alto rendimiento, escalabilidad y buen diseño a tu sistema.",
+        },
+      ],
+    };
+  },
 };
 </script>
 <style lang='css'>

@@ -264,6 +264,17 @@ export default {
       return this.$vuetify.breakpoint.xsOnly;
     },
   },
+  metaInfo() {
+    return {
+      title: "Software | Arcup",
+      meta: [
+        {
+          name: "description",
+          content: "Conoce nuestras fases en el proceso de desarrollo software.",
+        },
+      ],
+    };
+  },
 };
 </script>
 <style lang="css">

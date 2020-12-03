@@ -20,13 +20,19 @@
                   mediante nuestras fuentes de contacto:
                 </v-card-text>
                 <v-card-text class="text-justify text-size">
-                  <h2 class="h2"><v-icon size="23" class="pr-1" color="cyan">
-                  mdi-email-outline</v-icon>E-mail </h2> 
+                  <h2 class="h2">
+                    <v-icon size="23" class="pr-1" color="cyan">
+                      mdi-email-outline</v-icon
+                    >E-mail
+                  </h2>
 
                   <br />
                   contacto@arcup.com.mx
-                  <h2 class="h2"><br /><v-icon size="23" class="pr-1" color="cyan">
-                  mdi-phone</v-icon>Teléfono </h2>
+                  <h2 class="h2">
+                    <br /><v-icon size="23" class="pr-1" color="cyan">
+                      mdi-phone</v-icon
+                    >Teléfono
+                  </h2>
                   <br />
                   (+52) 2281132016 <br />
                   (+52) 2282935090 <br />
@@ -283,6 +289,32 @@ export default {
     BaseFooter,
   },
 
+  data: () => ({
+    name: "",
+    lastNameF: "",
+    lastNameM: "",
+    phoneNumber: "",
+    email: "",
+    projectName: "",
+    projectDescription: "",
+    checkbox: null,
+
+    cityDisabled: true,
+    stateDisabled: false,
+    statesArray: [],
+    statesSelected: [],
+    cityArray: [],
+    citySelected: [],
+
+    test: "",
+
+    dialog201: false,
+    dialogError: false,
+
+    loader: null,
+    loading3: false,
+  }),
+
   created() {
     axios
       .get("https://api-sepomex.hckdrk.mx/query/get_estados")
@@ -334,20 +366,27 @@ export default {
         projectDescription: this.projectDescription,
       };
 
-      emailjs.send("service_arcup", "template_vw33gf9", templateParams, "user_SmeQlmZFRcDR86wl6vCpl")
-      .then((response) =>  {
-          if (response != null) {
-            console.log("SUCCESS!", response.status, response.text);
-            this.dialog201 = true;
+      emailjs
+        .send(
+          "service_arcup",
+          "template_vw33gf9",
+          templateParams,
+          "user_SmeQlmZFRcDR86wl6vCpl"
+        )
+        .then(
+          (response) => {
+            if (response != null) {
+              console.log("SUCCESS!", response.status, response.text);
+              this.dialog201 = true;
+            }
+          },
+          (error) => {
+            if (error != null) {
+              this.dialogError = true;
+              console.log("FAILED...", error);
+            }
           }
-        },
-        (error) => {
-          if (error != null) {
-            this.dialogError = true;
-            console.log("FAILED...", error);
-          }
-        }
-      );
+        );
     },
     clear() {
       this.name = "";
@@ -363,31 +402,17 @@ export default {
     },
   },
 
-  data: () => ({
-    name: "",
-    lastNameF: "",
-    lastNameM: "",
-    phoneNumber: "",
-    email: "",
-    projectName: "",
-    projectDescription: "",
-    checkbox: null,
-
-    cityDisabled: true,
-    stateDisabled: false,
-    statesArray: [],
-    statesSelected: [],
-    cityArray: [],
-    citySelected: [],
-
-    test: "",
-
-    dialog201: false,
-    dialogError: false,
-
-    loader: null,
-    loading3: false,
-  }),
+  metaInfo() {
+    return {
+      title: "Contacto | Arcup",
+      meta: [
+        {
+          name: "description",
+          content: "En Arcup nos interesa lo que tengas que decir, contáctanos si tienes en mente un proyecto y requieres una solucion tecnológica.",
+        },
+      ],
+    };
+  },
 
   watch: {
     loader() {

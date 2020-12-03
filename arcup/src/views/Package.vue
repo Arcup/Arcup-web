@@ -410,6 +410,17 @@ export default {
       window.scrollTo(0, 0);
     },
   },
+   metaInfo() {
+    return {
+      title: "Paquetes | Arcup",
+      meta: [
+        {
+          name: "description",
+          content: "Conoce nuestros paquetes de desarrollo de software y elige tu mejor opción. Desarrollamos tu página web o apliación móvil.",
+        },
+      ],
+    };
+  },
   components: {
     BaseHeader,
     BaseFooter,
