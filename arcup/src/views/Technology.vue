@@ -37,7 +37,7 @@
               max-width="100"
             >
               <v-avatar size="100" class="background" @click="selecWeb">
-                <v-icon color="#00ffff" size="60" dark> mdi-web </v-icon>
+                <v-icon id="iconFront" color="#00ffff" size="60" dark> mdi-web </v-icon>
               </v-avatar>
             </v-card>
           </v-hover>
@@ -54,7 +54,7 @@
               max-width="100"
             >
               <v-avatar size="100" class="background" @click="selecAndroid">
-                <v-icon color="#00ffff" size="50" dark>mdi-server</v-icon>
+                <v-icon id="iconBack" color="#00ffff" size="50" dark>mdi-server</v-icon>
               </v-avatar>
             </v-card>
           </v-hover>
@@ -63,19 +63,19 @@
 
         <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
           <v-hover v-slot="{ hover }" open-delay="50">
-            <v-card
+            <v-card              
               rounded="circle"
               :elevation="hover ? 8 : 2"
               :class="{ 'on-hover': hover }"
               height="100"
-              max-width="100"
+              max-width="100"              
             >
               <v-avatar
                 size="100"
                 class="background"
                 @click="selecConsultation"
               >
-                <v-icon color="#00ffff" size="52" dark> mdi-cellphone </v-icon>
+                <v-icon id="iconMovil" color="#00ffff" size="52" dark> mdi-cellphone </v-icon>
               </v-avatar>
             </v-card>
           </v-hover>
@@ -421,12 +421,10 @@
                       v-for="(description, i) in item.description"
                       :key="i"
                     >
-                      <v-list-item>
-                        <v-icon color="black" size="10" class="mr-2">
-                          mdi-star-four-points-outline
-                        </v-icon>
-                        {{ description }}
-                      </v-list-item>
+                      <v-icon color="black" size="10" class="mr-2">
+                        mdi-star-four-points-outline
+                      </v-icon>
+                      {{ description }}
                     </v-list-item>
                   </v-list>
                 </v-card-subtitle>
@@ -601,16 +599,25 @@ export default {
       this.expandAndroid = false;
       this.expandConsultation = false;
       this.expandWeb = true;
+      document.getElementById("iconFront").style.color = "#ffffff";
+      document.getElementById("iconBack").style.color = "#00ffff";
+      document.getElementById("iconMovil").style.color = "#00ffff";
     },
     selecAndroid: function () {
       this.expandWeb = false;
       this.expandConsultation = false;
       this.expandAndroid = true;
+      document.getElementById("iconBack").style.color = "#ffffff";
+      document.getElementById("iconFront").style.color = "#00ffff";
+      document.getElementById("iconMovil").style.color = "#00ffff";
     },
     selecConsultation: function () {
       this.expandWeb = false;
       this.expandAndroid = false;
       this.expandConsultation = true;
+      document.getElementById("iconMovil").style.color = "#ffffff";
+      document.getElementById("iconFront").style.color = "#00ffff";
+      document.getElementById("iconBack").style.color = "#00ffff";
     },
     isMobile: function () {
       return this.$vuetify.breakpoint.xsOnly;

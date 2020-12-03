@@ -31,7 +31,7 @@
     <!-- Versión web -->
     <div v-show="!isMobile()">
       <!-- File 1 -->
-      <v-row>
+      <v-row no-gutters>
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
           <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
               <v-card-text> <h2>Obtención de requisitos</h2> </v-card-text>
@@ -57,7 +57,7 @@
       </v-row>
 
       <!-- File 2 -->
-      <v-row>
+      <v-row no-gutters>
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
           <v-card rounded="0" height="300">
             <v-img
@@ -81,7 +81,7 @@
       </v-row>
 
       <!-- File 3 -->
-      <v-row>
+      <v-row no-gutters>
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
           <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
             <v-card-text><h2>Diseño</h2></v-card-text>
@@ -104,7 +104,7 @@
       </v-row>
 
       <!-- File 4 -->
-      <v-row>
+      <v-row no-gutters>
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
           <v-card rounded="0" height="300">
             <v-img
@@ -128,7 +128,7 @@
       </v-row>
 
       <!-- File 5 -->
-      <v-row>
+      <v-row no-gutters>
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
           <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
             <v-card-text><h2>Pruebas</h2></v-card-text>            
@@ -150,7 +150,7 @@
       </v-row>
 
       <!-- File 6 -->
-      <v-row>
+      <v-row no-gutters>
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
           <v-card rounded="0" height="300">
             <v-img

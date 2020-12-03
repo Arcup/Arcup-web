@@ -4,26 +4,31 @@
       <v-row>
         <v-col cols="12" sm="6" md="4" lg="4" xl="4">
           <v-card-text id="contact" class="ma-0 pt-0 white--text text-center">
-              <div>Correo: </div>
-              <div class="pb-3"> <v-icon size="20" color="white">mdi-email-outline</v-icon> contacto@arcup.com.mx</div>
-              <div>Teléfono: </div>
-              <div> <v-icon size="20" color="white">mdi-phone</v-icon> (+52) 2281818876</div>
+            <div>Correo:</div>
+            <div class="pb-3">
+              <v-icon size="20" color="white">mdi-email-outline</v-icon>
+              contacto@arcup.com.mx
+            </div>
+            <div>Teléfono:</div>
+            <div>
+              <v-icon size="20" color="white">mdi-phone</v-icon> (+52)
+              2281818876
+            </div>
           </v-card-text>
         </v-col>
 
         <v-col class="ma-0 pa-0" cols="12" sm="6" md="4" lg="4" xl="4">
           <v-row no-gutters class="ml-4 mr-2 mb-2">
             <v-col class="ma-0 pa-0" cols="12" sm="12" md="12" lg="12" xl="12">
-              <v-card-text class="ma-0 d-flex justify-center pr-0">
-                <router-link :to="{ name: 'Main' }">
-                  <v-img
-                  @click="scrollTop"
-                  max-height="40"
-                  max-width="35"
-                  src="../assets/formaLogo-Arcup.svg"
-                ></v-img>
+              <v-card-text class="ma-0 d-flex justify-center pr-0">                
+                <router-link class="zoom" :to="{ name: 'Main' }">
+                  <v-img                    
+                    @click="scrollTop"
+                    height="45"
+                    width="35"
+                    src="../assets/formaLogo-Arcup.svg"                    
+                  ></v-img>
                 </router-link>
-                
               </v-card-text>
             </v-col>
             <v-col class="ma-0 pa-0" cols="12" sm="12" md="12" lg="12" xl="12">
@@ -33,14 +38,13 @@
                 tile
                 class="text-center"
                 flat
-                
               >
                 <v-card-text class="ma-0 pa-0 d-flex justify-center">
                   <div v-for="(item, index) in redesSociales" :key="index">
                     <v-btn
                       target="_blank"
                       :href="item.href"
-                      class="mx-4 white--text"
+                      class="mx-4 white--text zoom"
                       icon
                     >
                       <v-icon color="whithe" size="34px">
@@ -105,8 +109,12 @@ h5 {
   max-width: 65%;
   font-size: 12px;
 }
-#contact{
+#contact {
   font-size: 12px;
 }
+.zoom :hover {
+  transition-duration: 2s;
+  transform: rotate(360deg);
+  transform: scale(1.4);
+}
 </style> 
- <!--../assets/formaLogo-Arcup.svg -->
