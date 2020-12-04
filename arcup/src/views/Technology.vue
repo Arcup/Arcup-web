@@ -54,7 +54,7 @@
               max-width="100"
             >
               <v-avatar size="100" class="background" @click="selecAndroid">
-                <v-icon id="iconBack" color="#00ffff" size="50" dark>mdi-server</v-icon>
+                <v-icon id="iconBack" color="#ffffff" size="50" dark>mdi-server</v-icon>
               </v-avatar>
             </v-card>
           </v-hover>
@@ -75,7 +75,7 @@
                 class="background"
                 @click="selecConsultation"
               >
-                <v-icon id="iconMovil" color="#00ffff" size="52" dark> mdi-cellphone </v-icon>
+                <v-icon id="iconMovil" color="#ffffff" size="52" dark> mdi-cellphone </v-icon>
               </v-avatar>
             </v-card>
           </v-hover>
@@ -599,25 +599,25 @@ export default {
       this.expandAndroid = false;
       this.expandConsultation = false;
       this.expandWeb = true;
-      document.getElementById("iconFront").style.color = "#ffffff";
-      document.getElementById("iconBack").style.color = "#00ffff";
-      document.getElementById("iconMovil").style.color = "#00ffff";
+      document.getElementById("iconFront").style.color = "#00ffff";
+      document.getElementById("iconBack").style.color = "#ffffff";
+      document.getElementById("iconMovil").style.color = "#ffffff";
     },
     selecAndroid: function () {
       this.expandWeb = false;
       this.expandConsultation = false;
       this.expandAndroid = true;
-      document.getElementById("iconBack").style.color = "#ffffff";
-      document.getElementById("iconFront").style.color = "#00ffff";
-      document.getElementById("iconMovil").style.color = "#00ffff";
+      document.getElementById("iconBack").style.color = "#00ffff";
+      document.getElementById("iconFront").style.color = "#ffffff";
+      document.getElementById("iconMovil").style.color = "#ffffff";
     },
     selecConsultation: function () {
       this.expandWeb = false;
       this.expandAndroid = false;
       this.expandConsultation = true;
-      document.getElementById("iconMovil").style.color = "#ffffff";
-      document.getElementById("iconFront").style.color = "#00ffff";
-      document.getElementById("iconBack").style.color = "#00ffff";
+      document.getElementById("iconMovil").style.color = "#00ffff";
+      document.getElementById("iconFront").style.color = "#ffffff";
+      document.getElementById("iconBack").style.color = "#ffffff";
     },
     isMobile: function () {
       return this.$vuetify.breakpoint.xsOnly;

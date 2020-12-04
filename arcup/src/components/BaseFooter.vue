@@ -114,12 +114,10 @@ h5 {
 }
 .zoom-logo :hover {
   transition-duration: 0.5s;
-  transform: rotate(360deg);
   transform: scale(1.4);
 }
 .zoom-icon :hover {
   transition-duration: 0.5s;
-  transform: rotate(360deg);
   transform: scale(1.1);
 }
 </style> 
