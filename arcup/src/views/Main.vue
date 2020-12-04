@@ -1,5 +1,6 @@
 <template>
   <v-main>
+    <preloader></preloader>
     <base-header></base-header>
     <div class="container__deep" id="containerDeep">
       <v-row no-gutters>
@@ -256,6 +257,7 @@
 <script>
 //  Adding components to use insade Main component
 import BaseHeader from "@/components/BaseHeader.vue";
+import Preloader from "@/components/Preloader.vue";
 
 //  Adding image to Carousel resolution: md, lg, xl
 import imgMonitorProject from "../assets/carousel-images/carousel-project.png";
@@ -425,9 +427,11 @@ export default {
   },
   components: {
     BaseHeader,
+    Preloader,
   },
 };
 </script>
+    Preloadeript>
 <style lang='css' scoped>
 .v-card {
   transition: opacity 0.4s ease-in-out;
