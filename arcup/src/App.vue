@@ -3,5 +3,29 @@
     <router-view/>
   </v-app>
 </template>
+<script>
+export default {
+  name: "App",
+  metaInfo() {
+    return {
+      title: "Arcup",
+      meta: [
+        {
+          name: "description",
+          content: "Arcup | Construimos software de calidad a la medida, creamos tu proyecto y se lo mostramos al MUNDO. Desarrollamos tu página web o apliación móvil.",
+        },
+        {
+          name: "robots",
+          content: "index, follow",
+        },
+        {
+          name: "googlebot",
+          content: "index, follow",
+        },
+      ],
+    };
+  },
+}
+</script>
 <style lang="css" src="../public/styles.css"></style>
 
