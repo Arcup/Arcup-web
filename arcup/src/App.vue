@@ -15,6 +15,10 @@ export default {
           content: "Arcup | Construimos software de calidad a la medida, creamos tu proyecto y se lo mostramos al MUNDO. Desarrollamos tu página web o apliación móvil.",
         },
         {
+          name: "keywords",
+          content: "Desarrollo, Software, Desarrollo de software, Página web, Página, Aplicación Móvil, Aplicación, Precios, Xalapa, Veracruz",
+        },
+        {
           name: "robots",
           content: "index, follow",
         },
