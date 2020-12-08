@@ -435,7 +435,7 @@
       </v-fade-transition>
     </div>
     <!-- FInaliza versión movil-->
-    <base-footer> </base-footer>
+    <base-footer></base-footer>
   </div>
 </template>
 <script>
