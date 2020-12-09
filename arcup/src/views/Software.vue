@@ -5,18 +5,16 @@
       src="../assets/title-images/image-software.png"
       max-width="100%"
       max-height="300"
-      class="mb-10"
     >
     </v-img>
 
-    <div>
-      <h1 class="text-center pb-2 pr-4 pl-4">
+    <div class="text-center pt-10 pb-10">
+      <v-icon size="50" color="cyan">mdi-responsive</v-icon>      
+      <h1 class="text-center padding-top pb-2 pr-4 pl-4">
         CONOCE NUESTRO PROCESO DE DESARROLLO DE SOFTWARE
-        <v-icon color="cyan">mdi-laptop</v-icon>
       </h1>
-      <v-container>
-        <v-card class="mx-auto pt-3 pr-3 pl-3 background-gray" flat width="950">
-          <p class="text-justify">
+        <v-card class="mx-auto pt-3 pr-0 pl-0" flat width="950">
+          <p class="text-justify pl-4 pr-4">
             En Arcup estamos comprometidos con el desarrollo de software de
             calidad, por tal motivo, nos apegamos al uso de metodologías,
             procesos y herramientas para su construcción. 
@@ -25,7 +23,6 @@
             Conoce nuestro proceso:
           </p>
         </v-card>
-      </v-container>
     </div>
 
     <!-- Versión web -->
@@ -280,7 +277,7 @@ export default {
 <style lang="css">
   h1{
     font-size: 30px;
-    
+    font-family: Mazzard;  
   }
   h2{
     color: black;
@@ -297,5 +294,8 @@ export default {
   p{
     color:#000000;
     font-size: medium;
+  }
+  .background-gray {
+  background-color: rgb(245, 245, 245);
   }
 </style>

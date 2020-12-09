@@ -5,23 +5,22 @@
       src="../assets/title-images/image-technology.png"
       max-width="100%"
       max-height="300"
-      class="mb-10"
+      class=""
     >
     </v-img>
-    <div>
+
+    <div class="background-gray text-center pt-10 pb-10">
+      <v-icon size="50" color="cyan">mdi-responsive</v-icon>      
       <h1 class="text-center padding-top pb-2 pr-4 pl-4">
         CONOCE NUESTRA SELECCIÓN DE TECNOLOGÍAS
-        <v-icon color="cyan">mdi-responsive</v-icon>
       </h1>
-      <v-container>
-        <v-card class="mx-auto pt-3 pr-3 pl-3 background-gray" flat width="950">
-          <p class="text-justify">
+        <v-card color="rgb(245, 245, 245)" class="mx-auto pt-3 pr-3 pl-3" flat width="950">
+          <p class="text-justify pl-4 pr-4">
             En arcup nos importa tu proyecto, por ello, seleccionamos
             tecnologías y herramientas que aportan alto rendimiento,
             escalabilidad y buen diseño a tu sistema.
           </p>
         </v-card>
-      </v-container>
     </div>
     <!-- versión WEB -->
     <v-container v-show="!isMobile()">
@@ -30,11 +29,12 @@
         <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
           <v-hover v-slot="{ hover }" open-delay="50">
             <v-card
+              class="pointer"
               rounded="circle"
               :elevation="hover ? 8 : 2"
               :class="{ 'on-hover': hover }"
               height="100"
-              max-width="100"
+              max-width="100"              
             >
               <v-avatar size="100" class="background" @click="selecWeb">
                 <v-icon id="iconFront" color="#00ffff" size="60" dark> mdi-web </v-icon>
@@ -47,6 +47,7 @@
         <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
           <v-hover v-slot="{ hover }" open-delay="50">
             <v-card
+              class="pointer"
               rounded="circle"
               :elevation="hover ? 8 : 2"
               :class="{ 'on-hover': hover }"
@@ -63,7 +64,8 @@
 
         <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
           <v-hover v-slot="{ hover }" open-delay="50">
-            <v-card              
+            <v-card    
+              class="pointer"          
               rounded="circle"
               :elevation="hover ? 8 : 2"
               :class="{ 'on-hover': hover }"
@@ -642,6 +644,7 @@ export default {
 }
 h1 {
   font-size: 30px;
+  font-family: Mazzard;
 }
 h2 {
   font-size: 25px;
@@ -654,5 +657,11 @@ h3 {
 p {
   color: black;
   font-size: medium;
+}
+.pointer{
+  cursor: pointer;
+}
+.background-gray {
+  background-color: rgb(245, 245, 245);
 }
 </style>
