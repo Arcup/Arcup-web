@@ -7,11 +7,13 @@
       max-width="100%"
       max-height="300"
     ></v-img>
-    <div class="background-gray">
-      <h2 class="text-center padding-top pb-2 color-title pr-4 pl-4">
+    <div class="background-gray text-center py-10">
+      <v-icon class="mx-auto" size="50" color="cyan">mdi-information-outline </v-icon>
+      <h2 class="text-center pb-2 color-title px-4">
         DESCUBRE LAS CARACTERÍSTICAS DE NUESTROS SERVICIOS
-        <v-icon color="cyan">mdi-information-outline </v-icon>
+        
       </h2>
+      <v-card flat height="2" color="cyan" width="800" class="mx-auto"></v-card>
       <v-container>
         <v-card class="mx-auto pt-3 pr-3 pl-3 background-gray" flat width="950">
           <p class="text-justify">
@@ -104,7 +106,7 @@
                 :to="{ name: 'Technology' }"
                 class="text-decoration-none"
               >
-                <v-btn text color="cyan"> DESCUBRE MÁS </v-btn>
+                <v-btn text @click="scrollTop" color="cyan"> DESCUBRE MÁS </v-btn>
               </router-link>
             </v-card>
           </v-col>
@@ -122,7 +124,7 @@
                 :to="{ name: 'Technology' }"
                 class="text-decoration-none"
               >
-                <v-btn text color="cyan"> DESCUBRE MÁS </v-btn>
+                <v-btn text @click="scrollTop" color="cyan"> DESCUBRE MÁS </v-btn>
               </router-link>
             </v-card>
           </v-col>
@@ -141,7 +143,7 @@
                 :to="{ name: 'Technology' }"
                 class="text-decoration-none"
               >
-                <v-btn text color="cyan"> DESCUBRE MÁS </v-btn>
+                <v-btn @click="scrollTop" text color="cyan"> DESCUBRE MÁS </v-btn>
               </router-link>
             </v-card>
           </v-col>
@@ -163,6 +165,11 @@ export default {
   components: {
     BaseHeader,
     BaseFooter,
+  },
+  methods: {
+    scrollTop() {
+      window.scrollTo(0, 0);
+    },
   },
   metaInfo() {
     return {
