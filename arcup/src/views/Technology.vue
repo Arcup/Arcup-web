@@ -5,16 +5,17 @@
       src="../assets/title-images/image-technology.png"
       max-width="100%"
       max-height="300"
-      class="mb-10"
     >
     </v-img>
-    <div>
+    <div class="background-gray py-10">
+      <v-container class="text-center">
+        <v-icon class="mx-auto" size="50" color="cyan">mdi-responsive</v-icon>
       <h1 class="text-center padding-top pb-2 pr-4 pl-4">
         CONOCE NUESTRA SELECCIÓN DE TECNOLOGÍAS
-        <v-icon color="cyan">mdi-responsive</v-icon>
       </h1>
-      <v-container>
-        <v-card class="mx-auto pt-3 pr-3 pl-3 background-gray" flat width="950">
+      <v-card flat height="2" color="cyan" width="700" class="mx-auto"></v-card>
+      
+        <v-card class="mx-auto pt-3 pr-3 pl-3 background-gray" color="rgb(248, 248, 248)" flat width="950">
           <p class="text-justify">
             En arcup nos importa tu proyecto, por ello, seleccionamos
             tecnologías y herramientas que aportan alto rendimiento,
@@ -24,7 +25,7 @@
       </v-container>
     </div>
     <!-- versión WEB -->
-    <v-container v-show="!isMobile()">
+    <v-container class="pt-10" v-show="!isMobile()">
       <!-- Avatars -->
       <v-row class="ma-0">
         <v-col tag="center" cols="12" sm="4" md="4" lg="4" xl="4">
@@ -223,7 +224,7 @@
     <!-- Finaliza versión web -->
 
     <!-- Versión movil -->
-    <div v-show="isMobile()">
+    <div class="pt-10" v-show="isMobile()">
       <v-row no-gutters justify="center" cols="12" sm="4" md="4" lg="4" xl="4">
         <v-hover v-slot="{ hover }" open-delay="50" class="mb-4">
           <v-card
@@ -654,5 +655,8 @@ h3 {
 p {
   color: black;
   font-size: medium;
+}
+.background-gray{
+  background-color: rgb(248, 248, 248);
 }
 </style>

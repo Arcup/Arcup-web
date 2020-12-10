@@ -6,22 +6,22 @@
       max-width="100%"
       max-height="300"
     ></v-img>
-    <div>
-      <v-container class="mt-4">
-        <v-sheet height="100%" width="100%" class="fill-height" flat>
-          <v-row>
-            <v-col cols="12">
+    <div class="background-gray text-center py-10">
+      <v-icon size="50" color="cyan">mdi-web </v-icon>
               <h1 class="text-center fontTitleContainer">
-                Páginas web <v-icon size="40" color="cyan">mdi-web </v-icon>
+                Páginas web 
               </h1>
+               <v-card flat height="2" color="cyan" width="275" class="mx-auto"></v-card>
               <h4 class="text-center fontSubtitleContainer">
                 Encuentra tu paquete ideal o personalízalo con nosotros
               </h4>
               <p class="text-center fontDescriptionPrice">
                 Los precios pueden variar dependiendo del proyecto*
               </p>
-            </v-col>
-          </v-row>
+    </div>
+    <div>
+      <v-container class="mt-4">
+        <v-sheet height="100%" width="100%" class="fill-height" flat>
           <v-row v-for="(item, i) in itemWebPages" :key="i" class="mx-4 my-4">
             <v-card width="100%" elevation="2" class="rounded-r-xl">
               <v-row no-gutters>
@@ -131,23 +131,22 @@
         </v-sheet>
       </v-container>
     </div>
-    <div>
-      <v-container class="mt-4">
-        <v-sheet height="100%" width="100%" class="fill-height" flat>
-          <v-row>
-            <v-col cols="12">
+    <div class="background-gray text-center py-10">
+      <v-icon size="50" color="cyan">mdi-cellphone </v-icon>
               <h1 class="text-center fontTitleContainer">
                 App Móvil
-                <v-icon size="40" color="cyan">mdi-cellphone </v-icon>
               </h1>
+               <v-card flat height="2" color="cyan" width="275" class="mx-auto"></v-card>
               <h4 class="text-center fontSubtitleContainer">
                 Háblanos de tu idea y hagámosla realidad
               </h4>
               <p class="text-center fontDescriptionPrice">
                 Los precios pueden variar dependiendo del proyecto*
               </p>
-            </v-col>
-          </v-row>
+    </div>
+    <div>
+      <v-container class="mt-4">
+        <v-sheet height="100%" width="100%" class="fill-height" flat>
           <v-row v-for="(item, i) in itemApp" :key="i" class="mx-4 my-4">
             <v-card width="100%" elevation="2" class="rounded-r-xl">
               <v-row no-gutters>
@@ -257,6 +256,7 @@
       </v-container>
     </div>
     <div class="text-center pt-16 pb-16 color-background-gray">
+      <v-container class="text-center">
         <v-icon size="80" class="pb-3" color="cyan"
           >mdi-clock-check-outline
         </v-icon>
@@ -272,6 +272,7 @@
             >VER MÁS</v-btn
           >
         </router-link>
+      </v-container>
     </div>
     <base-footer></base-footer>
   </div>
@@ -482,5 +483,8 @@ export default {
 }
 .with-100 {
   width: 100%;
+}
+.background-gray{
+  background-color: rgb(248, 248, 248);
 }
 </style>

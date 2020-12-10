@@ -5,17 +5,20 @@
       src="../assets/title-images/image-software.png"
       max-width="100%"
       max-height="300"
-      class="mb-10"
+      
     >
     </v-img>
 
-    <div>
+    <div class="py-10 background-gray text-center">
+      <v-container>
+        <v-icon class="mx-auto" size="50" color="cyan">mdi-laptop</v-icon>
       <h1 class="text-center pb-2 pr-4 pl-4">
         CONOCE NUESTRO PROCESO DE DESARROLLO DE SOFTWARE
-        <v-icon color="cyan">mdi-laptop</v-icon>
+        
       </h1>
-      <v-container>
-        <v-card class="mx-auto pt-3 pr-3 pl-3 background-gray" flat width="950">
+       <v-card flat height="2" color="cyan" width="800" class="mx-auto"></v-card>
+ 
+        <v-card class="mx-auto px-3 pt-2" color="rgb(248, 248, 248)" flat width="910">
           <p class="text-justify">
             En Arcup estamos comprometidos con el desarrollo de software de
             calidad, por tal motivo, nos apegamos al uso de metodologías,
@@ -25,7 +28,9 @@
             Conoce nuestro proceso:
           </p>
         </v-card>
+    
       </v-container>
+      
     </div>
 
     <!-- Versión web -->
@@ -33,7 +38,7 @@
       <!-- File 1 -->
       <v-row no-gutters>
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
-          <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
+          <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" flat rounded="0" height="300">
               <v-card-text> <h2>Obtención de requisitos</h2> </v-card-text>
               <v-card-text>
                 <h3>
@@ -68,7 +73,7 @@
           </v-card>
         </v-col>
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
-          <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
+          <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" flat rounded="0" height="300">
             <v-card-text><h2>Análisis</h2> </v-card-text>
             <v-card-text class="pa-0">
               <h3>
@@ -83,7 +88,7 @@
       <!-- File 3 -->
       <v-row no-gutters>
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
-          <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
+          <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" flat rounded="0" height="300">
             <v-card-text><h2>Diseño</h2></v-card-text>
             <v-card-text class="pa-0"><h3>
               Creamos prototipos funcionales que guían el proceso de construcción y permiten a los
@@ -115,7 +120,7 @@
           </v-card>
         </v-col>
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
-          <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
+          <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" flat rounded="0" height="300">
             <v-card-text><h2>Codificación</h2></v-card-text>            
             <v-card-text class="pa-0"> 
               <h3>
@@ -130,7 +135,7 @@
       <!-- File 5 -->
       <v-row no-gutters>
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
-          <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
+          <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" flat rounded="0" height="300">
             <v-card-text><h2>Pruebas</h2></v-card-text>            
             <v-card-text class="pt-0"> <h3>
               Realizamos un plan de pruebas por iteración para validar los módulos implementados, asegurando así la calidad
@@ -161,7 +166,7 @@
           </v-card>
         </v-col>
         <v-col class="pa-0" cols="12" sm="6" md="6" lg="6" xl="6">
-          <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" color="#F5F5F5" rounded="0" height="300">
+          <v-card class="pa-2 text-center d-flex align-content-center flex-wrap" flat rounded="0" height="300">
             <v-card-text><h2>Despliegue</h2></v-card-text>            
             <v-card-text class="pa-0 text-center"> 
               <h3>
@@ -298,4 +303,7 @@ export default {
     color:#000000;
     font-size: medium;
   }
+  .background-gray{
+  background-color: rgb(248, 248, 248);
+}
 </style>
