@@ -17,8 +17,7 @@
         
       </h1>
        <v-card flat height="2" color="cyan" width="800" class="mx-auto"></v-card>
- 
-        <v-card class="mx-auto px-3 pt-2" color="rgb(248, 248, 248)" flat width="910">
+        <v-card class="mx-auto px-3 pt-2" color="rgb(248, 248, 248)" flat width="820">
           <p class="text-justify">
             En Arcup estamos comprometidos con el desarrollo de software de
             calidad, por tal motivo, nos apegamos al uso de metodologías,

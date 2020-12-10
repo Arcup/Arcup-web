@@ -13,9 +13,8 @@
       <h1 class="text-center padding-top pb-2 pr-4 pl-4">
         CONOCE NUESTRA SELECCIÓN DE TECNOLOGÍAS
       </h1>
-      <v-card flat height="2" color="cyan" width="700" class="mx-auto"></v-card>
-      
-        <v-card class="mx-auto pt-3 pr-3 pl-3 background-gray" color="rgb(248, 248, 248)" flat width="950">
+      <v-card flat height="2" color="cyan" width="700" class="mx-auto"></v-card>      
+        <v-card class="mx-auto pt-3 pr-3 pl-3 background-gray" color="rgb(248, 248, 248)" flat width="720">
           <p class="text-justify">
             En arcup nos importa tu proyecto, por ello, seleccionamos
             tecnologías y herramientas que aportan alto rendimiento,
@@ -36,6 +35,7 @@
               :class="{ 'on-hover': hover }"
               height="100"
               max-width="100"
+              class="cursor"
             >
               <v-avatar size="100" class="background" @click="selecWeb">
                 <v-icon id="iconFront" color="#00ffff" size="60" dark> mdi-web </v-icon>
@@ -53,6 +53,7 @@
               :class="{ 'on-hover': hover }"
               height="100"
               max-width="100"
+              class="cursor"
             >
               <v-avatar size="100" class="background" @click="selecAndroid">
                 <v-icon id="iconBack" color="#ffffff" size="50" dark>mdi-server</v-icon>
@@ -69,7 +70,8 @@
               :elevation="hover ? 8 : 2"
               :class="{ 'on-hover': hover }"
               height="100"
-              max-width="100"              
+              max-width="100"    
+              class="cursor"          
             >
               <v-avatar
                 size="100"
@@ -655,6 +657,9 @@ h3 {
 p {
   color: black;
   font-size: medium;
+}
+.cursor{
+  cursor: pointer;
 }
 .background-gray{
   background-color: rgb(248, 248, 248);
