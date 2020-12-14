@@ -54,7 +54,7 @@
           </h3>
           <v-card-text class="text-justify">
             Nos aseguramos de que nuestros servicios cumplan tus expectativas,
-            por ello, mantemos una buena y constante comunicación con nuestros
+            por ello, mantenemos una buena y constante comunicación con nuestros
             clientes y así asegurar el éxito del proyecto.
           </v-card-text>
         </v-col>

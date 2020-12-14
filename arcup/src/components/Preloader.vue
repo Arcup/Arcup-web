@@ -54,11 +54,11 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   background-color: whitesmoke;
-  z-index: 5;
+  z-index: 6;
 }
 .fullScreen {
   height: 100%;

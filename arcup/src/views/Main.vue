@@ -1,7 +1,9 @@
 <template>
-  <v-main>
+  <div>
     <preloader></preloader>
     <base-header></base-header>
+    
+    
     <div class="container__deep" id="containerDeep">
       <v-row no-gutters>
         <v-col>
@@ -252,7 +254,7 @@
         </v-col>
       </v-col>
     </div>
-  </v-main>
+  </div>
 </template>
 <script>
 //  Adding components to use insade Main component
@@ -336,13 +338,13 @@ export default {
           ],
         },
         {
-          name: "Negocios",
-          price: "$15,500",
+          name: "Administrable",
+          price: "$9,700",
           typePrice: "/mx",
-          icon: "mdi-shopping-outline",
+          icon: "mdi-cog-outline",
           pages: "De 6 a 12 páginas",
           description:
-            "Administra tu negocio desde internet. Autónomo. Organizado. Funcional.",
+            "Administra el contenido de tu web en el momento que quieras.",
           advantages: [
             "Página de administrador",
             "Control de usuarios",
