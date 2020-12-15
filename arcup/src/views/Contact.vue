@@ -141,11 +141,11 @@
                 ></v-checkbox>
                 <validation-provider
                   v-slot="{ errors }"
-                  name="Nombre del proyecto"
+                  name="Asunto"
                   rules="required|max:50"
                 >
                   <v-text-field
-                    label="Nombre del proyecto"
+                    label="Asunto"
                     v-model="projectName"
                     :error-messages="errors"
                     required
@@ -153,7 +153,7 @@
                 </validation-provider>
                 <validation-provider
                   v-slot="{ errors }"
-                  name="Descripción del proyecto"
+                  name="Descripción"
                   rules="required|max:1000"
                 >
                   <v-textarea
@@ -163,7 +163,7 @@
                     v-model="projectDescription"
                     :counter="1000"
                     no-resize
-                    label="Descripción del proyecto"
+                    label="Descripción"
                     height="121px"
                   ></v-textarea>
                 </validation-provider>
