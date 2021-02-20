@@ -35,7 +35,6 @@
                   </h2>
                   <br />
                   (+52) 2281132016 <br />
-                  (+52) 2282935090 <br />
                   (+52) 2281818876
                 </v-card-text>
               </v-col>
@@ -233,7 +232,6 @@
           <div>contacto@arcup.com.mx</div>
           <div class="text-size">Teléfono:</div>
           <div>(+52) 2281132016</div>
-          <div>(+52) 2282935090</div>
           <div>(+52) 2281818876</div>
         </v-card-text>
         <v-divider></v-divider>

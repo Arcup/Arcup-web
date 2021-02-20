@@ -50,8 +50,6 @@
               <v-icon class="" size="20" color="#00FFFF">mdi-phone</v-icon>
               (+52) 2281132016
               <v-icon class="pl-5" size="20" color="#00FFFF">mdi-phone</v-icon>
-              (+52) 2282935090
-              <v-icon class="pl-5" size="20" color="#00FFFF">mdi-phone</v-icon>
               (+52) 2281818876
             </v-card>
           </v-card-text>

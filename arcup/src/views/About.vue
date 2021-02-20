@@ -130,7 +130,6 @@ import BaseHeader from "@/components/BaseHeader.vue";
 import BaseFooter from "@/components/BaseFooter.vue";
 import imgCarousel from "../assets/carousel-images/carousel-pictures.png";
 import photoJesus from "../assets/photos/photo-jesus.jpg";
-import photoJahir from "../assets/photos/photo-jahir.jpg";
 import photoLuis from "../assets/photos/photo-luis.jpg";
 
 export default {
@@ -152,7 +151,7 @@ export default {
         degree: "Ingeniero de software",
         photo: photoJesus,
         jobTitle: "Co-Fundador",
-        tasks: "Front-End Developer y Diseñador Web",
+        tasks: "Full Stack Developer y Diseñador Web",
         email: "jesus.hdez@arcup.com.mx",
       },
       {
@@ -163,15 +162,6 @@ export default {
         jobTitle: "Co-Fundador",
         tasks: "Front-End Developer y Documentador",
         email: "luis.galicia@arcup.com.mx",
-      },
-      {
-        src: imgCarousel,
-        name: "Jahir Landa",
-        degree: "Ingeniero de software",
-        photo: photoJahir,
-        jobTitle: "Co-Fundador",
-        tasks: "Back-End Developer y Web Tester",
-        email: "jahir.landav@arcup.com.mx",
       },
     ],
   }),
