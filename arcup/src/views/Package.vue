@@ -15,9 +15,6 @@
               <h4 class="text-center fontSubtitleContainer">
                 Encuentra tu paquete ideal o personalízalo con nosotros
               </h4>
-              <p class="text-center fontDescriptionPrice">
-                Los precios pueden variar dependiendo del proyecto*
-              </p>
     </div>
     <div>
       <v-container class="mt-4">
@@ -82,6 +79,7 @@
                               class="text-center pt-0 mt-0 pb-0 mb-0"
                               cols="12"
                             >
+                             <v-icon size="40" color="cyan">{{item.icon}}</v-icon>
                               <h3 class="fontTitlePrice">
                                 {{ item.titlePrice }}
                               </h3>
@@ -90,18 +88,11 @@
                               class="text-center pt-0 mt-0 pb-0 mb-0"
                               cols="12"
                             >
-                              <h4 class="color-text-gray">
-                                Encuentra este paquete desde:
-                              </h4>
                             </v-col>
                             <v-col
                               class="text-center pt-0 mt-0 pb-0 mb-0"
                               cols="12"
                             >
-                              <p class="fontPrice">
-                                {{ item.price }}
-                                <span class="fontPriceMx">/mx</span>
-                              </p>
                             </v-col>
                             <v-col
                               class="text-center pt-0 mt-0 pb-0 mb-0"
@@ -140,9 +131,6 @@
               <h4 class="text-center fontSubtitleContainer">
                 Háblanos de tu idea y hagámosla realidad
               </h4>
-              <p class="text-center fontDescriptionPrice">
-                Los precios pueden variar dependiendo del proyecto*
-              </p>
     </div>
     <div>
       <v-container class="mt-4">
@@ -209,6 +197,8 @@
                               class="text-center pt-0 mt-0 pb-0 mb-0"
                               cols="12"
                             >
+                            <v-icon size="40" color="cyan">{{item.icon}}</v-icon>
+                            <v-icon size="40" color="cyan">{{item.icon2}}</v-icon>
                               <h3 class="fontTitlePrice">
                                 {{ item.titlePrice }}
                               </h3>
@@ -288,18 +278,17 @@ export default {
       {
         title: "Informativo",
         titlePrice: "Paquete Informativo",
-        price: "$3,200",
+        price: "",
+        icon: "mdi-information-outline",
         groupAdvantageOne: [
           "De 3 a 5 páginas",
           "Servicio de atención 24/7",
-          "Código QR",
         ],
         groupAdvantageTwo: [
-          "Entrega entre 10 - 15 días",
-          "Sitio totalmente responsiva",
+          "Página totalmente responsiva",
           "Hosting / Dominio por 1 año",
         ],
-        descriptionPrice: "Incluye 3 páginas, dominio y hosting por un año.",
+        descriptionPrice: "Cada paquete puede estar sujeto a cambios",
         description:
           "¿Quieres mostrarle al mundo quién eres, qué haces y cómo lo haces?. Este paquete " +
           "es el ideal para ti.",
@@ -307,42 +296,36 @@ export default {
       {
         title: "Auto-administrable",
         titlePrice: "Paquete Auto-administrable",
-        price: "$9,700",
+        price: "",
+        icon: "mdi-cog-outline",
         groupAdvantageOne: [
-          "De 3 a 10 elementos administrables",
-          "Servicio de atención 24/7",
-          "De 6 a 12 páginas",
-          "Página de administrador",
+          "De 5 a 10 páginas",
+          "De 3 a 10 elementos administrables"
         ],
         groupAdvantageTwo: [
-          "Entrega entre 20 - 45 días",
-          "Sitio totalmente responsiva",
+          "Servicio de atención 24/7",
           "Hosting / Dominio por 1 año",
-          "Código QR",
         ],
         descriptionPrice:
-          "Incluye 6 páginas, 3 elementos administrables, hosting y dominio por un año.",
+          "Cada paquete puede estar sujeto a cambios",
         description:
           "Administra el contenido de tu web en el momento que quieras. Obtén completa libertad con nuestro paquete auto-administrable.",
       },
       {
         title: "Negocios",
         titlePrice: "Paquete Negocios",
-        price: "$15,500",
+        price: "",
+        icon: "mdi-shopping-outline",
         groupAdvantageOne: [
-          "Entrega entre 1 - 2 meses",
-          "Servicio de atención 24/7",
-          "De 6 a 12 páginas",
-          "Roles de usuario",
+          "De 10 a 15 páginas",
+          "De 3 a 10 elementos administrables",
         ],
         groupAdvantageTwo: [
           "Administrar artículos",
           "Proceso de venta de principio a fin",
-          "De 3 a 10 elementos administrables",
-          "Hosting / Dominio por 1 año",
         ],
         descriptionPrice:
-          "Incluye 6 páginas, 3 elementos administrables, administración de artículos y proceso de venta.",
+          "Cada paquete puede estar sujeto a cambios",
         description:
           "Controla tu negocio desde internet, ofrece tus servicios, administra tus productos y véndelos en línea.",
       },
@@ -352,10 +335,10 @@ export default {
         title: "App Móvil",
         titlePrice: "Paquete App Móvil",
         price: "",
+        icon: "mdi-cellphone-play ",
         groupAdvantageOne: [
           "Publicación Play Store o App Store",
           "Revisiones constantes de avances",
-          "Servicio de atención 12/7",
         ],
         groupAdvantageTwo: [
           "Diseño moderno",
@@ -370,15 +353,14 @@ export default {
         title: "App Móvil & Página Web",
         titlePrice: "Paquete App & Página Web",
         price: "",
+        icon: "mdi-monitor-cellphone",
         groupAdvantageOne: [
           "Publicación en Play Store o App Store",
-          "Revisiones constantes de avances",
-          "Accede a tu información desde tu página web y/o tu dispositivo móvil.",
+          "Hosting / Dominio por 1 año",
         ],
         groupAdvantageTwo: [
           "Diseño moderno",
           "Adaptable para todos los teléfonos",
-          "Servicio de atención 12/7",
         ],
         descriptionPrice:
           "Contáctanos para proporcionarte más información y conocer tu proyecto.",
@@ -389,15 +371,15 @@ export default {
         title: "App móvil multiplataforma",
         titlePrice: "Paquete Android y iOS",
         price: "",
+        icon: "mdi-android",
+        icon2: "mdi-apple",
         groupAdvantageOne: [
           "Publicación en Play Store y App Store",
           "Versión para IOS y Android",
-          "Revisiones constantes de avances",
         ],
         groupAdvantageTwo: [
           "Diseño moderno",
           "Adaptable para todos los teléfonos",
-          "Servicio de atención 12/7",
         ],
         descriptionPrice:
           "Contáctanos para proporcionarte más información y conocer tu proyecto",
