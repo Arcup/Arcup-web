@@ -103,12 +103,12 @@
                   <div class="subtitle-1 font-weight-thin pt-0 mt-0">
                     {{ item.pages }}
                   </div>
-                  <div
+                  <!--<div
                     class="subtitle-1 font-weight-thin pt-0 mt-0 font-paquete"
                   >
                     Encuentra este paquete desde:
-                  </div>
-                  <v-card-text class="mt-4">
+                  </div>-->
+                  <v-card-text class="mt-2">
                     <p class="fontPrice">
                       {{ item.price }}
                       <span class="fontPriceMx">{{ item.typePrice }}</span>
@@ -324,32 +324,32 @@ export default {
       itemsPaquetes: [
         {
           name: "Informativo",
-          price: "$3,200",
-          typePrice: "/mx",
+          price: "Single Page",
+          typePrice: "",
           icon: "mdi-information-outline",
-          pages: "De 3 a 5 páginas",
+          pages: "Completamente personalizado",
           description:
             "Muéstrale al mundo quién eres. Emprendedores. Estudiantes. Empresas.",
           advantages: [
-            "Diseño 100% responsivo",
-            "Mantenimiento 24/7",
-            "Hosting por 1 año",
-            "Dominio personalizado (.com)",
+            "Diseño moderno e innovador",
+            "Amigable e intuitivo",
+            "Envío de correos desde el sistema",
+            "Dominio personalizado (.com.mx)",
           ],
         },
         {
           name: "Administrable",
-          price: "$9,700",
-          typePrice: "/mx",
+          price: "CMS System",
+          typePrice: "",
           icon: "mdi-cog-outline",
-          pages: "De 6 a 12 páginas",
+          pages: "Sistema web y sistema administrador",
           description:
             "Administra el contenido de tu web en el momento que quieras.",
           advantages: [
             "Página de administrador",
             "Control de usuarios",
-            "Hosting por 1 año",
-            "Dominio personalizado (.com)",
+            "Personalizable a cualquier giro",
+            "Servicio al cliente",
           ],
         },
         {
