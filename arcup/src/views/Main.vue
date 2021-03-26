@@ -2,8 +2,7 @@
   <div>
     <preloader></preloader>
     <base-header></base-header>
-    
-    
+
     <div class="container__deep" id="containerDeep">
       <v-row no-gutters>
         <v-col>
@@ -151,71 +150,77 @@
           </v-hover>
         </v-row>
       </div>
-      <div class="container__description text-center pt-15 pb-15">
-        <v-container class="pb-10">
-          <v-row>
-            <v-col cols="12" md="4" sm="12">
-              <v-icon class="pb-5" size="50" color="#00ffff"> mdi-vuejs</v-icon
-              ><br />
-              <span aria-setsize="50" class="white-button pb-5">
-                ACÉRCATE A NOSTROS<br />
-              </span>
-              <span class="white-button">
-                Y CONOCE NUESTRAS TECNOLOGÍAS <br />
-              </span>
-              <v-divider class="pb-5"></v-divider>
-              <router-link
-                :to="{ name: 'Technology' }"
-                class="text-decoration-none"
+      <div class="container__description pt-2 pb-2">
+        <div class="text-center">
+          <h1 class="font_items ml-10 my-2">
+            Algunas de nuestras características
+          </h1>
+        </div>
+        
+        <v-carousel cycle hide-delimiters :show-arrows="false" height="auto">
+          <v-carousel-item>
+            <v-row class="mx-4">
+              <v-col
+                cols="12"
+                md="4"
+                sm="12"
+                v-for="(item, i) in firstPerformance"
+                :key="i"
               >
-                <v-btn outlined color="white" @click="scrollTop"
-                  >TECNOLOGÍAS</v-btn
-                >
-              </router-link>
-            </v-col>
-            <v-col cols="12" md="4" sm="12">
-              <v-icon class="pb-5" size="50" color="#00ffff">
-                mdi-file-document-edit-outline</v-icon
-              ><br />
-              <span aria-setsize="50" class="white-button pb-5">
-                ACÉRCATE A NOSTROS<br />
-              </span>
-              <span class="white-button">
-                Y CONOCE NUESTROS PROCESOS <br />
-              </span>
-              <v-divider class="pb-5"></v-divider>
-              <router-link
-                :to="{ name: 'Software' }"
-                class="text-decoration-none"
+                <v-card color="#161e2eff" dark>
+                  <div class="d-flex flex-no-wrap justify-space-between">
+                    <div>
+                      <v-card-title
+                        class="headline"
+                        v-text="item.name"
+                      ></v-card-title>
+
+                      <v-card-subtitle
+                        v-text="item.description"
+                      ></v-card-subtitle>
+                    </div>
+
+                    <v-avatar class="ma-3" size="110" tile>
+                      <v-icon size="50" color="cyan">{{ item.icon }}</v-icon>
+                    </v-avatar>
+                  </div>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-carousel-item>
+          <v-carousel-item>
+            <v-row class="mx-4">
+              <v-col
+                cols="12"
+                md="4"
+                sm="12"
+                v-for="(item, i) in secondPerformance"
+                :key="i"
               >
-                <v-btn outlined color="white" @click="scrollTop"
-                  >PROCESOS</v-btn
-                >
-              </router-link>
-            </v-col>
-            <v-col cols="12" md="4" sm="12">
-              <v-icon class="pb-5" size="50" color="#00ffff">
-                mdi-clock-check-outline</v-icon
-              ><br />
-              <span aria-setsize="50" class="white-button pb-5">
-                ACÉRCATE A NOSTROS<br />
-              </span>
-              <span class="white-button">
-                Y CONOCE NUESTRAS CUALIDADES <br />
-              </span>
-              <v-divider class="pb-5"></v-divider>
-              <router-link
-                :to="{ name: 'YourProject' }"
-                class="text-decoration-none"
-              >
-                <v-btn outlined color="white" @click="scrollTop"
-                  >CUALIDADES</v-btn
-                >
-              </router-link>
-            </v-col>
-          </v-row>
-        </v-container>
+                <v-card color="#161e2eff" dark>
+                  <div class="d-flex flex-no-wrap justify-space-between">
+                    <div>
+                      <v-card-title
+                        class="headline"
+                        v-text="item.name"
+                      ></v-card-title>
+
+                      <v-card-subtitle
+                        v-text="item.description"
+                      ></v-card-subtitle>
+                    </div>
+
+                    <v-avatar class="ma-3" size="110" tile>
+                      <v-icon size="50" color="cyan">{{ item.icon }}</v-icon>
+                    </v-avatar>
+                  </div>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-carousel-item>
+        </v-carousel>
       </div>
+      <base-footer></base-footer>
     </div>
 
     <div class="container__angle" v-show="!isMobile">
@@ -254,12 +259,15 @@
         </v-col>
       </v-col>
     </div>
+    
   </div>
 </template>
 <script>
 //  Adding components to use insade Main component
 import BaseHeader from "@/components/BaseHeader.vue";
 import Preloader from "@/components/Preloader.vue";
+import BaseFooter from "@/components/BaseFooter.vue";
+
 
 //  Adding image to Carousel resolution: md, lg, xl
 import imgMonitorProject from "../assets/carousel-images/carousel-project.png";
@@ -368,6 +376,45 @@ export default {
           ],
         },
       ],
+      firstPerformance: [
+        {
+          name: "SEO",
+          description: "Tu página en los primeros resultados de búsqueda",
+          icon: "mdi-search-web",
+        },
+        {
+          name: "Soporte 24/7",
+          description:
+            "Aseguramos que tu página se mantenga activa y establecemos tiempos para mantenimiento",
+          icon: "mdi-face-agent",
+        },
+        {
+          name: "SSL",
+          description:
+            "Minimizamos el riesgo de ataques a tu sitio web con un certificado de seguridad",
+          icon: "mdi-lock",
+        },
+      ],
+      secondPerformance: [
+        {
+          name: "Diseño UX",
+          description:
+            "Garantizamos un sitio web intuitivo y adaptado a tu público",
+          icon: "mdi-lightbulb-on-outline",
+        },
+        {
+          name: "Responsivo",
+          description:
+            "¡Todo en uno! implementamos diseños adaptables a dispositivos móviles",
+          icon: "mdi-monitor-cellphone",
+        },
+        {
+          name: "Servidor dedicado",
+          description:
+            "Centralizamos tu información en nuestro servidor dedicado asegurando la confidencialidad",
+          icon: "mdi-server",
+        },
+      ],
     };
   },
   methods: {
@@ -422,7 +469,8 @@ export default {
       meta: [
         {
           name: "description",
-          content: "Arcup | Construimos software de calidad a la medida, creamos tu proyecto y se lo mostramos al MUNDO. Desarrollamos tu página web o apliación móvil.",
+          content:
+            "Arcup | Construimos software de calidad a la medida, creamos tu proyecto y se lo mostramos al MUNDO. Desarrollamos tu página web o apliación móvil.",
         },
       ],
     };
@@ -430,6 +478,7 @@ export default {
   components: {
     BaseHeader,
     Preloader,
+    BaseFooter
   },
 };
 </script>
@@ -445,7 +494,7 @@ export default {
   z-index: 1;
 }
 .container__description {
-  background-color: #161e2eff;
+  background-color: #fafafa;
 }
 .container__cards {
   background-color: #fafafa;
@@ -527,6 +576,10 @@ export default {
 .font__main-alter-xs {
   font-family: Mazzard;
   font-size: 20px;
+}
+.font_items {
+  font-family: Mazzard;
+  font-size: 28px;
 }
 .pointer {
   cursor: pointer;
