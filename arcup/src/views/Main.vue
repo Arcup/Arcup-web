@@ -23,7 +23,7 @@
           </v-carousel>
         </v-col>
       </v-row>
-      <v-container v-show="isMobile" class="container__description">
+      <v-container v-show="isMobile" class="container__description_mobile">
         <v-col md="6" sm="12" xs="12">
           <v-col class="white--text">
             <h1 class="font__main-alter-xs">
@@ -482,7 +482,6 @@ export default {
   },
 };
 </script>
-    Preloadeript>
 <style lang='css' scoped>
 .v-card {
   transition: opacity 0.4s ease-in-out;
@@ -495,6 +494,9 @@ export default {
 }
 .container__description {
   background-color: #fafafa;
+}
+.container__description_mobile {
+  background-color: #161e2eff;
 }
 .container__cards {
   background-color: #fafafa;
