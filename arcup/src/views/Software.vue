@@ -5,7 +5,7 @@
       src="../assets/title-images/image-software.png"
       max-width="100%"
       max-height="300"
-      
+      alt="Imagen con titulo Software"
     >
     </v-img>
 
@@ -54,6 +54,7 @@
               max-width="100%"
               max-height="100%"
               src="../assets/software-images/image-obtencionReque.jpg"
+              alt="Fotografía de personas trabajando"
             >
             </v-img>
           </v-card>
@@ -67,6 +68,7 @@
             <v-img
               height="300"
               src="../assets/software-images/image-analisis.jpg"
+              alt="Fotografía de personas trabajando"
             >
             </v-img>
           </v-card>
@@ -101,6 +103,7 @@
             <v-img
               height="300"
               src="../assets/software-images/image-diseno.jpg"
+              alt="Fotografía de personas trabajando"
             >
             </v-img>
           </v-card>
@@ -114,6 +117,7 @@
             <v-img
               height="300"
               src="../assets/software-images/image-codificacion.jpg"
+              alt="Fotografía de personas trabajando"
             >
             </v-img>
           </v-card>
@@ -147,6 +151,7 @@
             <v-img
               height="300"
               src="../assets/software-images/image-pruebas.jpg"
+              alt="Fotografía de personas trabajando"
             >
             </v-img>
           </v-card>
@@ -160,6 +165,7 @@
             <v-img
               height="300"
               src="../assets/software-images/image-despliegue.jpg"
+              alt="Fotografía de personas trabajando"
             >
             </v-img>
           </v-card>
@@ -192,7 +198,7 @@
         </v-col>
         <v-col class="pa-0" cols="12" sm="12" md="12" lg="12" xl="12">
           <v-card rounded="0" height="auto">
-            <v-img :src="item.src" max-width="100%" max-height="100%"> </v-img>
+            <v-img :src="item.src" max-width="100%" max-height="100%" alt="Fotografía de personas trabajando"> </v-img>
           </v-card>
         </v-col>
       </v-row>

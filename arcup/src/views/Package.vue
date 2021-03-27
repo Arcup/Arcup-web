@@ -5,6 +5,7 @@
       src="../assets/title-images/image-package.png"
       max-width="100%"
       max-height="300"
+      alt="Imagen con titulo Paquetes"
     ></v-img>
     <div class="background-gray text-center py-10">
       <v-icon size="50" color="cyan">mdi-web </v-icon>

@@ -5,6 +5,7 @@
       src="../assets/title-images/image-story.png"
       max-width="100%"
       max-height="300"
+      alt="Imagen con titulo Historia"
     ></v-img>
     <div class="text-center background-gray">
         <v-icon size="50" color="cyan" class="pt-10 ">mdi-chart-timeline-variant </v-icon>
@@ -43,6 +44,7 @@
                   :src="item.src"
                   gradient="to top, rgba(0,0,0,.44), rgba(0,0,0,.44)"
                   height="80px"
+                  alt="Imagen tecnológica"
                   ><v-card-title class="title">
                     {{ item.title }}
                   </v-card-title></v-img

@@ -5,6 +5,7 @@
       src="../assets/title-images/image-technology.png"
       max-width="100%"
       max-height="300"
+      alt="Imagen con titulo Tecnologías"
     >
     </v-img>
     <div class="background-gray py-10">

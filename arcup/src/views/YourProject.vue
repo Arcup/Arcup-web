@@ -6,6 +6,7 @@
       src="../assets/title-images/image-project.png"
       max-width="100%"
       max-height="300"
+      alt="Imagen con titulo Tu proyecto"
     ></v-img>
     <div class="background-gray text-center py-10">
       <v-icon class="mx-auto" size="50" color="cyan">mdi-information-outline </v-icon>

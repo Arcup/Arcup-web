@@ -5,6 +5,7 @@
       src="../assets/title-images/image-contact.png"
       max-width="100%"
       max-height="300"
+      alt="Imagen con titulo Contactanos"
     ></v-img>
     <validation-observer ref="observer" v-slot="{ invalid }">
       <form @submit.prevent="submit">
