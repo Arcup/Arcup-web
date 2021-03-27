@@ -2,7 +2,8 @@
   <div>
     <preloader></preloader>
     <base-header></base-header>
-
+    
+    
     <div class="container__deep" id="containerDeep">
       <v-row no-gutters>
         <v-col>
@@ -23,7 +24,7 @@
           </v-carousel>
         </v-col>
       </v-row>
-      <v-container v-show="isMobile" class="container__description_mobile">
+      <v-container v-show="isMobile" class="container__description">
         <v-col md="6" sm="12" xs="12">
           <v-col class="white--text">
             <h1 class="font__main-alter-xs">
@@ -102,12 +103,12 @@
                   <div class="subtitle-1 font-weight-thin pt-0 mt-0">
                     {{ item.pages }}
                   </div>
-                  <!--<div
+                  <div
                     class="subtitle-1 font-weight-thin pt-0 mt-0 font-paquete"
                   >
                     Encuentra este paquete desde:
-                  </div>-->
-                  <v-card-text class="mt-2">
+                  </div>
+                  <v-card-text class="mt-4">
                     <p class="fontPrice">
                       {{ item.price }}
                       <span class="fontPriceMx">{{ item.typePrice }}</span>
@@ -150,77 +151,71 @@
           </v-hover>
         </v-row>
       </div>
-      <div class="container__description pt-2 pb-2">
-        <div class="text-center">
-          <h1 class="font_items ml-10 my-2">
-            Algunas de nuestras características
-          </h1>
-        </div>
-        
-        <v-carousel cycle hide-delimiters :show-arrows="false" height="auto">
-          <v-carousel-item>
-            <v-row class="mx-4">
-              <v-col
-                cols="12"
-                md="4"
-                sm="12"
-                v-for="(item, i) in firstPerformance"
-                :key="i"
+      <div class="container__description text-center pt-15 pb-15">
+        <v-container class="pb-10">
+          <v-row>
+            <v-col cols="12" md="4" sm="12">
+              <v-icon class="pb-5" size="50" color="#00ffff"> mdi-vuejs</v-icon
+              ><br />
+              <span aria-setsize="50" class="white-button pb-5">
+                ACÉRCATE A NOSTROS<br />
+              </span>
+              <span class="white-button">
+                Y CONOCE NUESTRAS TECNOLOGÍAS <br />
+              </span>
+              <v-divider class="pb-5"></v-divider>
+              <router-link
+                :to="{ name: 'Technology' }"
+                class="text-decoration-none"
               >
-                <v-card color="#161e2eff" dark>
-                  <div class="d-flex flex-no-wrap justify-space-between">
-                    <div>
-                      <v-card-title
-                        class="headline"
-                        v-text="item.name"
-                      ></v-card-title>
-
-                      <v-card-subtitle
-                        v-text="item.description"
-                      ></v-card-subtitle>
-                    </div>
-
-                    <v-avatar class="ma-3" size="110" tile>
-                      <v-icon size="50" color="cyan">{{ item.icon }}</v-icon>
-                    </v-avatar>
-                  </div>
-                </v-card>
-              </v-col>
-            </v-row>
-          </v-carousel-item>
-          <v-carousel-item>
-            <v-row class="mx-4">
-              <v-col
-                cols="12"
-                md="4"
-                sm="12"
-                v-for="(item, i) in secondPerformance"
-                :key="i"
+                <v-btn outlined color="white" @click="scrollTop"
+                  >TECNOLOGÍAS</v-btn
+                >
+              </router-link>
+            </v-col>
+            <v-col cols="12" md="4" sm="12">
+              <v-icon class="pb-5" size="50" color="#00ffff">
+                mdi-file-document-edit-outline</v-icon
+              ><br />
+              <span aria-setsize="50" class="white-button pb-5">
+                ACÉRCATE A NOSTROS<br />
+              </span>
+              <span class="white-button">
+                Y CONOCE NUESTROS PROCESOS <br />
+              </span>
+              <v-divider class="pb-5"></v-divider>
+              <router-link
+                :to="{ name: 'Software' }"
+                class="text-decoration-none"
               >
-                <v-card color="#161e2eff" dark>
-                  <div class="d-flex flex-no-wrap justify-space-between">
-                    <div>
-                      <v-card-title
-                        class="headline"
-                        v-text="item.name"
-                      ></v-card-title>
-
-                      <v-card-subtitle
-                        v-text="item.description"
-                      ></v-card-subtitle>
-                    </div>
-
-                    <v-avatar class="ma-3" size="110" tile>
-                      <v-icon size="50" color="cyan">{{ item.icon }}</v-icon>
-                    </v-avatar>
-                  </div>
-                </v-card>
-              </v-col>
-            </v-row>
-          </v-carousel-item>
-        </v-carousel>
+                <v-btn outlined color="white" @click="scrollTop"
+                  >PROCESOS</v-btn
+                >
+              </router-link>
+            </v-col>
+            <v-col cols="12" md="4" sm="12">
+              <v-icon class="pb-5" size="50" color="#00ffff">
+                mdi-clock-check-outline</v-icon
+              ><br />
+              <span aria-setsize="50" class="white-button pb-5">
+                ACÉRCATE A NOSTROS<br />
+              </span>
+              <span class="white-button">
+                Y CONOCE NUESTRAS CUALIDADES <br />
+              </span>
+              <v-divider class="pb-5"></v-divider>
+              <router-link
+                :to="{ name: 'YourProject' }"
+                class="text-decoration-none"
+              >
+                <v-btn outlined color="white" @click="scrollTop"
+                  >CUALIDADES</v-btn
+                >
+              </router-link>
+            </v-col>
+          </v-row>
+        </v-container>
       </div>
-      <base-footer></base-footer>
     </div>
 
     <div class="container__angle" v-show="!isMobile">
@@ -259,15 +254,12 @@
         </v-col>
       </v-col>
     </div>
-    
   </div>
 </template>
 <script>
 //  Adding components to use insade Main component
 import BaseHeader from "@/components/BaseHeader.vue";
 import Preloader from "@/components/Preloader.vue";
-import BaseFooter from "@/components/BaseFooter.vue";
-
 
 //  Adding image to Carousel resolution: md, lg, xl
 import imgMonitorProject from "../assets/carousel-images/carousel-project.png";
@@ -332,32 +324,32 @@ export default {
       itemsPaquetes: [
         {
           name: "Informativo",
-          price: "Single Page",
-          typePrice: "",
+          price: "$3,200",
+          typePrice: "/mx",
           icon: "mdi-information-outline",
-          pages: "Completamente personalizado",
+          pages: "De 3 a 5 páginas",
           description:
             "Muéstrale al mundo quién eres. Emprendedores. Estudiantes. Empresas.",
           advantages: [
-            "Diseño moderno e innovador",
-            "Amigable e intuitivo",
-            "Envío de correos desde el sistema",
-            "Dominio personalizado (.com.mx)",
+            "Diseño 100% responsivo",
+            "Mantenimiento 24/7",
+            "Hosting por 1 año",
+            "Dominio personalizado (.com)",
           ],
         },
         {
           name: "Administrable",
-          price: "CMS System",
-          typePrice: "",
+          price: "$9,700",
+          typePrice: "/mx",
           icon: "mdi-cog-outline",
-          pages: "Sistema web y sistema administrador",
+          pages: "De 6 a 12 páginas",
           description:
             "Administra el contenido de tu web en el momento que quieras.",
           advantages: [
             "Página de administrador",
             "Control de usuarios",
-            "Personalizable a cualquier giro",
-            "Servicio al cliente",
+            "Hosting por 1 año",
+            "Dominio personalizado (.com)",
           ],
         },
         {
@@ -374,45 +366,6 @@ export default {
             "Alamcenamiento de información",
             "Diseño moderno",
           ],
-        },
-      ],
-      firstPerformance: [
-        {
-          name: "SEO",
-          description: "Tu página en los primeros resultados de búsqueda",
-          icon: "mdi-search-web",
-        },
-        {
-          name: "Soporte 24/7",
-          description:
-            "Aseguramos que tu página se mantenga activa y establecemos tiempos para mantenimiento",
-          icon: "mdi-face-agent",
-        },
-        {
-          name: "SSL",
-          description:
-            "Minimizamos el riesgo de ataques a tu sitio web con un certificado de seguridad",
-          icon: "mdi-lock",
-        },
-      ],
-      secondPerformance: [
-        {
-          name: "Diseño UX",
-          description:
-            "Garantizamos un sitio web intuitivo y adaptado a tu público",
-          icon: "mdi-lightbulb-on-outline",
-        },
-        {
-          name: "Responsivo",
-          description:
-            "¡Todo en uno! implementamos diseños adaptables a dispositivos móviles",
-          icon: "mdi-monitor-cellphone",
-        },
-        {
-          name: "Servidor dedicado",
-          description:
-            "Centralizamos tu información en nuestro servidor dedicado asegurando la confidencialidad",
-          icon: "mdi-server",
         },
       ],
     };
@@ -469,8 +422,7 @@ export default {
       meta: [
         {
           name: "description",
-          content:
-            "Arcup | Construimos software de calidad a la medida, creamos tu proyecto y se lo mostramos al MUNDO. Desarrollamos tu página web o apliación móvil.",
+          content: "Arcup | Construimos software de calidad a la medida, creamos tu proyecto y se lo mostramos al MUNDO. Desarrollamos tu página web o apliación móvil.",
         },
       ],
     };
@@ -478,10 +430,10 @@ export default {
   components: {
     BaseHeader,
     Preloader,
-    BaseFooter
   },
 };
 </script>
+    Preloadeript>
 <style lang='css' scoped>
 .v-card {
   transition: opacity 0.4s ease-in-out;
@@ -493,9 +445,6 @@ export default {
   z-index: 1;
 }
 .container__description {
-  background-color: #fafafa;
-}
-.container__description_mobile {
   background-color: #161e2eff;
 }
 .container__cards {
@@ -578,10 +527,6 @@ export default {
 .font__main-alter-xs {
   font-family: Mazzard;
   font-size: 20px;
-}
-.font_items {
-  font-family: Mazzard;
-  font-size: 28px;
 }
 .pointer {
   cursor: pointer;

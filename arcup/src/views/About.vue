@@ -1,14 +1,10 @@
 <template>
   <div>
     <base-header></base-header>
+
     <div>
-      <v-carousel cycle show-arrows-on-hover height="400">
-        <v-carousel-item
-          class="grey darken-4"
-          v-for="(item, i) in items"
-          :key="i"
-          :src="item.src"
-        >
+      <v-carousel cycle  show-arrows-on-hover height="400" >
+        <v-carousel-item class="grey darken-4" v-for="(item, i) in items" :key="i" :src="item.src">
           <div class="height text-center pl-6 pr-6">
             <v-row>
               <v-col cols="12" md="6" sm="6" xs="12" class="pt-5">
@@ -39,11 +35,11 @@
     </div>
     <div class="text-center pa-10 background-gray">
       <v-icon size="50" color="cyan">mdi-account-group </v-icon>
-
-      <h1 class="font__main-alter">CONÓCENOS</h1>
-      <v-card flat height="3" color="cyan" width="300" class="mx-auto"></v-card>
-      Conoce nuestros valores y motivaciones
-    </div>
+      
+        <h1 class="font__main-alter">CONÓCENOS</h1>
+        <v-card flat height="3" color="cyan" width="300" class="mx-auto"></v-card>
+        Conoce nuestros valores y motivaciones
+      </div>
     <v-container>
       <v-row>
         <v-col cols="12" md="6" sm="6">
@@ -51,9 +47,11 @@
 
           <v-card-text class="text--primary">
             <div class="text-justify text-card padding-button">
-              Analizar, diseñar y desarrollar productos de software innovadores
-              en el mercado, guiados por procesos documentados y adaptando
-              dichos procesos en el camino.
+              Desarrollar y diseñar software de calidad basado en las nuevas
+              tendencias tecnológicas, utilizando herramientas modernas y
+              haciendo énfasis en la completitud de los requerimientos del
+              cliente, superando así, las expectativas del producto
+              desarrollado.
             </div>
           </v-card-text>
 
@@ -72,24 +70,24 @@
 
           <v-card-text class="text--primary">
             <div class="text-card">
+              <v-icon color="cyan"> mdi-check </v-icon> Responsabilidad
+            </div>
+            <div class="text-card">
               <v-icon color="cyan"> mdi-check </v-icon> Honestidad
             </div>
             <div class="text-card">
-              <v-icon color="cyan"> mdi-check </v-icon> Calidad
+              <v-icon color="cyan"> mdi-check </v-icon> Competitividad
             </div>
             <div class="text-card">
-              <v-icon color="cyan"> mdi-check </v-icon> Innovación
-            </div>
-            <div class="text-card">
-              <v-icon color="cyan"> mdi-check </v-icon> Dedicación
+              <v-icon color="cyan"> mdi-check </v-icon> Superar expectativas
             </div>
             <div class="text-card padding-button">
-              <v-icon color="cyan"> mdi-check </v-icon> Eficacia
+              <v-icon color="cyan"> mdi-check </v-icon> Innovación
             </div>
           </v-card-text>
         </v-col>
 
-        <v-col cols="12" md="6" sm="6">
+        <v-col cols="12" md="6" sm="6" >
           <v-card class="mx-auto">
             <v-img
               class="white--text align-end"
@@ -104,8 +102,9 @@
 
           <v-card-text class="text--primary">
             <div class="text-justify text-card padding-button">
-              Tener una estructura empresarial sólida para agilizar procesos y
-              continuar desarrollando productos de utilidad para la población.
+              Consolidarnos como una empresa moderna de desarrollo de software
+              en México, implementando metodologías de trabajo que ayuden a
+              mejorar nuestros procesos de producción.
             </div>
           </v-card-text>
           <div class="card"></div>
@@ -114,7 +113,7 @@
             <v-img
               class="white--text align-end"
               height="190px"
-              src="https://cdn.pixabay.com/photo/2015/01/09/11/09/startup-594091_1280.jpg"
+              src="https://cdn.pixabay.com/photo/2015/01/08/18/26/write-593333_960_720.jpg"
             >
             </v-img>
           </v-card>
@@ -182,8 +181,7 @@ export default {
       meta: [
         {
           name: "description",
-          content:
-            "Conoce nuestro equipo de trabajo, nuestros valores y nuestras metas. Conoce nuestra visión y misión como empresa de desarrollo de software.",
+          content: "Conoce nuestro equipo de trabajo, nuestros valores y nuestras metas. Conoce nuestra visión y misión como empresa de desarrollo de software.",
         },
       ],
     };
